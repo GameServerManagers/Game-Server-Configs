@@ -1,0 +1,138 @@
+// Official NWI playlist
+// See example.playlist for documentation/format guide
+
+"playlist"
+{
+	"name"					"#Playlist_PVP_Tactical"
+	"description"				"#Playlist_PVP_Tactical_Desc"
+	
+	"require_maxplayers_max"		"24"	// Max player slots required for this playlist
+	
+	"allowed_maps"
+	{
+		"station"				"firefight"
+		"station"				"ambush"
+		"station_night"				"firefight"
+		"station_night"				"ambush"
+		"tell"					"ambush"
+		"tell_night"				"ambush"
+		"panj"					"firefight"
+		"panj_night"				"firefight"
+		"uprising"				"firefight"
+		"market"				"firefight"
+		"market_night"				"firefight"
+		"heights"				"firefight"
+		"heights_night"				"firefight"
+		"district"				"firefight"
+		"district_night"			"firefight"
+		"siege"					"firefight"
+		"contact"				"firefight"
+		"peak"					"firefight"
+		"peak_night"				"firefight"
+		"sinjar"				"firefight"
+		"sinjar_night"				"firefight"
+		"ministry"				"firefight"
+		"ministry_night"			"firefight"
+		"revolt"				"firefight"
+		"revolt_night"				"firefight"
+		"uprising"				"firefight"
+		"uprising_night"			"firefight"
+		"verticality"				"firefight"
+		"verticality_night"			"firefight"
+		"market"				"ambush"
+		"market_night"				"ambush"
+		"siege"					"ambush"
+		"contact"				"ambush"
+		"revolt"				"ambush"
+		"revolt_night"				"ambush"
+		"verticality"				"ambush"
+		"verticality_night"			"ambush"
+		"contact"				"elimination"
+		"district"				"elimination"
+		"heights"				"elimination"
+		"market"				"elimination"
+		"panj"					"elimination"
+		"peak"					"elimination"
+		"verticality"				"elimination"
+		"revolt"				"elimination"
+		"sinjar"				"elimination"
+		"station"				"elimination"
+		"tell"					"elimination"
+	}
+	
+	// recommended settings but can be changed
+	"cvars"
+	{
+		"mp_friendlyfire"			"1"	// friendly fire
+		"mp_tkpunish"				"1"	// How to punish team killing ( 0 = none, 1 = warning, 2 = kill )
+		"sv_hud_deathmessages"			"0"	// death messages
+		"sv_hud_targetindicator"		"1"	// show friendly player names when looking at them
+		"mp_timer_pregame"			"10"	// timer for the pre-game (before the game starts, usually after map change or on mp_restartgame 1)
+		"mp_timer_preround"			"15"	// timer for the pre-round (before the round starts, usually after a previous round ends or on mp_restartround 1)
+		"mp_timer_postround"			"15"	// timer for the post-round (after the round starts)
+		"mp_timer_postgame"			"10"	// timer for the post-game (at the end of a game / map rotation)
+		"mp_voice_use_3d_voip"			"1"	// disabling this will turn off the 3d voip system and allow all players to hear one another
+		"mapcyclefile"				"mapcycle_tactical_operations.txt"
+	}
+	
+	"forced_cvars"
+	{
+		"mp_theater_override"			""
+		"ins_bot_quota"				"0"	// if set higher than 0, the server will add this many bots to each team
+		"mp_teams_auto_join"			"1"	// when enabled, players are automatically assigned to a team on join
+		"mp_teams_unbalance_limit"		"1"	// the amount of player difference between each team the server considers to be imbalanced
+		"mp_autoteambalance"			"1"	// should the server auto balance the teams if they are imbalanced?
+		"mp_minteamplayers"			"1"	// min players on each team to start the match
+		"sv_deadtalk"				"0"	// enabling this will allow the dead and living to chat text each other
+		"sv_deadtalk_team"			"1"	// is deadchat limited to just your team?
+		"sv_deadvoice"				"0"	// enabling this will allow the dead and living to VOIP each other
+		"sv_vote_issue_changegamemode_allowed"	"0"	// no changegamemode
+		"sv_nwi_banlist"			"1"	// global ban list
+		"mp_supply_token_base"			"10"	// force to 10 starting supply, too many are changing this
+		"host_timescale"			"1.0"
+		
+		"ambush"
+		{
+			"mp_supply_rate_losing_team_high"	"0"
+			"mp_supply_rate_losing_team_low"	"0"
+			"mp_supply_rate_winning_team_high"	"0"
+			"mp_supply_rate_winning_team_low"	"0"
+		}
+		
+		"firefight"
+		{
+			"mp_supply_rate_losing_team_high"	"0"
+			"mp_supply_rate_losing_team_low"	"0"
+			"mp_supply_rate_winning_team_high"	"0"
+			"mp_supply_rate_winning_team_low"	"0"
+		}
+	}
+	
+	"filters"
+	{
+		// Minimum player count filter, removing this key will remove this filter.
+		"players"
+		{
+			// Default min/max values are 0 to require_maxplayers_max-1
+		}
+		
+		"tags"
+		{
+			"nofriendlyfire"
+			{
+				"invert"				"1"
+				"default"				"2"
+			}
+			
+			"fullscoreboard"
+			{
+				"default"				"2"
+			}
+			
+			"deathmsgs"
+			{
+				"default"				"2"
+			}
+		}
+	}
+}

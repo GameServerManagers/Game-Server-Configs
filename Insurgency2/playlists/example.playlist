@@ -1,0 +1,68 @@
+// Example playlist demonstrating the format and default values.
+
+"playlist"
+{
+	"name"					"Example Playlist"
+	"description"				"An example of an Insurgency playlist file."
+	
+	// Optional: Maxplayer requirements.
+	// Servers running this playlist must have a maxplayers value between
+	// require_maxplayers_min and require_maxplayers_max to operate.
+	"require_maxplayers_min"		"1"
+	"require_maxplayers_max"		"49"
+	
+	// A list of maps that this playlist must be played on.
+	// If no maps are included, this playlist will have no map restrictions.
+	"allowed_maps"
+	{
+		// "mapname" "gamemode"
+		// eg: "station" "push"
+	}
+	
+	// Recommended convars, will be applied but are not enforced and
+	// can be changed by server operators.
+	"cvars"
+	{
+		// "CVAR"										"VALUE"
+		
+		"ambush"	// Gamemode specific cvars
+		{
+			// "CVAR"									"VALUE"
+		}
+	}
+	
+	// Enforced convars, these will be unchangable.
+	"forced_cvars"
+	{
+		// "CVAR"										"VALUE"
+		
+		"ambush"	// Gamemode specific cvars
+		{
+			// "CVAR"									"VALUE"
+		}
+	}
+	
+	// Defines the filters available to players searching for a game.
+	"filters"
+	{
+		// Minimum player count filter, removing this key will remove this filter.
+		"players"
+		{
+			"min"					"0"	// Minimum slider value, defaults to 0
+			"max"					"64"	// Maximum slider value, defaults to require_maxplayers_max value
+		}
+		
+		// Per-tag filtering, each filter is given a 3-state button to require/exclude specific tags
+		// Example tags: no3dvoip, notargetindicator, deathmsgs, nofriendlyfire, deadchat, deadvoice, teamtalk (alltalk disabled), fullscoreboard (kd on scoreboard)
+		// Values: 0 = Exclude, 1 = Include, 2 = Ignore
+		"tags"
+		{
+			// "tag name"
+			// {
+			// "default"	"value" // Value (0-2): Default state of this button
+			// "ignorable"	"1" // Boolean, can this filter opt out of tag filtering. Default 1
+			// "invert"	"0" // Boolean, an inverted filter will REQUIRE a tag when crossed out and EXCLUDE a tag when ticked. Default 0
+			// }
+		}
+	}
+}

@@ -1,0 +1,24 @@
+// Empty playlist enforcing no maps/cvars, this will not appear in the main menu,
+// this is for server owners who wish to have stats recorded but not use an existing playlist.
+
+"playlist"
+{
+	"name"					""
+	"description"				""
+	
+	"allowed_maps"
+	{
+	}
+	
+	"cvars"
+	{
+	}
+	
+	"forced_cvars"
+	{
+	}
+	
+	"filters"
+	{
+	}
+}
