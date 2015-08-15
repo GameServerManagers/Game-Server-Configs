@@ -1,7 +1,7 @@
 // ****************************************************************************
 //                                                                            *
 //     No More Room in Hell - full_cvar_list.txt                              *
-//     1610 total convars/concommands                                         *
+//     1606 total convars/concommands                                         *
 //     Version 150815                                                         *
 //                                                                            *
 // ****************************************************************************
@@ -509,12 +509,8 @@ memory_diff                              : cmd      :                  : show me
 memory_list                              : cmd      :                  : dump memory list (linux only)
 memory_mark                              : cmd      :                  : snapshot current allocation status
 memory_status                            : cmd      :                  : show memory stats (linux only)
-meta                                     : cmd      :                  : Metamod:Source control options
-metamod_version                          : 1        : , "sp", "nf"     : Metamod:Source Version
 mission_list                             : cmd      :                  : List all available tactical missions
 mission_show                             : cmd      :                  : Show the given mission
-mm_basedir                               : 0        : , "sp"           : Metamod:Source Base Folder
-mm_pluginsfile                           : 0        : , "sp"           : Metamod:Source Plugins File
 mod_forcedata                            : 1        :                  : Forces all model file data into cache on model load.
 mod_forcetouchdata                       : 1        :                  : Forces all model file data into cache on model load.
 mod_load_anims_async                     : 0        :                  : 
@@ -1617,4 +1613,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 zomb_ragdoll                             : cmd      :                  : Toggle ragdoll on zombie
 zomb_squirt                              : cmd      :                  : Squirt all the things!
 --------------
-1610 total convars/concommands
+1606 total convars/concommands
