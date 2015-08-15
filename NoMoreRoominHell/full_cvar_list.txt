@@ -1,8 +1,8 @@
 // ****************************************************************************
 //                                                                            *
 //     No More Room in Hell - full_cvar_list.txt                              *
-//     1729 total convars/concommands                                         *
-//     Version 140815                                                         *
+//     1610 total convars/concommands                                         *
+//     Version 150815                                                         *
 //                                                                            *
 // ****************************************************************************
 
@@ -1617,4 +1617,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 zomb_ragdoll                             : cmd      :                  : Toggle ragdoll on zombie
 zomb_squirt                              : cmd      :                  : Squirt all the things!
 --------------
-1729 total convars/concommands
+1610 total convars/concommands
