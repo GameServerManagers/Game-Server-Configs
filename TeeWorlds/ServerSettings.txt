@@ -2,7 +2,7 @@
 //                                                                            *
 //     TeeWorlds - Server Settings                                            *
 //     URL: https://www.teeworlds.com/?page=docs&wiki=server_settings         *
-//     Version 271015                                                         *
+//     Version 281015                                                         *
 //                                                                            *
 // ****************************************************************************
 
