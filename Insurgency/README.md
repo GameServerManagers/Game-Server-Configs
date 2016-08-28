@@ -1,4 +1,4 @@
-**Insurgency 2**
+**Insurgency**
 
 This directory contains:
 
