@@ -586,7 +586,7 @@ mod_test_verts_not_available             : 0        : , "cheat"        :
 mod_touchalldata                         : 1        :                  : Touch model data during level startup
 mod_trace_load                           : 0        :                  :
 mortar_visualize                         : 0        : , "sv"           :
-motdfile                                 : 0        : , "sv"           : The MOTD file to load.
+motdfile                                  : 0        : , "sv"           : The MOTD file to load.
 motdfile_text                            : 0        : , "sv"           : The text-only MOTD file to use for clients that have disabled HTML MOTDs.
 moveaway_test                            : cmd      :                  :
 mp_allowNPCs                             : 1        : , "sv", "nf"     :
@@ -1585,7 +1585,7 @@ sniperviewdist                           : 35       : , "sv"           :
 soundpatch_captionlength                 : 2        : , "sv", "rep"    : How long looping soundpatch captions should display for.
 soundscape_debug                         : 0        : , "sv", "cheat"  : When on, draws lines to all env_soundscape entities. Green lines show the active soundscape, red lines show soundscapes that aren't in range, and white lines show soundscapes that are in range, but not the active soundscape.
 soundscape_flush                         : cmd      :                  : Flushes the server & client side soundscapes
-spec_freeze_time                         : 4        : , "sv", "cheat", "rep" : Time spend frozen in observer freeze cam.
+spec_freeze_time                         : 4        : , "sv", "cheat", "rep" : Time spent frozen in observer freeze cam.
 spec_freeze_traveltime                   : 0        : , "sv", "cheat", "rep" : Time taken to zoom in to frame a target in observer freeze cam.
 spew_consolelog_to_debugstring           : 0        :                  : Send console log to PLAT_DebugString()
 spike                                    : cmd      :                  : generates a fake spike

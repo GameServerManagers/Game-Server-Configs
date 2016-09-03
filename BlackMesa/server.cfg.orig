@@ -1,0 +1,12 @@
+// Black Mesa server.cfg file
+hostname "Black Mesa: Deathmatch"
+mp_timelimit 900
+mp_warmup_time 30
+// sv_lan 0
+// rcon_password
+// mp_flashlight 1
+// mp_forcerespawn 0
+// mp_friendlyfire 0
+// mp_fraglimit 45
+// sv_logecho 1
+// sv_logfile 1
