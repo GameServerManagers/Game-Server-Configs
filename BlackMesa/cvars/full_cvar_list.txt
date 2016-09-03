@@ -1,6 +1,6 @@
 // ****************************************************************************
 //                                                                            *
-//     No More Room in Hell - full_cvar_list.txt                              *
+//     Black Mesa: Deathmatch - full_cvar_list.txt                            *
 //     1779 total convars/concommands                                         *
 //     Version 030616                                                         *
 //                                                                            *
