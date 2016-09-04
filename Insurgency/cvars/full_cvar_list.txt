@@ -1602,7 +1602,7 @@ spec_freeze_distance_min                 : 60       : , "sv", "cheat", "rep" : M
 spec_freeze_enable                       : 0        : , "sv", "rep"    : Toggle FreezeCam
 spec_freeze_fov                          : 65       : , "sv", "cheat", "rep" : FOV while in FreezeCam
 spec_freeze_roll                         : -15      : , "sv", "cheat", "rep" : Camera roll tilt while freeze cam is active.
-spec_freeze_time                         : 4        : , "sv", "cheat", "rep" : Time spend frozen in observer freeze cam.
+spec_freeze_time                         : 4        : , "sv", "cheat", "rep" : Time spent frozen in observer freeze cam.
 spec_freeze_traveltime                   : 0        : , "sv", "cheat", "rep" : Time taken to zoom in to frame a target in observer freeze cam.
 spec_freeze_zoffset_max                  : -10      : , "sv", "cheat", "rep" : Maximum random z distance from the target to stop when framing them in observer freeze cam.
 spec_freeze_zoffset_min                  : -20      : , "sv", "cheat", "rep" : Minimum random z distance from the target to stop when framing them in observer freeze cam.
