@@ -1,0 +1,29 @@
+// Server Hostname
+hostname "Blade Symphony"
+
+// Server Password
+sv_password ""
+
+// RCON Password
+rcon_password "REPLACEME"
+
+// Time Limit
+mp_timelimit 40
+
+// Logging
+log off
+sv_logfile 1
+sv_logecho 0
+sv_logbans 1
+
+// MapCycle File
+mapcyclefile maplist.txt
+
+// Cheats Disabled
+sv_cheats 0
+
+// AllTalk Enabled
+sv_alltalk 1
+
+// Misc.
+sv_allowupload 1
