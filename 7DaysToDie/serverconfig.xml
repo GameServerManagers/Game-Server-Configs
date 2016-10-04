@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<ServerSettings>
+  <property name="ServerPort"                           value="26900"/>                         <!-- Port you want the server to listen on. -->
+  <property name="ServerIsPublic"                       value="true"/>                          <!-- Should this server register to master server -->
+  <property name="ServerName"                           value="My Game Host"/>          <!-- Whatever you want the name to be. -->
+  <property name="ServerPassword"                       value=""/>                                      <!-- Password to gain entry to the server -->
+  <property name="ServerMaxPlayerCount"         value="8"/>                                     <!-- Maximum Concurrent Players -->
+  <property name="ServerDescription"            value="A 7 Days to Die server"/> <!-- Whatever you want the description to be. -->
+  <property name="ServerWebsiteURL"             value=""/>                                      <!-- Website URL for the server -->
+
+  <property name="GameWorld"                            value="Navezgane"/>                     <!-- Navezgane, Random Gen -->
+  <property name="GameName"                             value="My Game"/>                       <!-- Whatever you want the game name to be THIS CONTROLS THE RANDOM GENERATION SEED -->
+  <property name="GameDifficulty"                       value="2"/>                             <!-- 0 - 5, 0=easiest, 5=hardest -->
+  <property name="GameMode"                                     value="GameModeSurvivalMP"/>    <!-- GameModeSurvivalMP, GameModeSurvivalSP (MP has land protection) -->
+
+  <property name="ZombiesRun"                           value="0" />                            <!-- 0 = default day/night walk/run, 1 = never run, 2 = always run -->
+  <property name="BuildCreate"                          value="false" />                                <!-- cheat mode on/off -->
+  <property name="DayNightLength"                       value="50" />                           <!-- real time minutes per in game day: 50 minutes -->
+  <property name="DayLightLength"                       value="18" />                           <!-- in game hours the sun shines per day: 18 hours day light per day-->
+  <property name="FriendlyFire"                         value="false" />                        <!-- Can friendly players damage each other (PvP) -->
+  <property name="PersistentPlayerProfiles"     value="false" />                        <!-- If disabled a player can join with any selected profile. If true they will join with the last profile they joined with -->
+
+  <property name="PlayerSafeZoneLevel"      value="5" />                                <!-- If a player is less or equal this level he will create a safe zone (no enemies) when spawned -->
+  <property name="PlayerSafeZoneHours"      value="5" />                                <!-- Hours in world time this safe zone exists -->
+
+  <property name="ControlPanelEnabled"          value="false"/>                         <!-- Enable/Disable the control panel -->
+  <property name="ControlPanelPort"             value="8080"/>                          <!-- Port of the control panel webpage -->
+  <property name="ControlPanelPassword"         value="CHANGEME"/>                      <!-- Password to gain entry to the control panel -->
+
+  <property name="TelnetEnabled"                        value="true"/>                          <!-- Enable/Disable the telnet -->
+  <property name="TelnetPort"                           value="8081"/>                          <!-- Port of the telnet server -->
+  <property name="TelnetPassword"                       value=""/>                      <!-- Password to gain entry to telnet interface -->
+
+  <property name="AdminFileName"                        value="serveradmin.xml"/>       <!-- Server admin file name -->
+
+  <property name="DropOnDeath"                          value="0" />                            <!-- 0 = everything, 1 = toolbelt only, 2 = backpack only, 3 = delete all -->
+  <property name="DropOnQuit"                           value="0" />                            <!-- 0 = nothing, 1 = everything, 2 = toolbelt only, 3 = backpack only -->
+
+  <property name="EnemySenseMemory"                     value="60" />                           <!-- Time, in seconds, that a zombie will pursue something that has been sensed. -->
+  <property name="EnemySpawnMode"                       value="3" />                            <!-- 0 = Disabled 0%, 1 = Very Low 50%, 2 = Low 75%, 3 = Medium 100%, 4 = High 125%, 5 = Very High 150% -->
+  <property name="EnemyDifficulty"                      value="0" />                            <!-- 0 = Normal, 1 = Feral -->
+
+  <property name="BlockDurabilityModifier"      value="100" />                          <!-- percentage in whole numbers -->
+
+  <property name="LootAbundance"                        value="100" />                          <!-- percentage in whole numbers -->
+  <property name="LootRespawnDays"                      value="30" />                           <!-- days in whole numbers -->
+
+  <property name="LandClaimSize"                                                value="7"/>             <!-- Size in blocks that is protected by a keystone -->
+  <property name="LandClaimDeadZone"                                    value="30"/>    <!-- Keystones must be this many blocks apart (unless you are friends with the other player) -->
+  <property name="LandClaimExpiryTime"                                  value="3"/>             <!-- The number of days a player can be offline before their claims expire and are no longer protected -->
+  <property name="LandClaimDecayMode"                                   value="0"/>             <!-- Controls how offline players land claims decay. All claims have full protection for the first 24hrs. 0=Linear, 1=Exponential, 2=Full protection until claim is expired. -->
+  <property name="LandClaimOnlineDurabilityModifier"    value="4"/>             <!-- How much protected claim area block hardness is increased when a player is online. 0 means infinite (no damage will ever be taken). Default is 32x -->
+  <property name="LandClaimOfflineDurabilityModifier"   value="4"/>             <!-- How much protected claim area block hardness is increased when a player is offline. 0 means infinite (no damage will ever be taken). Default is 32x -->
+  <property name="AirDropFrequency"                                             value="72"/>    <!-- How often airdrop occur in game-hours, 0 == never -->
+  <property name="AirDropMarker"                                                value="false"/> <!-- Sets if a marker is added to map/compass for air drops. -->
+  <property name="MaxSpawnedZombies"                                    value="60"/>    <!-- Making this number too large (more than about 80) may cause servers to run at poor framerates which will effect lag and play quality for clients. -->
+
+  <!--
+  If your server has a large number of players you can increase this limit to add more wildlife. Animals don't consume as much CPU as zombies.
+  NOTE: That this doesn't cause more animals to spawn arbitrarily: The biome spawning system only spawns a certain number of animals in a given
+  area, but if you have lots of players that are all spread out then you may be hitting the limit and can increase it.
+  -->
+  <property name="MaxSpawnedAnimals"                                    value="50"/>
+  <property name="EACEnabled"                                                   value="true"/>  <!-- Enables/Disables EasyAntiCheat -->
+
+  <!--property name="SaveGameFolder"      value="absolute path" /-->    <!-- use this to override the default save game path -->
+ 
