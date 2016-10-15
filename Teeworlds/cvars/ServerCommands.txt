@@ -1,6 +1,6 @@
 // ****************************************************************************
 //                                                                            *
-//     TeeWorlds - Server Commands                                            *
+//     Teeworlds - Server Commands                                            *
 //     URL: https://www.teeworlds.com/?page=docs&wiki=server_commands         *
 //     Version 281015                                                         *
 //                                                                            *

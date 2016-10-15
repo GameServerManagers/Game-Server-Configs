@@ -1,6 +1,6 @@
 // ****************************************************************************
 //                                                                            *
-//     TeeWorlds - Server Settings                                            *
+//     Teeworlds - Server Settings                                            *
 //     URL: https://www.teeworlds.com/?page=docs&wiki=server_settings         *
 //     Version 281015                                                         *
 //                                                                            *
@@ -20,7 +20,7 @@ Engine settings
 
 Settings	Description	Default
 sv_name	Name of the server	unnamed server
-bindaddr *	Address to bind	
+bindaddr *	Address to bind
 sv_port *	Port the server will listen on	8303
 sv_external_port *	Port to report to the master servers (e.g. in case of a firewall rename)	0
 sv_max_clients *	Number of clients that can be connected to the server at the same time	12
@@ -28,17 +28,17 @@ sv_max_clients_per_ip	Number of clients with the same ip that can be connected t
 sv_high_bandwidth *	Use high bandwidth mode, for LAN servers only	0
 sv_register	Register on the master servers	1
 sv_map	Map to use	dm1
-sv_rcon_password	Password to access the remote console (if not set, rcon is disabled)	
-password	Password to connect to the server	
-logfile	Path to a logfile	
+sv_rcon_password	Password to access the remote console (if not set, rcon is disabled)
+password	Password to connect to the server
+logfile	Path to a logfile
 console_output_level	Adjust the amount of messages in the console	0
 sv_rcon_max_tries	Maximum number of tries for remote console authetication	3
 sv_rcon_bantime	Time (in minutes) a client gets banned if remote console authentication fails (0 makes it just use kick)	5
 sv_auto_demo_record	Automatically record demos	0
 sv_auto_demo_max	Maximum number of automatically recorded demos (0 = no limit)	10
 ec_bindaddr	Address to bind the external console to. Anything but 'localhost' is dangerous"	localhost
-ec_port	Port to use for the external console	
-ec_password	External console password"	
+ec_port	Port to use for the external console
+ec_password	External console password"
 ec_bantime	The time a client gets banned if econ authentication fails. 0 just closes the connection	0
 ec_auth_timeout	Time in seconds before the the econ authentication times out	30
 ec_output_level	Adjusts the amount of information in the external console	1
@@ -49,9 +49,9 @@ sv_warmup	Warmup time between rounds	0
 sv_scorelimit	Score limit of the game (0 disables it)	20
 sv_timelimit	Time limit of the game (in case of equal points there will be sudden death)	0
 sv_gametype	Gametype (dm/ctf/tdm) (This setting needs the map to be reloaded in order to take effect)	dm
-sv_maprotation	The maps to be rotated	
+sv_maprotation	The maps to be rotated
 sv_rounds_per_map	Number of rounds before changing to next map in rotation	1
-sv_motd	Message of the day, shown in server info and when joining a server	
+sv_motd	Message of the day, shown in server info and when joining a server
 sv_spectator_slots	Number of clients that can only be spectators	0
 sv_teambalance_time	Time in minutes after the teams are uneven, to auto balance	1
 sv_spamprotection	Enable spam filter	1
