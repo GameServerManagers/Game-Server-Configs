@@ -1,4 +1,4 @@
-game.serverName "BfServer"
+game.serverName "SERVERNAME"
 game.serverDedicated 1
 game.serverGameTime 0
 game.serverMaxPlayers 32

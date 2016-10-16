@@ -2,7 +2,7 @@
 <ServerSettings>
   <property name="ServerPort"                           value="26900"/>                         <!-- Port you want the server to listen on. -->
   <property name="ServerIsPublic"                       value="true"/>                          <!-- Should this server register to master server -->
-  <property name="ServerName"                           value="My Game Host"/>          <!-- Whatever you want the name to be. -->
+  <property name="ServerName"                           value="SERVERNAME"/>          <!-- Whatever you want the name to be. -->
   <property name="ServerPassword"                       value=""/>                                      <!-- Password to gain entry to the server -->
   <property name="ServerMaxPlayerCount"         value="8"/>                                     <!-- Maximum Concurrent Players -->
   <property name="ServerDescription"            value="A 7 Days to Die server"/> <!-- Whatever you want the description to be. -->
@@ -25,11 +25,11 @@
 
   <property name="ControlPanelEnabled"          value="false"/>                         <!-- Enable/Disable the control panel -->
   <property name="ControlPanelPort"             value="8080"/>                          <!-- Port of the control panel webpage -->
-  <property name="ControlPanelPassword"         value="CHANGEME"/>                      <!-- Password to gain entry to the control panel -->
+  <property name="ControlPanelPassword"         value="ADMINPASSWORD"/>                      <!-- Password to gain entry to the control panel -->
 
   <property name="TelnetEnabled"                        value="true"/>                          <!-- Enable/Disable the telnet -->
   <property name="TelnetPort"                           value="8081"/>                          <!-- Port of the telnet server -->
-  <property name="TelnetPassword"                       value=""/>                      <!-- Password to gain entry to telnet interface -->
+  <property name="TelnetPassword"                       value="ADMINPASSWORD"/>                      <!-- Password to gain entry to telnet interface -->
 
   <property name="AdminFileName"                        value="serveradmin.xml"/>       <!-- Server admin file name -->
 
