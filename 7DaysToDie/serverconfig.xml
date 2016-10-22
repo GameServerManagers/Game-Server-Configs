@@ -17,7 +17,7 @@
   <property name="BuildCreate"                          value="false" />                                <!-- cheat mode on/off -->
   <property name="DayNightLength"                       value="50" />                           <!-- real time minutes per in game day: 50 minutes -->
   <property name="DayLightLength"                       value="18" />                           <!-- in game hours the sun shines per day: 18 hours day light per day-->
-  <property name="FriendlyFire"                         value="false" />                        <!-- Can friendly players damage each other (PvP) -->
+   <property name="PlayerKillingMode"		value="3" />				<!-- Player Killing Settings (0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone) -->
   <property name="PersistentPlayerProfiles"     value="false" />                        <!-- If disabled a player can join with any selected profile. If true they will join with the last profile they joined with -->
 
   <property name="PlayerSafeZoneLevel"      value="5" />                                <!-- If a player is less or equal this level he will create a safe zone (no enemies) when spawned -->
@@ -64,4 +64,4 @@
   <property name="EACEnabled"                                                   value="true"/>  <!-- Enables/Disables EasyAntiCheat -->
 
   <!--property name="SaveGameFolder"      value="absolute path" /-->    <!-- use this to override the default save game path -->
- 
+ </ServerSettings>
