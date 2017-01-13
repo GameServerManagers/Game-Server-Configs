@@ -25,7 +25,7 @@ Server =
 
     -- The name of the server, as seen by players and the server browser.
     -- Default value: "JC2-MP Server"
-    Name                        = "JC2-MP Server",
+    Name                        = "SERVERNAME",
     -- The server description, as seen by players and the server browser.
     -- Default value: "No description available"
     Description                 = "No description available.",
