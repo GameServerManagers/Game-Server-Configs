@@ -156,7 +156,12 @@ Module =
     MaxErrorCount               = 5,
     -- The time from the last error necessary for the error counter to be decremented.
     -- Default value (in milliseconds): 500
-    ErrorDecrementTime          = 500
+    ErrorDecrementTime          = 500,
+    -- Controls whether autorun scripts (as controlled by IKnowWhatImDoing) should be
+    -- sent to clients for empty modules. Don't turn this on unless you're willing to
+    -- accept the bandwidth hit and know what you're doing!
+    -- Default value: false
+    SendAutorunWhenEmpty        = false
 }
 
 --[[
