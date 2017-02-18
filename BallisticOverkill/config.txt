@@ -1,0 +1,66 @@
+# Ballistic Overkill Dedicated Server Configuration File
+# After changing any configuration you must restart the server to take effect
+
+# Server name as listed in server browser
+ServerName=SERVERNAME
+
+# UDP Server port
+ServerPort=27015
+
+# Server Query Port
+QueryPort=27016
+
+# Max players
+# Valid values are from 2 to 16
+MaxPlayers=12
+
+# Max Spectators
+MaxSpectators=4
+
+# Max ping (in miliseconds)
+# When the client's ping is greater than MaxPing he will be kicked from the server
+# Use 0 (zero) to turn it off.
+MaxPing=0
+
+# Start game map
+# Valid values are:
+# 1: Corporate Park
+# 2: Hollow
+# 3: Sunnsquare Mall
+# 4: Nox Museum
+# 5: Wonderdome
+# 7: Citadel
+# 8: Overhead
+# 9: Blackfield
+# 10: Hakim
+GameMap=3
+
+# Game mode
+# Valid values are:
+# 1: Team Deatchmatch
+# 2: Conquest
+# 3: King of the Hill
+# 5: Free for all
+GameMode=1
+
+# MatchTime
+# value in minutes
+MatchTime=10
+
+# Password
+# Set an Password to only selected players be able to enter in your match
+Password=test
+
+#DedicatedBroadcast
+# 0: P2P Broadcast (Hybrid)
+# 1: Server Broadcast (ServerOnly)
+DedicatedBroadcast=0
+
+# Banner shown when the client is logging into the server
+# Valid types are JPG and PNG
+# Image size is 328x82 pixels
+# Sample Url: http://i.imgur.com/TZyeCgt.png
+BannerURL=
+# URL to open when the user clicks over the banner
+# Sample Url: http://google.com
+ClickURL=
