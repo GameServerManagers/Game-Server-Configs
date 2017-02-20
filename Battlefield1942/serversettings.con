@@ -3,7 +3,7 @@ game.serverDedicated 1
 game.serverGameTime 0
 game.serverMaxPlayers 32
 game.serverScoreLimit 0
-game.serverInternet 0
+game.serverInternet 1
 game.serverNumberOfRounds 3
 game.serverSpawnTime 20
 game.serverSpawnDelay 3
