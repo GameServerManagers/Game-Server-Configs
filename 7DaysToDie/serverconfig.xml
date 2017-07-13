@@ -21,7 +21,7 @@
 
   <property name="ZombiesRun"				value="0" />				<!-- 0 = default day/night walk/run, 1 = never run, 2 = always run -->
   <property name="BuildCreate"				value="false" />				<!-- cheat mode on/off -->
-  <property name="DayNightLength"			value="50" />				<!-- real time minutes per in game day: 50 minutes -->
+  <property name="DayNightLength"			value="60" />				<!-- real time minutes per in game day: 60 minutes -->
   <property name="DayLightLength"			value="18" />				<!-- in game hours the sun shines per day: 18 hours day light per day-->
   <property name="PlayerKillingMode"		value="3" />				<!-- Player Killing Settings (0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone) -->
   <property name="PersistentPlayerProfiles"	value="false" />			<!-- If disabled a player can join with any selected profile. If true they will join with the last profile they joined with -->
@@ -69,7 +69,7 @@
   <property name="MaxSpawnedAnimals"					value="50"/>
   <property name="EACEnabled"							value="true"/>  <!-- Enables/Disables EasyAntiCheat -->
   <property name="HideCommandExecutionLog"				value="0"/>		<!-- Hide logging of command execution. 0 = show everything, 1 = hide only from Telnet/ControlPanel, 2 = also hide from remote game clients, 3 = hide everything -->
-  <property name="MaxUncoveredMapChunksPerPlayer"		value="131072"/>	<!-- Override how many chunks can be uncovered on the ingame map by each player. Resulting max map file size per player is 512 Bytes times this value. Default 131072 means max 32 km² can be uncovered at any time -->
+  <property name="MaxUncoveredMapChunksPerPlayer"		value="131072"/>	<!-- Override how many chunks can be uncovered on the ingame map by each player. Resulting max map file size limit per player is (x * 512 Bytes), uncovered area is (x * 256 m²). Default 131072 means max 32 km² can be uncovered at any time -->
   <property name="BedrollDeadZoneSize"		value="15"/>	<!-- Size of bedroll deadzone, no zombies will spawn inside this area, and any cleared sleeper volumes that touch a bedroll deadzone will not spawn after they've been cleared. -->
 
   <!--property name="SaveGameFolder"      value="absolute path" /-->	<!-- use this to override the default save game path -->
