@@ -1,3 +1,10 @@
+// ************************************************************************** //
+//                                                                            //
+//     Brain Bread 2 - server.cfg                                             //
+//     Version 240917                                                         //
+//                                                                            //
+// ************************************************************************** //
+
 _resetgamestats                          : cmd      :                  : Erases current game stats and writes out a blank stats file
 _restart                                 : cmd      :                  : Shutdown and restart the engine.
 achievement_debug                        : 0        : , "sv", "cheat", "rep" : Turn on achievement debug msgs.
