@@ -1,6 +1,6 @@
 // ****************************************************************************
 //                                                                            *
-//     Insurgency 2 - full_cvar_list.txt                                      *
+//     Insurgency - full_cvar_list.txt                                        *
 //     1844 total convars/concommands                                         *
 //     Version 280816                                                         *
 //                                                                            *
