@@ -1,6 +1,6 @@
 // ************************************************************************** //
 //                                                                            //
-//     Fistful of Frags - full_cvar_list.txt                                  //
+//     Brain Bread 2 - server.cfg                                             //
 //     Version 240917                                                         //
 //                                                                            //
 // ************************************************************************** //
@@ -8,14 +8,22 @@
 _resetgamestats                          : cmd      :                  : Erases current game stats and writes out a blank stats file
 _restart                                 : cmd      :                  : Shutdown and restart the engine.
 achievement_debug                        : 0        : , "sv", "cheat", "rep" : Turn on achievement debug msgs.
+activate_perk_agility                    : cmd      :                  : Activate Agility Perk
+activate_perk_proficiency                : cmd      :                  : Activate Proficiency Perk
+activate_perk_strength                   : cmd      :                  : Activate Strength Perk
+activate_zombie_rage                     : cmd      :                  : Activate Zombie Rage Perk
 addip                                    : cmd      :                  : Add an IP address to the ban list.
+admin_ban_id                             : cmd      :                  : Admin Ban Command
+admin_changelevel                        : cmd      :                  : Admin Changelevel Command
+admin_joinhuman                          : cmd      :                  : Admin Join Human Command
+admin_kick_id                            : cmd      :                  : Admin Kick Command
+admin_spectate                           : cmd      :                  : Admin Spectate Command
 ai_actbusy_search_time                   : 10       : , "sv"           :
 ai_ally_manager_debug                    : 0        : , "sv"           :
 ai_auto_contact_solver                   : 1        : , "sv"           :
 ai_block_damage                          : 0        : , "sv"           :
-ai_citizen_debug_commander               : 1        : , "sv"           :
 ai_clear_bad_links                       : cmd      :                  : Clears bits set on nav links indicating link is unusable
-ai_debug_actbusy                         : 0        : , "sv", "cheat"  : Used to debug actbusy behavior. Usage: 1: Constantly draw lines from NPCs to the actbusy nodes they've chosen to actbusy at. 2:
+ai_debug_actbusy                         : 0        : , "sv", "cheat"  : Used to debug actbusy behavior. Usage: 1: Constantly draw lines from NPCs to the actbusy nodes they've chosen to actbusy at. 2: Whenever an NPC makes a decision to use an actbusy, show which actbusy they've chosen. 3: Selected NPCs (with npc_select) will report why they're not choosing actbusy nodes. 4: Display debug output of actbusy logic. 5: Display safe zone volumes and info.
 ai_debug_assault                         : 0        : , "sv"           :
 ai_debug_avoidancebounds                 : 0        : , "sv"           :
 ai_debug_directnavprobe                  : 0        : , "sv"           :
@@ -28,7 +36,7 @@ ai_debug_expressions                     : 0        : , "sv"           : Show ra
 ai_debug_follow                          : 0        : , "sv"           :
 ai_debug_loners                          : 0        : , "sv"           :
 ai_debug_looktargets                     : 0        : , "sv"           :
-ai_debug_los                             : 0        : , "sv", "cheat"  : NPC Line-Of-Sight debug mode. If 1, solid entities that block NPC LOC will be highlighted with white bounding boxes. If 2, it'l
+ai_debug_los                             : 0        : , "sv", "cheat"  : NPC Line-Of-Sight debug mode. If 1, solid entities that block NPC LOC will be highlighted with white bounding boxes. If 2, it'll show non-solid entities that would do it if they were solid.
 ai_debug_nav                             : 0        : , "sv"           :
 ai_debug_node_connect                    : cmd      :                  : Debug the attempted connection between two nodes
 ai_debug_ragdoll_magnets                 : 0        : , "sv"           :
@@ -38,8 +46,8 @@ ai_debug_speech                          : 0        : , "sv"           :
 ai_debug_squads                          : 0        : , "sv"           :
 ai_debug_think_ticks                     : 0        : , "sv"           :
 ai_debugscriptconditions                 : 0        : , "sv"           :
-ai_default_efficient                     : 0        : , "sv"           :
-ai_disable                               : cmd      :                  : Bi-passes all AI logic routines and puts all NPCs into their idle animations.  Can be used to get NPCs out of your way and to t
+ai_default_efficient                     : 1        : , "sv"           :
+ai_disable                               : cmd      :                  : Bi-passes all AI logic routines and puts all NPCs into their idle animations.  Can be used to get NPCs out of your way and to test effect of AI logic routines on frame rate
 ai_drawbattlelines                       : 0        : , "sv", "cheat"  :
 ai_drop_hint                             : cmd      :                  : Drop an ai_hint at the player's current eye position.
 ai_dump_hints                            : cmd      :                  :
@@ -52,12 +60,11 @@ ai_expression_optimization               : 0        : , "sv"           : Disable
 ai_fear_player_dist                      : 720      : , "sv"           :
 ai_find_lateral_cover                    : 1        : , "sv"           :
 ai_find_lateral_los                      : 1        : , "sv"           :
-ai_follow_move_commands                  : 1        : , "sv"           :
 ai_follow_use_points                     : 1        : , "sv"           :
 ai_follow_use_points_when_moving         : 1        : , "sv"           :
 ai_force_serverside_ragdoll              : 0        : , "sv"           :
 ai_frametime_limit                       : 50       : , "sv"           : frametime limit for min efficiency AIE_NORMAL (in sec's).
-ai_hull                                  : cmd      :                  : Controls which connections are shown when ai_show_hull or ai_show_connect commands are used  Arguments: NPC name or classname,
+ai_hull                                  : cmd      :                  : Controls which connections are shown when ai_show_hull or ai_show_connect commands are used  Arguments: NPC name or classname, <none>=NPC under crosshair
 ai_inhibit_spawners                      : 0        : , "sv", "cheat"  :
 ai_lead_time                             : 0        : , "sv"           :
 ai_LOS_mode                              : 0        : , "sv", "rep"    :
@@ -67,14 +74,13 @@ ai_moveprobe_usetracelist                : 0        : , "sv"           :
 ai_navigator_generate_spikes             : 0        : , "sv"           :
 ai_navigator_generate_spikes_strength    : 8        : , "sv"           :
 ai_new_aiming                            : 1        : , "sv"           :
-ai_newgroundturret                       : 0        : , "sv"           :
-ai_next_hull                             : cmd      :                  : Cycles through the various hull sizes.  Currently selected hull size is written to the screen.  Controls which connections are
+ai_next_hull                             : cmd      :                  : Cycles through the various hull sizes.  Currently selected hull size is written to the screen.  Controls which connections are shown when ai_show_hull or ai_show_connect commands are used  Arguments: -none-
 ai_no_local_paths                        : 0        : , "sv"           :
 ai_no_node_cache                         : 0        : , "sv"           :
 ai_no_select_box                         : 0        : , "sv"           :
 ai_no_steer                              : 0        : , "sv"           :
 ai_no_talk_delay                         : 0        : , "sv"           :
-ai_nodes                                 : cmd      :                  : Toggles node display.  First call displays the nodes for the given network as green objects.  Second call  displays the nodes a
+ai_nodes                                 : cmd      :                  : Toggles node display.  First call displays the nodes for the given network as green objects.  Second call  displays the nodes and their IDs.  Nodes are color coded as follows:  Green  - ground node  Cyan  - air node  Magenta - climb node  Grey  - node not available for selected hull size  Orange  - node currently locked
 ai_norebuildgraph                        : 0        : , "sv"           :
 ai_path_adjust_speed_on_immediate_turns  : 1        : , "sv"           :
 ai_path_insert_pause_at_est_end          : 1        : , "sv"           :
@@ -95,23 +101,24 @@ ai_shot_bias_max                         : 1        : , "sv", "rep"    :
 ai_shot_bias_min                         : -1       : , "sv", "rep"    :
 ai_shot_stats                            : 0        : , "sv"           :
 ai_shot_stats_term                       : 1000     : , "sv"           :
-ai_show_connect                          : cmd      :                  : Displays the allowed connections between each node for the currently selected hull type.  Hulls are color code as follows:  Gre
-ai_show_connect_fly                      : cmd      :                  : Displays the allowed connections between each node for the currently selected hull type.  Hulls are color code as follows:  Gre
-ai_show_connect_jump                     : cmd      :                  : Displays the allowed connections between each node for the currently selected hull type.  Hulls are color code as follows:  Gre
-ai_show_graph_connect                    : cmd      :                  : Toggles graph connection display for the node that the player is looking at.  Nodes that are connected to the selected node by
+ai_show_active_military_activities       : 0        : , "sv", "cheat", "rep" : Print out which activities are being executed by the military npcs.
+ai_show_connect                          : cmd      :                  : Displays the allowed connections between each node for the currently selected hull type.  Hulls are color code as follows:  Green  - ground movement   Blue  - jumping movement  Cyan  - flying movement  Magenta - climbing movement  Red  - connection disabled
+ai_show_connect_fly                      : cmd      :                  : Displays the allowed connections between each node for the currently selected hull type.  Hulls are color code as follows:  Green  - ground movement   Blue  - jumping movement  Cyan  - flying movement  Magenta - climbing movement  Red  - connection disabled
+ai_show_connect_jump                     : cmd      :                  : Displays the allowed connections between each node for the currently selected hull type.  Hulls are color code as follows:  Green  - ground movement   Blue  - jumping movement  Cyan  - flying movement  Magenta - climbing movement  Red  - connection disabled
+ai_show_graph_connect                    : cmd      :                  : Toggles graph connection display for the node that the player is looking at.  Nodes that are connected to the selected node by the net graph will be drawn in red with magenta lines connecting to the selected node.  Nodes that are not connected via the net graph from the selected node will be drawn in blue.
 ai_show_grid                             : cmd      :                  : Draw a grid on the floor where looking.
-ai_show_hints                            : cmd      :                  : Displays all hints as small boxes  Blue  - hint is available for use  Red  - hint is currently being used by an NPC  Orange  -
-ai_show_hull                             : cmd      :                  : Displays the allowed hulls between each node for the currently selected hull type.  Hulls are color code as follows:  Green  -
+ai_show_hints                            : cmd      :                  : Displays all hints as small boxes  Blue  - hint is available for use  Red  - hint is currently being used by an NPC  Orange  - hint not being used by timed out  Grey  - hint has been disabled
+ai_show_hull                             : cmd      :                  : Displays the allowed hulls between each node for the currently selected hull type.  Hulls are color code as follows:  Green  - ground movement   Blue  - jumping movement  Cyan  - flying movement  Magenta - climbing movement  Arguments:  -none-
 ai_show_hull_attacks                     : 0        : , "sv"           :
 ai_show_node                             : cmd      :                  : Highlight the specified node
 ai_show_think_tolerance                  : 0        : , "sv"           :
-ai_show_visibility                       : cmd      :                  : Toggles visibility display for the node that the player is looking at.  Nodes that are visible from the selected node will be d
+ai_show_visibility                       : cmd      :                  : Toggles visibility display for the node that the player is looking at.  Nodes that are visible from the selected node will be drawn in red with yellow lines connecting to the selected node.  Nodes that are not visible from the selected node will be drawn in blue.
 ai_simulate_task_overtime                : 0        : , "sv"           :
 ai_spread_cone_focus_time                : 0        : , "sv"           :
 ai_spread_defocused_cone_multiplier      : 3        : , "sv"           :
 ai_spread_pattern_focus_time             : 0        : , "sv"           :
-ai_step                                  : cmd      :                  : NPCs will freeze after completing their current task.  To complete the next task, use 'ai_step' again.  To resume processing no
-ai_strong_optimizations                  : 0        : , "sv"           :
+ai_step                                  : cmd      :                  : NPCs will freeze after completing their current task.  To complete the next task, use 'ai_step' again.  To resume processing normally use 'ai_resume'
+ai_strong_optimizations                  : 1        : , "sv"           :
 ai_strong_optimizations_no_checkstand    : 0        : , "sv"           :
 ai_task_pre_script                       : 0        : , "sv"           :
 ai_test_los                              : cmd      :                  : Test AI LOS from the player's POV
@@ -127,21 +134,76 @@ ai_vehicle_avoidance                     : 1        : , "sv", "cheat"  :
 ainet_generate_report                    : cmd      :                  : Generate a report to the console.
 ainet_generate_report_only               : cmd      :                  : Generate a report to the console.
 air_density                              : cmd      :                  : Changes the density of air for drag computations.
-airboat_fatal_stress                     : 5000     : , "sv"           : Amount of stress in kg that would kill the airboat driver.
 alias                                    : cmd      :                  : Alias a command.
 anim_3wayblend                           : 1        : , "sv", "rep"    : Toggle the 3-way animation blending code.
-antlion_easycrush                        : 1        : , "sv"           :
 async_allow_held_files                   : 1        :                  : Allow AsyncBegin/EndRead()
 async_mode                               : 0        :                  : Set the async filesystem mode (0 = async, 1 = synchronous)
 async_resume                             : cmd      :                  :
 async_serialize                          : 0        :                  : Force async reads to serialize for profiling
 async_simulate_delay                     : 0        :                  : Simulate a delay of up to a set msec per file operation
 async_suspend                            : cmd      :                  :
-autoaim_max_deflect                      : 0        : , "sv"           :
-autoaim_max_dist                         : 2160     : , "sv"           :
-autoaim_unlock_target                    : 0        : , "sv"           :
 banid                                    : cmd      :                  : Add a user ID to the ban list.
 banip                                    : cmd      :                  : Add an IP address to the ban list.
+bb2_afk_kick_time                        : 90       : , "sv", "rep"    : If a player is afk for longer than this amount of seconds then he'll be kicked.
+bb2_allow_latejoin                       : 1        : , "sv", "rep"    : Allow players who join late to spawn as a human.
+bb2_allow_mercy                          : 3        : , "sv", "rep"    : If this command's value is higher than 0 and the death count of a zombie player exceed this value he will respawn as a human on death.
+bb2_allow_npc_to_score                   : 0        : , "sv", "rep"    : Should friendly npcs be allowed to affect scoring? For example for quests.
+bb2_allow_profile_system                 : 1        : , "sv", "rep"    : Allow players to load Global stats or local stats defined on the server. 1 = Global, 2 = Local!
+bb2_arena_reinforcement_count            : 14       : , "sv", "rep"    : How many respawns will you allow?
+bb2_arena_respawn_time                   : 40       : , "sv", "rep"    : Server respawn interval, respawns waiting reinforcements every X seconds! Minimum 20 sec.
+bb2_ban_time                             : 30       : , "sv", "rep"    : For how many minutes will a player be banned if a ban vote passes?
+bb2_classic_mode_enabled                 : 0        : , "sv", "rep"    : This will enable BrainBread Classic Mode for Objective Mode. Enabling this will prevent non Walker and Military NPCs from spawning.
+bb2_classic_zombie_noteamchange          : 1        : , "sv", "rep"    : When a player zombie kills a human player the human will not become a zombie on respawn.
+bb2_create_inventory_item                : cmd      :                  : Create some inventory item.
+bb2_create_powerup_item                  : cmd      :                  : Create some powerup item.
+bb2_deathmatch_announcer_maxtime         : 10       : , "sv", "rep"    : If you strike another kill and it has gone this many sec it will reset your kill value. 0 = Ignore!
+bb2_deathmatch_fraglimit                 : 60       : , "sv", "rep"    : Set the max amount of frags a person can get before the game ends.
+bb2_deathmatch_respawn_time              : 3        : , "sv", "rep"    : Set the default respawn time in seconds.
+bb2_elimination_fraglimit                : 200      : , "sv", "rep"    : Set the max amount of frags a team can obtain before that team will win the game.
+bb2_elimination_respawn_time             : 5        : , "sv", "rep"    : Set the default respawn time in seconds.
+bb2_elimination_respawn_time_scale       : 1        : , "sv", "rep"    : Increase the respawn time by this many seconds for the teams.
+bb2_elimination_score_from_extermination : 25       : , "sv", "rep"    : How much score should a team be awarded for exterminating the other team? (kill everyone and allow no one to respawn)
+bb2_elimination_score_humans             : 1        : , "sv", "rep"    : Whenever the human team gets a zombie player kill this is the value to add.
+bb2_elimination_score_zombies            : 5        : , "sv", "rep"    : Whenever the zombie team gets a kill this is the value to add.
+bb2_elimination_teammate_distance        : 1000     : , "sv", "rep"    : When a teammate is this much away from me then I will glow him/her.
+bb2_elimination_teamperk_duration        : 30       : , "sv", "rep"    : How many seconds does a team perk last?
+bb2_elimination_teamperk_kills_required  : 50       : , "sv", "rep"    : How many kills does a team need to get in order to activate a team perk?
+bb2_enable_afk_kicker                    : 1        : , "sv", "rep"    : Kick players who're afk after a certain amount of time.
+bb2_enable_ban_list                      : 1        : , "sv", "rep"    : Enable or Disable the official ban list?
+bb2_enable_high_ping_kicker              : 1        : , "sv", "rep"    : When a player connects, check his average ping after 30 sec, if the average ping is higher than bb2_high_ping_limit he will be kicked.
+bb2_enable_scaling                       : 1        : , "sv", "rep"    : Should NPCs scale to the amount of players in the game? Disabling this will enable the 'Noob Mode'. Scaling will increase the npcs health and damage for every player in the game.
+bb2_get_brush_bounds                     : cmd      :                  : Get brush bounds of any brush in front of you.
+bb2_give_armor_type                      : cmd      :                  : Give Temp Armor Type
+bb2_high_ping_limit                      : 200      : , "sv", "rep"    : If the players average ping exceeds this value then kick the player.
+bb2_m1a1_damage                          : 3000     : , "sv", "rep"    : Set the damage of the M1A1 cannon.
+bb2_m1a1_damage_machinegun               : 30       : , "sv", "rep"    : Set the damage of the M1A1 machinegun.
+bb2_m1a1_friendly                        : 1        : , "sv", "rep"    : Should the M1A1 not kill friendlies, for example other Military NPCs.
+bb2_m1a1_machinegun_firerate             : 0        : , "sv", "rep"    : Set the fire rate of the machinegun
+bb2_m1a1_radius                          : 500      : , "sv", "rep"    : Set the radius of the explosion.
+bb2_m1a1_range_max                       : 2000     : , "sv", "rep"    : Set the max range of the M1A1.
+bb2_m1a1_range_min                       : 400      : , "sv", "rep"    : Set the min range of the M1A1.
+bb2_max_fall_height                      : 4        : , "sv", "rep"    : You'll take damage from falling X amount of meters.
+bb2_npc_scaling                          : 1        : , "sv", "rep"    : Set the start scale value to add per player in the game. If the value is 5 then every player in the game * 5 is the scale of the npc which means you scale the npc's health and damage by that amount.
+bb2_perform_prestige                     : cmd      :                  : If your level is high enough you can reset all your skills to receive special rewards.
+bb2_roundstart_freezetime                : 8        : , "sv", "rep"    : How many sec until the round starts?
+bb2_set_fps                              : cmd      :                  : Set fps of all animations. (weapons)
+bb2_spawn_frequency                      : 1        : , "sv", "rep"    : When a wave has been spawned this is the time between each zombie to spawn. Shouldn't be too low due to lag.
+bb2_spawn_protection                     : 10       : , "sv", "rep"    : Player Spawn Protection Time(sec) On Spawn!
+bb2_story_respawn_time                   : 10       : , "sv", "rep"    : Set the default respawn time in seconds.
+bb2_tutorial_mode                        : 0        : , "sv", "cheat"  : Force-enable tutorial mode for any map, useful for testing.
+bb2_vote_disable_ban                     : 1        : , "sv", "rep"    : Disable vote ban.
+bb2_vote_disable_kick                    : 0        : , "sv", "rep"    : Disable vote kick.
+bb2_vote_disable_map                     : 0        : , "sv", "rep"    : Disable vote map.
+bb2_vote_frequency_time                  : 60       : , "sv", "rep"    : The time in seconds until players can vote again.
+bb2_vote_required_level                  : 15       : , "sv", "rep"    : In Objective, Story & Arena this is the minimum level a player must be in order to create votes.
+bb2_vote_required_percentage             : 70       : , "sv", "rep"    : The percent of yes votes required to pass a vote.
+bb2_vote_time                            : 30       : , "sv", "rep"    : The time in seconds until the vote ends.
+bb2_vote_time_endgame                    : 10       : , "sv", "rep"    : When the game ends the players will have this much time to vote for the next map.
+bb2_weapon_randomizer_refresh_time       : 120      : , "sv", "rep"    : For how long can random weapons spawned by the item_weapon_randomizer stay before being refreshed? (seconds)
+bb2_zombie_lifespan_max                  : 1        : , "sv", "rep"    : The max amount of minutes a regular zombie will last before automatically dying.
+bb2_zombie_lifespan_min                  : 0        : , "sv", "rep"    : The min amount of minutes a regular zombie will last before automatically dying.
+bb2_zombie_max                           : 45       : , "sv", "rep"    : Maximum amount of zombies allowed in the game.
+bb2_zombie_spawner_distance              : 5200     : , "sv", "rep"    : If there is no players within this distance from the spawner it will not spawn any zombies.
 bench_end                                : cmd      :                  : Ends gathering of info.
 bench_start                              : cmd      :                  : Starts gathering of info. Arguments: filename to write results into
 bench_upload                             : cmd      :                  : Uploads most recent benchmark stats to the Valve servers.
@@ -150,17 +212,23 @@ bind_mac                                 : cmd      :                  : Bind th
 BindToggle                               : cmd      :                  : Performs a bind <key> 'increment var <cvar> 0 1 1'
 birds_debug                              : 0        : , "sv"           :
 bloodspray                               : cmd      :                  : blood
-bot                                      : cmd      :                  : Add a bot.
+bot_add_human                            : cmd      :                  : Add a human bot.
+bot_add_zombie                           : cmd      :                  : Add a zombie bot.
+bot_attack                               : 1        : , "sv"           : Shoot!
+bot_changeclass                          : 0        : , "sv"           : Force all bots to change to the specified class.
+bot_crouch                               : 0        : , "sv"           : Bot crouches
+bot_defend                               : 0        : , "sv"           : Set to a team number, and that team will all keep their combat shields raised.
+bot_flipout                              : 0        : , "sv"           : When on, all bots fire their guns.
+bot_forceattack2                         : 0        : , "sv"           : When firing, use attack2.
+bot_forceattackon                        : 0        : , "sv"           : When firing, don't tap fire, hold it down.
+bot_forcefireweapon                      : 0        : , "sv"           : Force bots with the specified weapon to fire.
+bot_mimic                                : 0        : , "sv"           : Bot uses usercmd of player by index.
+bot_mimic_yaw_offset                     : 0        : , "sv"           : Offsets the bot yaw.
+bot_sendcmd                              : 0        : , "sv"           : Forces bots to send the specified command.
+bot_zombie                               : 0        : , "sv"           : Brraaaaaiiiins.
 breakable_disable_gib_limit              : 0        : , "sv"           :
 breakable_multiplayer                    : 1        : , "sv"           :
-buddha                                   : cmd      :                  : Toggle.  Player takes damage but won't die. (Shows red cross when health is zero)
 budget_toggle_group                      : cmd      :                  : Turn a budget group on/off
-bug_swap                                 : cmd      :                  : Automatically swaps the current weapon for the bug bait and back again.
-bugbait_distract_time                    : 5        : , "sv"           :
-bugbait_grenade_radius                   : 150      : , "sv"           :
-bugbait_hear_radius                      : 2500     : , "sv"           :
-bugbait_radius                           : 512      : , "sv"           :
-bulletspeed                              : 6000     : , "sv"           :
 cache_print                              : cmd      :                  : cache_print [section] Print out contents of cache memory.
 cache_print_lru                          : cmd      :                  : cache_print_lru [section] Print out contents of cache memory.
 cache_print_summary                      : cmd      :                  : cache_print_summary [section] Print out a summary contents of cache memory.
@@ -172,21 +240,23 @@ ch_createjeep                            : cmd      :                  : Spawn j
 changelevel                              : cmd      :                  : Change server to the specified map
 changelevel2                             : cmd      :                  : Transition to the specified map in single player
 changelevel_next                         : cmd      :                  : Immediately changes to the next map in the map rotation for the server.
-cl_backspeed                             : 400      : , "sv", "cheat", "rep" :
+cl_backspeed                             : 450      : , "sv", "cheat", "rep" :
 cl_clock_correction                      : 1        : , "cheat"        : Enable/disable clock correction on the client.
-cl_clock_correction_adjustment_max_amount : 200      : , "cheat"        : Sets the maximum number of milliseconds per second it is allowed to correct the client clock. It will only correct this amount
-cl_clock_correction_adjustment_max_offset : 90       : , "cheat"        : As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds), it moves towards apply
+cl_clock_correction_adjustment_max_amount : 200      : , "cheat"        : Sets the maximum number of milliseconds per second it is allowed to correct the client clock. It will only correct this amount if the difference between the client and server clock is equal to or larger than cl_clock_correction_adjustment_max_offset.
+cl_clock_correction_adjustment_max_offset : 90       : , "cheat"        : As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds), it moves towards applying cl_clock_correction_adjustment_max_amount of adjustment. That way, the response is small when the offset is small.
 cl_clock_correction_adjustment_min_offset : 10       : , "cheat"        : If the clock offset is less than this amount (in milliseconds), then no clock correction is applied.
 cl_clock_correction_force_server_tick    : 999      : , "cheat"        : Force clock correction to match the server tick + this offset (-999 disables it).
 cl_clock_showdebuginfo                   : 0        : , "cheat"        : Show debugging info about the clock drift.
 cl_clockdrift_max_ms                     : 150      : , "cheat"        : Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.
 cl_clockdrift_max_ms_threadmode          : 0        : , "cheat"        : Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.
-cl_forwardspeed                          : 400      : , "sv", "cheat", "rep" :
+cl_forwardspeed                          : 450      : , "sv", "cheat", "rep" :
 cl_resend                                : 6        :                  : Delay in seconds before the client will resend the 'connect' attempt
 cl_show_connectionless_packet_warnings   : 0        :                  : Show console messages about ignored connectionless packets on the client.
-cl_sidespeed                             : 400      : , "sv", "cheat", "rep" :
+cl_sidespeed                             : 450      : , "sv", "cheat", "rep" :
 cl_spewscriptintro                       : 0        : , "sv"           :
 cl_upspeed                               : 320      : , "sv", "cheat", "rep" :
+classic_rejoin_zombie                    : cmd      :                  : Re-join the game as a zombie!
+classic_respawn_ashuman                  : cmd      :                  : Respawn as a human if possible!
 clear_debug_overlays                     : cmd      :                  : clears debug overlays
 clientport                               : 27005    :                  : Host game client port
 closecaption                             : 0        : , "a", "user"    : Enable close captioning.
@@ -195,8 +265,6 @@ collision_shake_amp                      : 0        : , "sv"           :
 collision_shake_freq                     : 0        : , "sv"           :
 collision_shake_time                     : 0        : , "sv"           :
 collision_test                           : cmd      :                  : Tests collision system
-combine_guard_spawn_health               : 1        : , "sv"           :
-combine_spawn_health                     : 1        : , "sv"           :
 commentary                               : 0        : , "a", "sv"      : Desired commentary mode state.
 commentary_available                     : 0        : , "sv"           : Automatically set by the game when a commentary file is available for the current map.
 commentary_cvarsnotchanging              : cmd      :                  :
@@ -208,14 +276,15 @@ create_flashlight                        : cmd      :                  :
 creditsdone                              : cmd      :                  :
 curve_bias                               : 0        : , "sv"           :
 cvarlist                                 : cmd      :                  : Show the list of convars/concommands.
-datacachesize                            : 248      :                  : Size in MB.
+datacachesize                            : 256      :                  : Size in MB.
 dbghist_addline                          : cmd      :                  : Add a line to the debug history. Format: <category id> <line>
-dbghist_dump                             : cmd      :                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Sc
+dbghist_dump                             : cmd      :                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Scene Print      3: Alyx Blind      4: Log of damage done to player
 deathmatch                               : 1        : , "nf"           : Running a deathmatch server.
 debug_materialmodifycontrol              : 0        : , "sv"           :
 debug_physimpact                         : 0        : , "sv"           :
 debug_touchlinks                         : 0        : , "sv"           : Spew touch link activity
 decalfrequency                           : 10       : , "sv", "nf"     :
+dev_reset_stats                          : cmd      :                  : Reset Stats
 developer                                : 0        :                  : Set developer message level
 devshots_nextmap                         : cmd      :                  : Used by the devshots system to go to the next map in the devshots maplist.
 differences                              : cmd      :                  : Show all convars which are not at their default values.
@@ -223,10 +292,9 @@ disconnect                               : cmd      :                  : Disconn
 disp_dynamic                             : 0        :                  :
 dispcoll_drawplane                       : 0        : , "sv"           :
 displaysoundlist                         : 0        : , "sv"           :
-dog_debug                                : 0        : , "sv"           :
-dog_max_wait_time                        : 7        : , "sv"           :
 drawcross                                : cmd      :                  : Draws a cross at the given location  Arguments: x y z
 drawline                                 : cmd      :                  : Draws line between two 3D Points.  Green if no collision  Red is collides with something  Arguments: x1 y1 z1 x2 y2 z2
+drop_ammo                                : cmd      :                  : Drop ammo, give ammo to your teammates.
 dt_ShowPartialChangeEnts                 : 0        :                  : (SP only) - show entities that were copied using small optimized lists (FL_EDICT_PARTIAL_CHANGE).
 dt_UsePartialChangeEnts                  : 1        :                  : (SP only) - enable FL_EDICT_PARTIAL_CHANGE optimization.
 dti_flush                                : cmd      :                  : Write out the datatable instrumentation files (you must run with -dti for this to work).
@@ -241,36 +309,35 @@ dumpeventqueue                           : cmd      :                  : Dump th
 dumpgamestringtable                      : cmd      :                  : Dump the contents of the game string table to the console.
 dumplongticks                            : cmd      :                  : Enables generating minidumps on long ticks.
 dumpstringtables                         : cmd      :                  : Print string tables to console.
-dyn_throw                                : cmd      :                  :
 echo                                     : cmd      :                  : Echo text to console.
 engine_no_focus_sleep                    : 50       : , "a"            :
-ent_absbox                               : cmd      :                  : Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.  Ar
-ent_attachments                          : cmd      :                  : Displays the attachment points on an entity.  Arguments:    {entity_name} / {class_name} / no argument picks what player is loo
+ent_absbox                               : cmd      :                  : Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+ent_attachments                          : cmd      :                  : Displays the attachment points on an entity.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_autoaim                              : cmd      :                  : Displays the entity's autoaim radius.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
-ent_bbox                                 : cmd      :                  : Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlay
+ent_bbox                                 : cmd      :                  : Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlays.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_cancelpendingentfires                : cmd      :                  : Cancels all ent_fire created outputs that are currently waiting for their delay to expire.
-ent_create                               : cmd      :                  : Creates an entity of the given type where the player is looking.  Additional parameters can be passed in in the form: ent_creat
+ent_create                               : cmd      :                  : Creates an entity of the given type where the player is looking.  Additional parameters can be passed in in the form: ent_create <entity name> <param 1 name> <param 1> <param 2 name> <param 2>...<param N name> <param N>
 ent_debugkeys                            : 0        : , "sv"           :
 ent_dump                                 : cmd      :                  : Usage:    ent_dump <entity name>
 ent_fire                                 : cmd      :                  : Usage:    ent_fire <target> [action] [value] [delay]
 ent_info                                 : cmd      :                  : Usage:    ent_info <class name>
-ent_keyvalue                             : cmd      :                  : Applies the comma delimited key=value pairs to the entity with the given Hammer ID.  Format: ent_keyvalue <entity id> <key1> <v
-ent_messages                             : cmd      :                  : Toggles input/output message display for the selected entity(ies).  The name of the entity will be displayed as well as any mes
+ent_keyvalue                             : cmd      :                  : Applies the comma delimited key=value pairs to the entity with the given Hammer ID.  Format: ent_keyvalue <entity id> <key1> <value1> <key2> <value2> ... <keyN> <valueN>
+ent_messages                             : cmd      :                  : Toggles input/output message display for the selected entity(ies).  The name of the entity will be displayed as well as any messages that it sends or receives.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_messages_draw                        : 0        : , "sv", "cheat"  : Visualizes all entity input/output activity.
 ent_name                                 : cmd      :                  :
-ent_orient                               : cmd      :                  : Orient the specified entity to match the player's angles. By default, only orients target entity's YAW. Use the 'allangles' opt
-ent_pause                                : cmd      :                  : Toggles pausing of input/output message processing for entities.  When turned on processing of all message will stop.  Any mess
-ent_pivot                                : cmd      :                  : Displays the pivot for the given entity(ies).  (y=up=green, z=forward=blue, x=left=red).   Arguments:    {entity_name} / {class
-ent_rbox                                 : cmd      :                  : Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.  Ar
+ent_orient                               : cmd      :                  : Orient the specified entity to match the player's angles. By default, only orients target entity's YAW. Use the 'allangles' option to orient on all axis.  Format: ent_orient <entity name> <optional: allangles>
+ent_pause                                : cmd      :                  : Toggles pausing of input/output message processing for entities.  When turned on processing of all message will stop.  Any messages displayed with 'ent_messages' will stop fading and be displayed indefinitely. To step through the messages one by one use 'ent_step'.
+ent_pivot                                : cmd      :                  : Displays the pivot for the given entity(ies).  (y=up=green, z=forward=blue, x=left=red).   Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+ent_rbox                                 : cmd      :                  : Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_remove                               : cmd      :                  : Removes the given entity(s)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_remove_all                           : cmd      :                  : Removes all entities of the specified type  Arguments:    {entity_name} / {class_name}
 ent_rotate                               : cmd      :                  : Rotates an entity by a specified # of degrees
-ent_setname                              : cmd      :                  : Sets the targetname of the given entity(s)  Arguments:    {new entity name} {entity_name} / {class_name} / no argument picks wh
-ent_show_response_criteria               : cmd      :                  : Print, to the console, an entity's current criteria set used to select responses.  Arguments:    {entity_name} / {class_name} /
+ent_setname                              : cmd      :                  : Sets the targetname of the given entity(s)  Arguments:    {new entity name} {entity_name} / {class_name} / no argument picks what player is looking at
+ent_show_response_criteria               : cmd      :                  : Print, to the console, an entity's current criteria set used to select responses.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_step                                 : cmd      :                  : When 'ent_pause' is set this will step through one waiting input / output message at a time.
 ent_teleport                             : cmd      :                  : Teleport the specified entity to where the player is looking.  Format: ent_teleport <entity name>
-ent_text                                 : cmd      :                  : Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text)  Arguments:    {entity_
-ent_viewoffset                           : cmd      :                  : Displays the eye position for the given entity(ies) in red.  Arguments:    {entity_name} / {class_name} / no argument picks wha
+ent_text                                 : cmd      :                  : Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+ent_viewoffset                           : cmd      :                  : Displays the eye position for the given entity(ies) in red.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 exec                                     : cmd      :                  : Execute script file.
 exit                                     : cmd      :                  : Exit the engine.
 explode                                  : cmd      :                  : Kills the player with explosive damage
@@ -285,7 +352,6 @@ filesystem_unbuffered_io                 : 1        :                  :
 find                                     : cmd      :                  : Find concommands with the specified string in their name/help text.
 find_ent                                 : cmd      :                  : Find and list all entities with classnames or targetnames that contain the specified substring. Format: find_ent <substring>
 find_ent_index                           : cmd      :                  : Display data for entity matching specified index. Format: find_ent_index <index>
-find_player_ip                           : cmd      :                  :
 findflags                                : cmd      :                  : Find concommands by flags.
 fire_absorbrate                          : 3        : , "sv"           :
 fire_dmgbase                             : 1        : , "sv"           :
@@ -308,71 +374,6 @@ flex_minplayertime                       : 5        : , "sv"           :
 flex_talk                                : 0        : , "sv"           :
 flush                                    : cmd      :                  : Flush unlocked cache memory.
 flush_locked                             : cmd      :                  : Flush unlocked and locked cache memory.
-fof_bot_debug                            : 0        : , "sv"           :
-fof_bot_forceopenchest                   : 0        : , "sv"           :
-fof_bot_forceweapon                      : 0        : , "sv"           : Only accepts weapon indexes, not names
-fof_bot_mimic                            : 0        : , "sv"           : Bot uses usercmd of player by index.
-fof_bot_mimic_yaw_offset                 : 0        : , "sv"           : Offsets the bot yaw.
-fof_bot_scriptname                       : 0        : , "sv"           : sets the name of the bot script file to load, must end in .txt
-fof_bot_skill                            : 2        : , "sv"           :
-fof_bot_stop                             : 0        : , "sv"           :
-fof_npc_horsekickdamage                  : 100      : , "sv"           : Horse kick damage
-fof_npc_horsekickforce                   : 500      : , "sv"           : Horse kick force applied to player
-fof_standoff_scale                       : 1        : , "sv"           :
-fof_standoff_vec_x                       : 0        : , "sv"           :
-fof_standoff_vec_y                       : 0        : , "sv"           :
-fof_standoff_vec_z                       : 0        : , "sv"           :
-fof_sv_bot_dynamicjoin                   : 0        : , "sv"           :
-fof_sv_bot_slotpct                       : 0        : , "sv"           :
-fof_sv_capture_notoriety                 : 25       : , "sv"           :
-fof_sv_cart_highlight                    : 1        : , "sv", "rep"    : Outline effect active for cart model
-fof_sv_currentmode                       : 1        : , "sv", "rep"    :
-fof_sv_disable_killstreak                : 0        : , "sv", "rep"    :
-fof_sv_dm_timer_ends_map                 : 1        : , "sv"           :
-fof_sv_dynamite_shot                     : 1        : , "sv"           :
-fof_sv_elm_extratime                     : 25       : , "sv"           : Sets extra time in Elimination games after all weapon crates have been opened
-fof_sv_force_spect                       : 0        : , "sv"           :
-fof_sv_item_respawn_time                 : 60       : , "sv", "nf"     :
-fof_sv_mapcycle_dm                       : 0        : , "sv"           :
-fof_sv_mapcycle_dm_12                    : 0        : , "sv"           :
-fof_sv_mapcycle_dm_32                    : 0        : , "sv"           :
-fof_sv_mapcycle_tp                       : 0        : , "sv"           :
-fof_sv_mapdistance_mult                  : 1        : , "sv"           :
-fof_sv_maxidle_secs                      : 45       : , "sv"           :
-fof_sv_maxrounds                         : 0        : , "sv", "rep"    :
-fof_sv_maxteams                          : 4        : , "sv", "rep"    :
-fof_sv_obj_warmuptime                    : 25       : , "sv"           : Warm up lenght
-fof_sv_optional_output                   : 0        : , "sv"           : Remove certain optional map entities
-fof_sv_pickup_maxweight                  : 120      : , "sv"           : Maximum wieght player can carry
-fof_sv_pricemult_bow                     : 1        : , "sv", "nf", "rep" :
-fof_sv_pricemult_dynamite                : 1        : , "sv", "nf", "rep" :
-fof_sv_pricemult_sharps                  : 1        : , "sv", "nf", "rep" :
-fof_sv_recoilamount                      : 0        : , "sv", "nf", "rep" : Recoil amount for handguns
-fof_sv_roundsplayed                      : 0        : , "sv", "rep"    :
-fof_sv_scramble_ratio                    : 0        : , "sv"           : Teams get scrambled when total team kills exceed this ratio
-fof_sv_scrambleteams                     : 1        : , "sv"           :
-fof_sv_smoke_alpha_max                   : 0        : , "sv", "rep"    : How translucid smoke is initially (forced on clients)
-fof_sv_smoke_alpha_min                   : 0        : , "sv", "rep"    : How translucid smoke is when removed (forced on clients)
-fof_sv_smoke_amount                      : 0        : , "sv", "rep"    : How many smoke pufs are emitted by weapons (forced on clients)
-fof_sv_smoke_life                        : 0        : , "sv", "rep"    : How many seconds take the smoke to dissipate (forced on clients)
-fof_sv_smoke_size                        : 0        : , "sv", "rep"    : Smoke's initial size (forced on clients)
-fof_sv_spawn_invul_time                  : 3        : , "sv"           :
-fof_sv_speedpenalty                      : 0        : , "sv", "nf", "rep" :
-fof_sv_team_collisions                   : 0        : , "sv", "nf", "rep" : Enables own team collisions
-fof_sv_team_remap_1                      : 2        : , "sv", "rep"    : reassign a team to team slot 1: 2-vigilantes, 3-desperados, 4-bandidos, 5-rangers
-fof_sv_team_remap_2                      : 3        : , "sv", "rep"    : reassign a team to team slot 2: 2-vigilantes, 3-desperados, 4-bandidos, 5-rangers
-fof_sv_team_remap_3                      : 4        : , "sv", "rep"    : reassign a team to team slot 3: 2-vigilantes, 3-desperados, 4-bandidos, 5-rangers
-fof_sv_team_remap_4                      : 5        : , "sv", "rep"    : reassign a team to team slot 4: 2-vigilantes, 3-desperados, 4-bandidos, 5-rangers
-fof_sv_teambalance_allowed               : 1        : , "sv", "rep"    :
-fof_sv_tp_buytime                        : 5        : , "sv"           :
-fof_sv_tp_plus_elm                       : 0        : , "sv"           :
-fof_sv_tp_switchsides                    : 0        : , "sv"           : Switch sides when a team reaches the score set by fof_sv_winlimit
-fof_sv_viewspring                        : 25       : , "sv", "nf", "rep" : View recover speed after viewpunch
-fof_sv_wcrate_regentime                  : 100      : , "sv"           :
-fof_sv_weapon_drop                       : 0        : , "sv", "nf", "rep" : Teamplay cvar, set 0 for normal drops (as in DM), 1 all weapons drop, 2 all weapons drop with weapon aging, 3 no weapons drop
-fof_sv_weaponmenu                        : 1        : , "sv", "rep"    :
-fof_sv_winlimit                          : 0        : , "sv", "rep"    :
-fof_warmup                               : 1        : , "sv", "rep"    :
 fog_enable_water_fog                     : 1        : , "cheat"        :
 fov                                      : cmd      :                  : Change players FOV
 fps_max                                  : 300      :                  : Frame rate limiter, cannot be set while connected to a server.
@@ -382,71 +383,35 @@ fs_printopenfiles                        : cmd      :                  : Show al
 fs_report_sync_opens                     : 0        :                  : 0:Off, 1:Always, 2:Not during load
 fs_warning_level                         : cmd      :                  : Set the filesystem warning level.
 fs_warning_mode                          : 0        :                  : 0:Off, 1:Warn main thread, 2:Warn other threads
-fu                                       : cmd      :                  :
 func_break_max_pieces                    : 15       : , "a", "sv", "rep" :
 func_break_reduction_factor              : 0        : , "sv"           :
 func_breakdmg_bullet                     : 0        : , "sv"           :
 func_breakdmg_club                       : 1        : , "sv"           :
 func_breakdmg_explosive                  : 1        : , "sv"           :
-g_ai_citizen_show_enemy                  : 0        : , "sv"           :
-g_antlion_cascade_push                   : 1        : , "a", "sv"      :
 g_debug_angularsensor                    : 0        : , "sv", "cheat"  :
-g_debug_antlion                          : 0        : , "sv"           :
-g_debug_antlion_worker                   : 0        : , "sv"           :
-g_debug_antlionguard                     : 0        : , "sv"           :
-g_debug_antlionmaker                     : 0        : , "sv", "cheat"  :
 g_debug_basehelicopter                   : 0        : , "sv", "cheat"  :
-g_debug_basescanner                      : 0        : , "sv", "cheat"  :
-g_debug_combine_camera                   : 0        : , "sv"           :
 g_debug_constraint_sounds                : 0        : , "sv", "cheat"  : Enable debug printing about constraint sounds.
-g_debug_cscanner                         : 0        : , "sv"           :
 g_debug_doors                            : 0        : , "sv"           :
-g_debug_dropship                         : 0        : , "sv"           :
-g_debug_dynamicresupplies                : 0        : , "sv"           : Debug item_dynamic_resupply spawning. Set to 1 to see text printouts of the spawning. Set to 2 to see lines drawn to other item
-g_debug_gunship                          : 0        : , "sv", "cheat"  :
-g_debug_headcrab                         : 0        : , "sv", "cheat"  :
 g_debug_npc_vehicle_roles                : 0        : , "sv"           :
-g_debug_physcannon                       : 0        : , "sv", "cheat", "rep" :
 g_debug_ragdoll_removal                  : 0        : , "sv", "cheat", "rep" :
 g_debug_trackpather                      : 0        : , "sv", "cheat"  :
-g_debug_transitions                      : 0        : , "sv"           : Set to 1 and restart the map to be warned if the map has no trigger_transition volumes. Set to 2 to see a dump of all entities
-g_debug_turret                           : 0        : , "sv"           :
-g_debug_turret_ceiling                   : 0        : , "sv"           :
 g_debug_vehiclebase                      : 0        : , "sv", "cheat"  :
 g_debug_vehicledriver                    : 0        : , "sv", "cheat"  :
 g_debug_vehicleexit                      : 0        : , "sv", "cheat"  :
 g_debug_vehiclesound                     : 0        : , "sv", "cheat"  :
-g_debug_vortigaunt_aim                   : 0        : , "sv"           :
-g_helicopter_bomb_danger_radius          : 120      : , "sv"           :
-g_helicopter_bullrush_bomb_enemy_distance : 0        : , "sv"           :
-g_helicopter_bullrush_bomb_speed         : 850      : , "sv"           : The maximum distance the player can be from the chopper before it stops firing
-g_helicopter_bullrush_bomb_time          : 10       : , "sv"           :
-g_helicopter_bullrush_distance           : 5000     : , "sv"           :
-g_helicopter_bullrush_mega_bomb_health   : 0        : , "sv"           : Fraction of the health of the chopper before it mega-bombs
-g_helicopter_bullrush_shoot_height       : 650      : , "sv"           : The maximum distance the player can be from the chopper before it stops firing
-g_helicopter_chargetime                  : 2        : , "sv"           : How much time we have to wait (on average) between the time we start hearing the charging sound + the chopper fires
-g_helicopter_idletime                    : 3        : , "sv"           : How much time we have to wait (on average) after we fire before we can charge up again
-g_helicopter_maxfiringdist               : 2500     : , "sv"           : The maximum distance the player can be from the chopper before it stops firing
 g_Language                               : 0        : , "sv", "rep"    :
 g_ragdoll_important_maxcount             : 2        : , "sv", "rep"    :
 g_ragdoll_maxcount                       : 8        : , "sv", "rep"    :
-g_test_new_antlion_jump                  : 1        : , "a", "sv"      :
 give                                     : cmd      :                  : Give item to player.  Arguments: <item_name>
 givecurrentammo                          : cmd      :                  : Give a supply of ammo for current weapon..
 global_set                               : cmd      :                  : global_set <globalname> <state>: Sets the state of the given env_global (0 = OFF, 1 = ON, 2 = DEAD).
-god                                      : cmd      :                  : Toggle. Player becomes invulnerable.
 groundlist                               : cmd      :                  : Display ground entity list <index>
 hammer_update_entity                     : cmd      :                  : Updates the entity's position/angles when in edit mode
-hammer_update_safe_entities              : cmd      :                  : Updates entities in the map that can safely be updated (don't have parents or are affected by constraints). Also excludes entit
-hap_airboat_gun_mag                      : 3        : , "sv"           :
+hammer_update_safe_entities              : cmd      :                  : Updates entities in the map that can safely be updated (don't have parents or are affected by constraints). Also excludes entities mentioned in any hammer_updateignorelist objects in this map.
 hap_turret_mag                           : 5        : , "sv"           :
 heartbeat                                : cmd      :                  : Force heartbeat of master servers
 help                                     : cmd      :                  : Find help about a convar/concommand.
-hl2_darkness_flashlight_factor           : 1        : , "sv"           :
-hl2_episodic                             : 0        : , "sv", "rep"    :
-hl2_normspeed                            : 190      : , "sv"           :
-hl2_sprintspeed                          : 320      : , "sv"           :
-hl2_walkspeed                            : 150      : , "sv"           :
+holster_weapon                           : cmd      :                  : Holster your weapon.
 host_flush_threshold                     : 20       :                  : Memory threshold below which the host should flush caches between server instances
 host_framerate                           : 0        :                  : Set to lock per-frame time elapse.
 host_limitlocal                          : 0        :                  : Apply cl_cmdrate and cl_updaterate to loopback connection
@@ -460,10 +425,10 @@ host_speeds                              : 0        :                  : Show ge
 host_thread_mode                         : 0        :                  : Run the host in threaded mode, (0 == off, 1 == if multicore, 2 == force)
 host_timer_report                        : cmd      :                  : Spew CPU timer jitter for the last 128 frames in microseconds (dedicated only)
 host_timer_spin_ms                       : 0        :                  : Use CPU busy-loop for improved timer precision (dedicated only)
-hostip                                   : -1407247616.000 :                  : Host game server ip
+host_timescale                           : 1        : , "rep"          : Prescale the clock by this amount.
+hostip                                   : -1407403904.000 :                  : Host game server ip
 hostname                                 : 0        :                  : Hostname for server.
 hostport                                 : 27015    :                  : Host game server port
-hud_airboathint_numentries               : 10       : , "sv"           :
 hurtme                                   : cmd      :                  : Hurts the player.  Arguments: <health to lose>
 incrementvar                             : cmd      :                  : Increment specified convar value.
 ip                                       : 172      :                  : Overrides IP for multihomed hosts
@@ -496,7 +461,6 @@ map                                      : cmd      :                  : Start p
 map_background                           : cmd      :                  : Runs a map as the background to the main menu.
 map_commentary                           : cmd      :                  : Start playing, with commentary, on a specified map.
 map_noareas                              : 0        :                  : Disable area to area connection testing.
-map_start_time                           : -1       : , "sv", "numeric", "rep" :
 mapcyclefile                             : 0        : , "sv"           : Name of the .txt file used to cycle the maps on multiplayer servers
 maps                                     : cmd      :                  : Displays list of maps.
 mat_aaquality                            : 0        :                  :
@@ -518,7 +482,7 @@ mat_dxlevel                              : 92       :                  :
 mat_enable_vrmode                        : cmd      :                  : Switches the material system to VR mode (after restart)
 mat_envmapsize                           : 128      :                  :
 mat_envmaptgasize                        : 32       :                  :
-mat_excludetextures                      : 0        :                  :
+mat_excludetextures                      : 0        : , "cheat"        :
 mat_fastnobump                           : 0        : , "cheat"        :
 mat_fastspecular                         : 1        :                  : Enable/Disable specularity for visual testing.  Will not reload materials and will not affect perf.
 mat_fillrate                             : 0        : , "cheat"        :
@@ -584,6 +548,7 @@ mat_softwareskin                         : 0        : , "cheat"        :
 mat_specular                             : 1        :                  : Enable/Disable specularity for perf testing.  Will cause a material reload upon change.
 mat_spew_on_texture_size                 : 0        :                  : Print warnings about vtf content that isn't of the expected size
 mat_supportflashlight                    : -1       :                  : 0 - do not support flashlight (don't load flashlight shader combos), 1 - flashlight is supported
+mat_texture_tracking                     : 0        :                  :
 mat_tonemap_algorithm                    : 1        : , "cheat"        : 0 = Original Algorithm 1 = New Algorithm
 mat_tonemapping_occlusion_use_stencil    : 0        :                  :
 mat_trilinear                            : 0        :                  :
@@ -610,11 +575,6 @@ memory_diff                              : cmd      :                  : show me
 memory_list                              : cmd      :                  : dump memory list (linux only)
 memory_mark                              : cmd      :                  : snapshot current allocation status
 memory_status                            : cmd      :                  : show memory stats (linux only)
-metropolice_charge                       : 1        : , "sv"           :
-metropolice_chase_use_follow             : 0        : , "sv"           :
-metropolice_move_and_melee               : 1        : , "sv"           :
-mission_list                             : cmd      :                  : List all available tactical missions
-mission_show                             : cmd      :                  : Show the given mission
 mod_forcedata                            : 1        :                  : Forces all model file data into cache on model load.
 mod_forcetouchdata                       : 1        :                  : Forces all model file data into cache on model load.
 mod_load_anims_async                     : 0        :                  :
@@ -623,81 +583,43 @@ mod_load_mesh_async                      : 0        :                  :
 mod_load_showstall                       : 0        :                  : 1 - show hitches , 2 - show stalls
 mod_load_vcollide_async                  : 0        :                  :
 mod_lock_mdls_on_load                    : 0        :                  :
-mod_test_mesh_not_available              : 0        :                  :
-mod_test_not_available                   : 0        :                  :
-mod_test_verts_not_available             : 0        :                  :
+mod_test_mesh_not_available              : 0        : , "cheat"        :
+mod_test_not_available                   : 0        : , "cheat"        :
+mod_test_verts_not_available             : 0        : , "cheat"        :
 mod_touchalldata                         : 1        :                  : Touch model data during level startup
 mod_trace_load                           : 0        :                  :
-monk_headshot_freq                       : 2        : , "sv"           :
 mortar_visualize                         : 0        : , "sv"           :
 motdfile                                 : 0        : , "sv"           : The MOTD file to load.
 motdfile_text                            : 0        : , "sv"           : The text-only MOTD file to use for clients that have disabled HTML MOTDs.
-mp_allowNPCs                             : 1        : , "sv", "nf"     :
 mp_allowspectators                       : 1        : , "sv", "rep"    : toggles whether the server allows spectator mode or not
 mp_autocrosshair                         : 1        : , "sv", "nf"     :
-mp_autoteambalance                       : 1        : , "sv", "nf"     :
-mp_bonusroundtime                        : 15       : , "sv", "rep"    : Time after round win until round restarts
-mp_chattime                              : 15       : , "sv", "rep"    : amount of time players can chat after the game is over
-mp_clan_ready_signal                     : 0        : , "sv"           : Text that team leader from each team must speak for the match to begin
-mp_clan_readyrestart                     : 0        : , "sv"           : If non-zero, game will restart once someone from each team gives the ready signal
+mp_chattime                              : 10       : , "sv", "rep"    : Amount of time players can chat after the game or round is over
 mp_decals                                : 200      : , "a"            :
-mp_defaultteam                           : 0        : , "sv"           :
 mp_disable_autokick                      : cmd      :                  : Prevents a userid from being auto-kicked
-mp_disable_respawn_times                 : 0        : , "sv", "nf", "rep" :
-mp_enableroundwaittime                   : 1        : , "sv", "rep"    : Enable timers to wait between rounds.
 mp_fadetoblack                           : 0        : , "sv", "nf", "rep" : fade a player's screen to black when he dies
-mp_falldamage                            : 0        : , "sv", "nf"     :
-mp_flashlight                            : 0        : , "sv", "nf"     :
+mp_falldamage                            : 1        : , "sv", "nf"     :
 mp_footsteps                             : 1        : , "sv", "nf"     :
-mp_forceautoteam                         : 0        : , "sv", "nf", "rep" : Automatically assign players to teams when joining.
-mp_forcecamera                           : 0        : , "sv", "rep"    : Restricts spectator modes for dead players
-mp_forcerespawn                          : 1        : , "sv", "nf"     :
-mp_forcerespawnplayers                   : cmd      :                  : Force all players to respawn.
-mp_forcewin                              : cmd      :                  : Forces team to win
-mp_fraglimit                             : 0        : , "sv", "nf", "rep" : The number of kills at which the map ends
+mp_forcecamera                           : 1        : , "sv", "rep"    : Restricts spectator modes for dead players
 mp_friendlyfire                          : 0        : , "sv", "nf", "rep" : Allows team members to injure other members of their team
-mp_holiday_nogifts                       : 0        : , "sv", "nf"     : Set to 1 to prevent holiday gifts from spawning when players are killed.
+mp_limitteams                            : 1        : , "sv", "rep"    : If the player count difference between two teams are bigger than this value it will auto-balance the teams.
 mp_mapcycle_empty_timeout_seconds        : 0        : , "sv", "rep"    : If nonzero, server will cycle to the next map if it has been empty on the current map for N seconds
-mp_match_end_at_timelimit                : 0        : , "sv", "nf"     : Allow the match to end when mp_timelimit hits instead of waiting for the end of the current round.
-mp_maxrounds                             : 0        : , "sv", "nf", "rep" : max number of rounds to play before server changes maps
-mp_ready_signal                          : 0        : , "sv"           : Text that each player must speak for the match to begin
-mp_readyrestart                          : 0        : , "sv"           : If non-zero, game will restart once each player gives the ready signal
-mp_respawnwavetime                       : 10       : , "sv", "nf", "rep" : Time between respawn waves.
 mp_restartgame                           : 0        : , "sv"           : If non-zero, game will restart in the specified number of seconds
-mp_restartgame_immediate                 : 0        : , "sv"           : If non-zero, game will restart immediately
-mp_restartround                          : 0        : , "sv"           : If non-zero, the current round will restart in the specified number of seconds
-mp_scrambleteams                         : cmd      :                  : Scramble the teams and restart the game
-mp_scrambleteams_auto                    : 1        : , "sv", "nf"     : Server will automatically scramble the teams if criteria met.  Only works on dedicated servers.
-mp_scrambleteams_auto_windifference      : 2        : , "sv", "nf"     : Number of round wins a team must lead by in order to trigger an auto scramble.
 mp_show_voice_icons                      : 1        : , "sv", "rep"    : Show overhead player voice icons when players are speaking.
-mp_simulatemultiplecappers               : 1        : , "sv", "cheat"  :
-mp_stalemate_enable                      : 0        : , "sv", "nf"     : Enable/Disable stalemate mode.
-mp_stalemate_meleeonly                   : 0        : , "sv", "nf", "rep" : Restrict everyone to melee weapons only while in Sudden Death.
-mp_stalemate_timelimit                   : 240      : , "sv", "rep"    : Timelimit (in seconds) of the stalemate round.
-mp_switchteams                           : cmd      :                  : Switch teams and restart the game
-mp_teamlist                              : 0        : , "sv", "nf"     :
-mp_teamoverride                          : 1        : , "sv"           :
-mp_teamplay                              : 0        : , "sv", "nf"     :
-mp_teams_unbalance_limit                 : 1        : , "sv", "rep"    : Teams are unbalanced when one team has this many more players than the other team. (0 disables check)
-mp_time_between_capscoring               : 30       : , "sv"           : Delay between scoring of owned capture points.
-mp_timelimit                             : 0        : , "sv", "nf", "rep" : game time per map in minutes
-mp_tournament                            : 0        : , "sv", "nf", "rep" :
-mp_tournament_allow_non_admin_restart    : 1        : , "sv"           : Allow mp_tournament_restart command to be issued by players other than admin.
-mp_tournament_restart                    : cmd      :                  : Restart Tournament Mode on the current level.
-mp_waitingforplayers_cancel              : 0        : , "sv"           : Set to 1 to end the WaitingForPlayers period.
-mp_waitingforplayers_restart             : 0        : , "sv"           : Set to 1 to start or restart the WaitingForPlayers period.
-mp_waitingforplayers_time                : 0        : , "sv"           : WaitingForPlayers time length in seconds
-mp_weaponstay                            : 0        : , "sv", "nf"     :
-mp_winlimit                              : 0        : , "sv", "nf", "rep" : Max score one team can reach before server changes maps
+mp_timelimit_arena                       : 40       : , "sv", "rep"    : Set the timelimit in minutes for Arena maps.
+mp_timelimit_deathmatch                  : 20       : , "sv", "rep"    : Set the timelimit in minutes for Deathmatch maps.
+mp_timelimit_elimination                 : 30       : , "sv", "rep"    : Set the timelimit in minutes for Elimination maps.
+mp_timelimit_objective                   : 60       : , "sv", "rep"    : Set the timelimit in minutes for Objective & Story maps.
+mp_weaponstay                            : 1        : , "sv", "nf"     :
 multvar                                  : cmd      :                  : Multiply specified convar value.
 name                                     : 0        : , "a", "user", "print", "server_can_execute" : Current user name
+namelockid                               : cmd      :                  : Prevent name changes for this userID.
 nav_add_to_selected_set                  : cmd      :                  : Add current area to the selected set.
 nav_add_to_selected_set_by_id            : cmd      :                  : Add specified area id to the selected set.
 nav_analyze                              : cmd      :                  : Re-analyze the current Navigation Mesh and save it to disk.
 nav_area_bgcolor                         : 0        : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
 nav_area_max_size                        : 50       : , "sv", "cheat"  : Max area size created in nav generation
 nav_avoid                                : cmd      :                  : Toggles the 'avoid this area when possible' flag used by the AI system.
-nav_begin_area                           : cmd      :                  : Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and
+nav_begin_area                           : cmd      :                  : Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and issue a 'nav_end_area' command.
 nav_begin_deselecting                    : cmd      :                  : Start continuously removing from the selected set.
 nav_begin_drag_deselecting               : cmd      :                  : Start dragging a selection area.
 nav_begin_drag_selecting                 : cmd      :                  : Start dragging a selection area.
@@ -712,7 +634,7 @@ nav_clear_attribute                      : cmd      :                  : Remove 
 nav_clear_selected_set                   : cmd      :                  : Clear the selected set.
 nav_clear_walkable_marks                 : cmd      :                  : Erase any previously placed walkable positions.
 nav_compress_id                          : cmd      :                  : Re-orders area and ladder ID's so they are continuous.
-nav_connect                              : cmd      :                  : To connect two Areas, mark the first Area, highlight the second Area, then invoke the connect command. Note that this creates a
+nav_connect                              : cmd      :                  : To connect two Areas, mark the first Area, highlight the second Area, then invoke the connect command. Note that this creates a ONE-WAY connection from the first to the second Area. To make a two-way connection, also connect the second area to the first.
 nav_coplanar_slope_limit                 : 0        : , "sv", "cheat"  :
 nav_coplanar_slope_limit_displacement    : 0        : , "sv", "cheat"  :
 nav_corner_adjust_adjacent               : 18       : , "sv", "cheat"  : radius used to raise/lower corners in nearby areas when raising/lowering corners.
@@ -726,7 +648,7 @@ nav_crouch                               : cmd      :                  : Toggles
 nav_debug_blocked                        : 0        : , "sv", "cheat"  :
 nav_delete                               : cmd      :                  : Deletes the currently highlighted Area.
 nav_delete_marked                        : cmd      :                  : Deletes the currently marked Area (if any).
-nav_disconnect                           : cmd      :                  : To disconnect two Areas, mark an Area, highlight a second Area, then invoke the disconnect command. This will remove all connec
+nav_disconnect                           : cmd      :                  : To disconnect two Areas, mark an Area, highlight a second Area, then invoke the disconnect command. This will remove all connections between the two Areas.
 nav_disconnect_outgoing_oneways          : cmd      :                  : For each area in the selected set, disconnect all outgoing one-way connections.
 nav_displacement_test                    : 10000    : , "sv", "cheat"  : Checks for nodes embedded in displacements (useful for in-development maps)
 nav_dont_hide                            : cmd      :                  : Toggles the 'area is not suitable for hiding spots' flag used by the AI system.
@@ -758,14 +680,14 @@ nav_make_sniper_spots                    : cmd      :                  : Chops t
 nav_mark                                 : cmd      :                  : Marks the Area or Ladder under the cursor for manipulation by subsequent editing commands.
 nav_mark_attribute                       : cmd      :                  : Set nav attribute for all areas in the selected set.
 nav_mark_unnamed                         : cmd      :                  : Mark an Area with no Place name. Useful for finding stray areas missed when Place Painting.
-nav_mark_walkable                        : cmd      :                  : Mark the current location as a walkable position. These positions are used as seed locations when sampling the map to generate
+nav_mark_walkable                        : cmd      :                  : Mark the current location as a walkable position. These positions are used as seed locations when sampling the map to generate a Navigation Mesh.
 nav_max_view_distance                    : 6000     : , "sv", "cheat"  : Maximum range for precomputed nav mesh visibility (0 = default 1500 units)
 nav_max_vis_delta_list_length            : 64       : , "sv", "cheat"  :
-nav_merge                                : cmd      :                  : To merge two Areas into one, mark the first Area, highlight the second by pointing your cursor at it, and invoke the merge comm
+nav_merge                                : cmd      :                  : To merge two Areas into one, mark the first Area, highlight the second by pointing your cursor at it, and invoke the merge command.
 nav_merge_mesh                           : cmd      :                  : Merges a saved selected set into the current mesh.
 nav_no_hostages                          : cmd      :                  : Toggles the 'hostages cannot use this area' flag used by the AI system.
 nav_no_jump                              : cmd      :                  : Toggles the 'dont jump in this area' flag used by the AI system.
-nav_place_floodfill                      : cmd      :                  : Sets the Place of the Area under the cursor to the curent Place, and 'flood-fills' the Place to all adjacent Areas. Flood-filli
+nav_place_floodfill                      : cmd      :                  : Sets the Place of the Area under the cursor to the curent Place, and 'flood-fills' the Place to all adjacent Areas. Flood-filling stops when it hits an Area with the same Place, or a different Place than that of the initial Area.
 nav_place_list                           : cmd      :                  : Lists all place names used in the map.
 nav_place_pick                           : cmd      :                  : Sets the current Place to the Place of the Area under the cursor.
 nav_place_replace                        : cmd      :                  : Replaces all instances of the first place with the second place.
@@ -877,31 +799,21 @@ net_status                               : cmd      :                  : Shows c
 net_udp_rcvbuf                           : 131072   :                  : Default UDP receive buffer size
 net_usesocketsforloopback                : 0        :                  : Use network sockets layer even for listen server local player's packets (multiplayer only).
 next                                     : 0        : , "cheat"        : Set to 1 to advance to next frame ( when singlestep == 1 )
-nextfoflevel                             : 0        : , "sv"           :
 nextlevel                                : 0        : , "sv", "nf"     : If set to a valid map name, will change to this map during the next changelevel
 noclip                                   : cmd      :                  : Toggle. Player becomes non-solid and flies.
 notarget                                 : cmd      :                  : Toggle. Player becomes hidden to NPCs.
-npc_ally_deathmessage                    : 1        : , "sv", "cheat"  :
 npc_ammo_deplete                         : cmd      :                  : Subtracts half of the target's ammo
-npc_barnacle_swallow                     : 0        : , "sv"           : Use prototype swallow code.
-npc_bipass                               : cmd      :                  : Displays the local movement attempts by the given NPC(s) (triangulation detours).  Failed bypass routes are displayed in red, s
-npc_citizen_auto_player_squad            : 1        : , "sv"           :
-npc_citizen_auto_player_squad_allow_use  : 0        : , "sv"           :
-npc_citizen_dont_precache_all            : 0        : , "sv"           :
-npc_citizen_explosive_resist             : 0        : , "sv"           :
-npc_citizen_insignia                     : 0        : , "sv"           :
-npc_citizen_medic_emit_sound             : 1        : , "sv"           :
-npc_citizen_squad_marker                 : 0        : , "sv"           :
-npc_combat                               : cmd      :                  : Displays text debugging information about the squad and enemy of the selected NPC  (See Overlay Text)  Arguments:    {npc_name}
-npc_conditions                           : cmd      :                  : Displays all the current AI conditions that an NPC has in the overlay text.  Arguments:    {npc_name} / {npc class_name} / no a
-npc_create                               : cmd      :                  : Creates an NPC of the given type where the player is looking (if the given NPC can actually stand at that location).  Note that
-npc_create_aimed                         : cmd      :                  : Creates an NPC aimed away from the player of the given type where the player is looking (if the given NPC can actually stand at
+npc_bipass                               : cmd      :                  : Displays the local movement attempts by the given NPC(s) (triangulation detours).  Failed bypass routes are displayed in red, successful bypasses are shown in green.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at.
+npc_combat                               : cmd      :                  : Displays text debugging information about the squad and enemy of the selected NPC  (See Overlay Text)  Arguments:    {npc_name} / {npc class_name} / no argument picks what player is looking at
+npc_conditions                           : cmd      :                  : Displays all the current AI conditions that an NPC has in the overlay text.  Arguments:    {npc_name} / {npc class_name} / no argument picks what player is looking at
+npc_create                               : cmd      :                  : Creates an NPC of the given type where the player is looking (if the given NPC can actually stand at that location).  Note that this only works for npc classes that are already in the world.  You can not create an entity that doesn't have an instance in the level.  Arguments: {npc_class_name}
+npc_create_aimed                         : cmd      :                  : Creates an NPC aimed away from the player of the given type where the player is looking (if the given NPC can actually stand at that location).  Note that this only works for npc classes that are already in the world.  You can not create an entity that doesn't have an instance in the level.  Arguments: {npc_class_name}
 npc_create_equipment                     : 0        : , "sv"           :
-npc_destroy                              : cmd      :                  : Removes the given NPC(s) from the universe Arguments:    {npc_name} / {npc_class_name} / no argument picks what player is looki
+npc_destroy                              : cmd      :                  : Removes the given NPC(s) from the universe Arguments:    {npc_name} / {npc_class_name} / no argument picks what player is looking at
 npc_destroy_unselected                   : cmd      :                  : Removes all NPCs from the universe that aren't currently selected
-npc_enemies                              : cmd      :                  : Shows memory of NPC.  Draws an X on top of each memory.  Eluded entities drawn in blue (don't know where it went)  Unreachable
-npc_focus                                : cmd      :                  : Displays red line to NPC's enemy (if has one) and blue line to NPC's target entity (if has one)  Arguments:    {npc_name} / {np
-npc_freeze                               : cmd      :                  : Selected NPC(s) will freeze in place (or unfreeze). If there are no selected NPCs, uses the NPC under the crosshair.  Arguments
+npc_enemies                              : cmd      :                  : Shows memory of NPC.  Draws an X on top of each memory.  Eluded entities drawn in blue (don't know where it went)  Unreachable entities drawn in green (can't get to it)  Current enemy drawn in red  Current target entity drawn in magenta  All other entities drawn in pink  Arguments:    {npc_name} / {npc class_name} / no argument picks what player is looking at
+npc_focus                                : cmd      :                  : Displays red line to NPC's enemy (if has one) and blue line to NPC's target entity (if has one)  Arguments:    {npc_name} / {npc class_name} / no argument picks what player is looking at
+npc_freeze                               : cmd      :                  : Selected NPC(s) will freeze in place (or unfreeze). If there are no selected NPCs, uses the NPC under the crosshair.  Arguments: -none-
 npc_freeze_unselected                    : cmd      :                  : Freeze all NPCs not selected
 npc_go                                   : cmd      :                  : Selected NPC(s) will go to the location that the player is looking (shown with a purple box)  Arguments: -none-
 npc_go_do_run                            : 1        : , "sv"           : Set whether should run on NPC go
@@ -909,24 +821,21 @@ npc_go_random                            : cmd      :                  : Sends a
 npc_heal                                 : cmd      :                  : Heals the target back to full health
 npc_height_adjust                        : 1        : , "a", "sv"      : Enable test mode for ik height adjustment
 npc_kill                                 : cmd      :                  : Kills the given NPC(s) Arguments:    {npc_name} / {npc_class_name} / no argument picks what player is looking at
-npc_nearest                              : cmd      :                  : Draw's a while box around the NPC(s) nearest node  Arguments:    {entity_name} / {class_name} / no argument picks what player i
-npc_relationships                        : cmd      :                  : Displays the relationships between this NPC and all others.  Arguments:    {entity_name} / {class_name} / no argument picks wha
+npc_nearest                              : cmd      :                  : Draw's a while box around the NPC(s) nearest node  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+npc_relationships                        : cmd      :                  : Displays the relationships between this NPC and all others.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 npc_reset                                : cmd      :                  : Reloads schedules for all NPC's from their script files  Arguments: -none-
-npc_route                                : cmd      :                  : Displays the current route of the given NPC as a line on the screen.  Waypoints along the route are drawn as small cyan rectang
-npc_select                               : cmd      :                  : Select or deselects the given NPC(s) for later manipulation.  Selected NPC's are shown surrounded by a red translucent box  Arg
+npc_route                                : cmd      :                  : Displays the current route of the given NPC as a line on the screen.  Waypoints along the route are drawn as small cyan rectangles.  Line is color coded in the following manner:  Blue - path to a node  Cyan - detour around an object (triangulation)  Red - jump  Maroon - path to final target position  Arguments:    {npc_name} / {npc_class_name} / no argument picks what player is looking at
+npc_select                               : cmd      :                  : Select or deselects the given NPC(s) for later manipulation.  Selected NPC's are shown surrounded by a red translucent box  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 npc_sentences                            : 0        : , "sv"           :
 npc_speakall                             : cmd      :                  : Force the npc to try and speak all their responses
 npc_squads                               : cmd      :                  : Obsolete.  Replaced by npc_combat
-npc_steering                             : cmd      :                  : Displays the steering obstructions of the NPC (used to perform local avoidance)  Arguments:    {entity_name} / {class_name} / n
+npc_steering                             : cmd      :                  : Displays the steering obstructions of the NPC (used to perform local avoidance)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 npc_steering_all                         : cmd      :                  : Displays the steering obstructions of all NPCs (used to perform local avoidance)
-npc_strider_height_adj                   : 0        : , "sv"           :
-npc_strider_shake_ropes_magnitude        : 150      : , "sv"           :
-npc_strider_shake_ropes_radius           : 1200     : , "sv"           :
-npc_task_text                            : cmd      :                  : Outputs text debugging information to the console about the all the tasks + break conditions of the selected NPC current schedu
-npc_tasks                                : cmd      :                  : Displays detailed text debugging information about the all the tasks of the selected NPC current schedule (See Overlay Text)  A
+npc_task_text                            : cmd      :                  : Outputs text debugging information to the console about the all the tasks + break conditions of the selected NPC current schedule  Arguments:    {npc_name} / {npc class_name} / no argument picks what player is looking at
+npc_tasks                                : cmd      :                  : Displays detailed text debugging information about the all the tasks of the selected NPC current schedule (See Overlay Text)  Arguments:    {npc_name} / {npc class_name} / no argument picks what player is looking at
 npc_teleport                             : cmd      :                  : Selected NPC will teleport to the location that the player is looking (shown with a purple box)  Arguments: -none-
 npc_thinknow                             : cmd      :                  : Trigger NPC to think
-npc_viewcone                             : cmd      :                  : Displays the viewcone of the NPC (where they are currently looking and what the extents of there vision is)  Arguments:    {ent
+npc_viewcone                             : cmd      :                  : Displays the viewcone of the NPC (where they are currently looking and what the extents of there vision is)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 npc_vphysics                             : 0        : , "sv"           :
 old_radiusdamage                         : 0        : , "sv", "rep"    :
 opt_EnumerateLeavesFastAlgorithm         : 1        :                  : Use the new SIMD version of CEngineBSPTree::EnumerateLeavesInBox.
@@ -934,28 +843,19 @@ option_duck_method                       : 1        : , "a", "sv", "rep" :
 particle_test_attach_attachment          : 0        : , "sv", "cheat"  : Attachment index for attachment mode
 particle_test_attach_mode                : 0        : , "sv", "cheat"  : Possible Values: 'start_at_attachment', 'follow_attachment', 'start_at_origin', 'follow_origin'
 particle_test_file                       : 0        : , "sv", "cheat"  : Name of the particle system to dynamically spawn
-particle_test_start                      : cmd      :                  : Dispatches the test particle system with the parameters specified in particle_test_file,  particle_test_attach_mode and particl
-particle_test_stop                       : cmd      :                  : Stops all particle systems on the selected entities.  Arguments:    {entity_name} / {class_name} / no argument picks what playe
+particle_test_start                      : cmd      :                  : Dispatches the test particle system with the parameters specified in particle_test_file,  particle_test_attach_mode and particle_test_attach_param on the entity the player is looking at.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+particle_test_stop                       : cmd      :                  : Stops all particle systems on the selected entities.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 password                                 : 0        : , "a", "norecord" : Current server access password
 path                                     : cmd      :                  : Show the engine filesystem path.
 pause                                    : cmd      :                  : Toggle the server pause state.
+PerfMark                                 : cmd      :                  : inserts a telemetry marker into the stream. If args are provided, they will be included.
 phys_impactforcescale                    : 1        : , "sv"           :
 phys_penetration_error_time              : 10       : , "sv"           : Controls the duration of vphysics penetration error boxes.
 phys_pushscale                           : 1        : , "sv", "rep"    :
 phys_speeds                              : 0        : , "sv"           :
 phys_stressbodyweights                   : 5        : , "sv"           :
-phys_swap                                : cmd      :                  : Automatically swaps the current weapon for the physcannon and back again.
 phys_timescale                           : 1        : , "sv"           : Scale time for physics
 phys_upimpactforcescale                  : 0        : , "sv"           :
-physcannon_ball_cone                     : 0        : , "sv", "cheat", "rep" :
-physcannon_chargetime                    : 2        : , "sv", "cheat", "rep" :
-physcannon_cone                          : 0        : , "sv", "cheat", "rep" :
-physcannon_maxforce                      : 1500     : , "sv", "cheat", "rep" :
-physcannon_maxmass                       : 250      : , "sv", "cheat", "rep" :
-physcannon_mega_enabled                  : 0        : , "sv", "cheat", "rep" :
-physcannon_minforce                      : 700      : , "sv", "cheat", "rep" :
-physcannon_pullforce                     : 4000     : , "sv", "cheat", "rep" :
-physcannon_tracelength                   : 250      : , "sv", "cheat", "rep" :
 physics_budget                           : cmd      :                  : Times the cost of each active object
 physics_constraints                      : cmd      :                  : Highlights constraint system graph for an entity
 physics_debug_entity                     : cmd      :                  : Dumps debug info for an entity
@@ -963,23 +863,18 @@ physics_highlight_active                 : cmd      :                  : Turns o
 physics_report_active                    : cmd      :                  : Lists all active physics objects
 physics_select                           : cmd      :                  : Dumps debug info for an entity
 physicsshadowupdate_render               : 0        : , "sv"           :
-picker                                   : cmd      :                  : Toggles 'picker' mode.  When picker is on, the bounding box, pivot and debugging text is displayed for whatever entity the play
+picker                                   : cmd      :                  : Toggles 'picker' mode.  When picker is on, the bounding box, pivot and debugging text is displayed for whatever entity the player is looking at.  Arguments: full - enables all debug information
 ping                                     : cmd      :                  : Display ping to server.
 pipeline_static_props                    : 1        :                  :
 player_debug_print_damage                : 0        : , "sv", "cheat"  : When true, print amount and type of all damage received by player to console.
 player_limit_jump_speed                  : 1        : , "sv", "rep"    :
 player_old_armor                         : 0        : , "sv"           :
+player_pickup_maxmass                    : 250      : , "sv", "cheat", "rep" :
 player_showpredictedposition             : 0        : , "sv"           :
 player_showpredictedposition_timestep    : 1        : , "sv"           :
-player_squad_autosummon_debug            : 0        : , "sv"           :
-player_squad_autosummon_move_tolerance   : 20       : , "sv"           :
-player_squad_autosummon_player_tolerance : 10       : , "sv"           :
-player_squad_autosummon_time             : 5        : , "sv"           :
-player_squad_autosummon_time_after_combat : 8        : , "sv"           :
 player_squad_double_tap_time             : 0        : , "sv"           :
 player_squad_transient_commands          : 1        : , "sv", "rep"    :
 player_throwforce                        : 1000     : , "sv", "cheat", "rep" :
-player_usercommand_timeout               : 10       : , "sv"           : After this many seconds without a usercommand from a player, the client is kicked.
 plugin_load                              : cmd      :                  : plugin_load <filename> : loads a plugin
 plugin_pause                             : cmd      :                  : plugin_pause <index> : pauses a loaded plugin
 plugin_pause_all                         : cmd      :                  : pauses all loaded plugins
@@ -990,7 +885,7 @@ plugin_unpause_all                       : cmd      :                  : unpause
 prop_active_gib_limit                    : 999999   : , "sv"           :
 prop_active_gib_max_fade_time            : 999999   : , "sv"           :
 prop_crosshair                           : cmd      :                  : Shows name for prop looking at
-prop_debug                               : cmd      :                  : Toggle prop debug mode. If on, props will show colorcoded bounding boxes. Red means ignore all damage. White means respond phys
+prop_debug                               : cmd      :                  : Toggle prop debug mode. If on, props will show colorcoded bounding boxes. Red means ignore all damage. White means respond physically to damage but never break. Green maps health in the range of 100 down to 1.
 prop_dynamic_create                      : cmd      :                  : Creates a dynamic prop with a specific .mdl aimed away from where the player is looking.  Arguments: {.mdl name}
 prop_physics_create                      : cmd      :                  : Creates a physics prop with a specific .mdl aimed away from where the player is looking.  Arguments: {.mdl name}
 props_break_max_pieces                   : -1       : , "sv"           : Maximum prop breakable piece count (-1 = model default)
@@ -1045,7 +940,7 @@ r_eyeshift_x                             : 0        : , "a"            :
 r_eyeshift_y                             : 0        : , "a"            :
 r_eyeshift_z                             : 0        : , "a"            :
 r_eyesize                                : 0        : , "a"            :
-r_fastzreject                            : 0        :                  : Activate/deactivates a fast z-setting algorithm to take advantage of hardware with fast z reject. Use -1 to default to hardware
+r_fastzreject                            : 0        :                  : Activate/deactivates a fast z-setting algorithm to take advantage of hardware with fast z reject. Use -1 to default to hardware settings
 r_fastzrejectdisp                        : 0        :                  : Activates/deactivates fast z rejection on displacements (360 only). Only active when r_fastzreject is on.
 r_flashlightdepthtexture                 : 1        :                  :
 r_flashlightscissor                      : 1        :                  :
@@ -1066,6 +961,7 @@ r_lightcachemodel                        : -1       : , "cheat"        :
 r_lightinterp                            : 5        : , "cheat"        : Controls the speed of light interpolation, 0 turns off interpolation
 r_lightmap                               : -1       : , "cheat"        :
 r_lightstyle                             : -1       : , "cheat"        :
+r_lightwarpidentity                      : 0        : , "cheat"        :
 r_lockpvs                                : 0        : , "cheat"        : Lock the PVS so you can fly around and inspect what is being drawn.
 r_lod                                    : -1       :                  :
 r_maxmodeldecal                          : 50       :                  :
@@ -1086,10 +982,11 @@ r_overlaywireframe                       : 0        :                  :
 r_partition_level                        : -1       : , "cheat"        : Displays a particular level of the spatial partition system. Use -1 to disable it.
 r_printdecalinfo                         : cmd      :                  :
 r_proplightingfromdisk                   : 1        :                  : 0=Off, 1=On, 2=Show Errors
-r_proplightingpooling                    : -1       : , "cheat"        : 0 - off, 1 - static prop color meshes are allocated from a single shared vertex buffer (on hardware that supports stream offset
+r_proplightingpooling                    : -1       : , "cheat"        : 0 - off, 1 - static prop color meshes are allocated from a single shared vertex buffer (on hardware that supports stream offset)
 r_queued_decals                          : 0        :                  : Offloads a bit of decal rendering setup work to the material system queue when enabled.
 r_randomflex                             : 0        : , "cheat"        :
 r_renderoverlayfragment                  : 1        :                  :
+r_rimlight                               : 1        :                  :
 r_rootlod                                : 0        : , "a"            : Root LOD
 r_shadowrendertotexture                  : 0        :                  :
 r_showenvcubemap                         : 0        : , "cheat"        :
@@ -1110,6 +1007,7 @@ r_waterforcereflectentities              : 0        :                  :
 rcon_password                            : 0        : , "norecord"     : remote console password.
 recompute_speed                          : cmd      :                  : Recomputes clock speed (for debugging purposes).
 reload                                   : cmd      :                  : Reload the most recent saved game (add setpos to jump to current view position on reload).
+reload_gamebase_server                   : cmd      :                  : Reload the game base content.(full reparse)
 removeid                                 : cmd      :                  : Remove a user ID from the ban list.
 removeip                                 : cmd      :                  : Remove an IP address from the ban list.
 replay_debug                             : 0        : , "norecord"     :
@@ -1119,9 +1017,8 @@ report_soundpatch                        : cmd      :                  : reports
 report_touchlinks                        : cmd      :                  : Lists all touchlinks
 respawn_entities                         : cmd      :                  : Respawn all the entities in the map.
 restart                                  : cmd      :                  : Restart the game on the same level (add setpos to jump to current view position on restart).
-round_restart                            : cmd      :                  :
 rr_debug_qa                              : 0        : , "sv"           : Set to 1 to see debug related to the Question & Answer system used to create conversations between allied NPCs.
-rr_debugresponses                        : 0        : , "sv"           : Show verbose matching output (1 for simple, 2 for rule scoring). If set to 3, it will only show response success/failure for np
+rr_debugresponses                        : 0        : , "sv"           : Show verbose matching output (1 for simple, 2 for rule scoring). If set to 3, it will only show response success/failure for npc_selected NPCs.
 rr_debugrule                             : 0        : , "sv"           : If set to the name of the rule, that rule's score will be shown whenever a concept is passed into the response rules system.
 rr_dumpresponses                         : 0        : , "sv"           : Dump all response_rules.txt and rules (requires restart)
 rr_reloadresponsesystems                 : cmd      :                  : Reload all response system scripts.
@@ -1149,210 +1046,23 @@ setpos                                   : cmd      :                  : Move pl
 setpos_exact                             : cmd      :                  : Move player to an exact specified origin (must have sv_cheats).
 shake                                    : cmd      :                  : Shake the screen.
 showhitlocation                          : 0        : , "sv"           :
-showsniperdist                           : 0        : , "sv"           :
-showsniperlines                          : 0        : , "sv"           :
 showtriggers                             : 0        : , "sv", "cheat"  : Shows trigger brushes
 showtriggers_toggle                      : cmd      :                  : Toggle show triggers
 singlestep                               : 0        : , "cheat"        : Run engine in single step mode ( set next to 1 to advance a frame )
-sk_airboat_drain_rate                    : 10       : , "sv"           :
-sk_airboat_max_ammo                      : 100      : , "sv"           :
-sk_airboat_recharge_rate                 : 15       : , "sv"           :
-sk_allow_autoaim                         : 1        : , "sv", "rep"    :
-sk_ally_regen_time                       : 0        : , "sv"           : Time taken for an ally to regenerate a point of health.
-sk_ammo_qty_scale1                       : 1        : , "sv", "rep"    :
-sk_ammo_qty_scale2                       : 1        : , "sv", "rep"    :
-sk_ammo_qty_scale3                       : 0        : , "sv", "rep"    :
-sk_antlion_air_attack_dmg                : 0        : , "sv"           :
-sk_antlion_health                        : 0        : , "sv"           :
-sk_antlion_jump_damage                   : 0        : , "sv"           :
-sk_antlion_swipe_damage                  : 0        : , "sv"           :
-sk_antlionguard_dmg_charge               : 0        : , "sv"           :
-sk_antlionguard_dmg_shove                : 0        : , "sv"           :
-sk_antlionguard_health                   : 0        : , "sv"           :
-sk_apc_health                            : 750      : , "sv"           :
+sk_ally_regen_time                       : 1        : , "sv"           : Time taken for an ally to regenerate a point of health.
 sk_apc_missile_damage                    : 15       : , "sv"           :
-sk_auto_reload_time                      : 3        : , "sv", "rep"    :
-sk_autoaim_mode                          : 1        : , "a", "sv", "rep" :
-sk_autoaim_scale1                        : 1        : , "sv", "rep"    :
-sk_autoaim_scale2                        : 1        : , "sv", "rep"    :
-sk_barnacle_health                       : 0        : , "sv"           :
-sk_barney_health                         : 0        : , "sv"           :
-sk_battery                               : 0        : , "sv"           :
 sk_bullseye_health                       : 0        : , "sv"           :
-sk_citizen_giveammo_player_delay         : 10       : , "sv"           :
-sk_citizen_heal_ally                     : 30       : , "sv"           :
-sk_citizen_heal_ally_delay               : 20       : , "sv"           :
-sk_citizen_heal_ally_min_pct             : 0        : , "sv"           :
-sk_citizen_heal_player                   : 25       : , "sv"           :
-sk_citizen_heal_player_delay             : 25       : , "sv"           :
-sk_citizen_heal_player_min_forced        : 10       : , "sv"           :
-sk_citizen_heal_player_min_pct           : 0        : , "sv"           :
-sk_citizen_health                        : 0        : , "sv"           :
-sk_citizen_player_stare_dist             : 72       : , "sv"           :
-sk_citizen_player_stare_time             : 1        : , "sv"           :
-sk_citizen_stare_heal_time               : 5        : , "sv"           :
-sk_combine_ball_search_radius            : 512      : , "sv", "rep"    :
-sk_combine_guard_health                  : 0        : , "sv"           :
-sk_combine_guard_kick                    : 0        : , "sv"           :
-sk_combine_s_health                      : 0        : , "sv"           :
-sk_combine_s_kick                        : 0        : , "sv"           :
-sk_combineball_guidefactor               : 0        : , "sv", "rep"    :
-sk_combineball_seek_angle                : 15       : , "sv", "rep"    :
-sk_combineball_seek_kill                 : 0        : , "sv", "rep"    :
 sk_crow_health                           : 1        : , "sv"           :
 sk_crow_melee_dmg                        : 0        : , "sv"           :
-sk_crowbar_lead_time                     : 0        : , "sv"           :
-sk_dmg_homer_grenade                     : 0        : , "sv"           :
-sk_dmg_inflict_scale1                    : 1        : , "sv", "rep"    :
-sk_dmg_inflict_scale2                    : 1        : , "sv", "rep"    :
-sk_dmg_inflict_scale3                    : 0        : , "sv", "rep"    :
-sk_dmg_pathfollower_grenade              : 0        : , "sv"           :
-sk_dmg_sniper_penetrate_npc              : 0        : , "sv", "rep"    :
-sk_dmg_sniper_penetrate_plr              : 0        : , "sv", "rep"    :
-sk_dmg_take_scale1                       : 0        : , "sv", "rep"    :
-sk_dmg_take_scale2                       : 1        : , "sv", "rep"    :
-sk_dmg_take_scale3                       : 1        : , "sv", "rep"    :
-sk_dropship_container_health             : 750      : , "sv"           :
-sk_dynamic_resupply_modifier             : 1        : , "sv"           :
-sk_env_headcrabcanister_shake_amplitude  : 50       : , "sv"           :
-sk_env_headcrabcanister_shake_radius     : 1024     : , "sv"           :
-sk_env_headcrabcanister_shake_radius_vehicle : 2500     : , "sv"           :
-sk_fraggrenade_radius                    : 0        : , "sv"           :
-sk_gunship_burst_dist                    : 768      : , "sv"           :
-sk_gunship_burst_min                     : 800      : , "sv"           :
-sk_gunship_burst_size                    : 15       : , "sv"           :
-sk_gunship_health_increments             : 0        : , "sv"           :
-sk_headcrab_fast_health                  : 0        : , "sv"           :
-sk_headcrab_health                       : 0        : , "sv"           :
-sk_headcrab_melee_dmg                    : 0        : , "sv"           :
-sk_headcrab_poison_health                : 0        : , "sv"           :
-sk_headcrab_poison_npc_damage            : 0        : , "sv"           :
-sk_healthcharger                         : 0        : , "sv"           :
-sk_healthkit                             : 0        : , "sv"           :
-sk_healthvial                            : 0        : , "sv"           :
-sk_helicopter_burstcount                 : 12       : , "sv"           : How many shot bursts to fire after charging up. The bigger the number, the longer the firing is
-sk_helicopter_drone_speed                : 450      : , "sv"           : How fast does the zapper drone move?
-sk_helicopter_firingcone                 : 20       : , "sv"           : The angle in degrees of the cone in which the shots will be fired
-sk_helicopter_grenade_puntscale          : 1        : , "sv"           : When physpunting a chopper's grenade, scale its velocity by this much.
-sk_helicopter_grenadedamage              : 25       : , "sv"           : The amount of damage the helicopter grenade deals.
-sk_helicopter_grenadeforce               : 55000    : , "sv"           : The physics force that the helicopter grenade exerts.
-sk_helicopter_grenaderadius              : 275      : , "sv"           : The damage radius of the helicopter grenade.
-sk_helicopter_health                     : 5600     : , "sv"           :
-sk_helicopter_num_bombs1                 : 3        : , "sv"           :
-sk_helicopter_num_bombs2                 : 5        : , "sv"           :
-sk_helicopter_num_bombs3                 : 5        : , "sv"           :
-sk_helicopter_roundsperburst             : 5        : , "sv"           : How many shots to fire in a single burst
-sk_homer_grenade_radius                  : 0        : , "sv"           :
-sk_ichthyosaur_health                    : 0        : , "sv"           :
-sk_ichthyosaur_melee_dmg                 : 0        : , "sv"           :
-sk_manhack_health                        : 0        : , "sv"           :
-sk_manhack_melee_dmg                     : 0        : , "sv"           :
-sk_manhack_v2                            : 1        : , "sv"           :
-sk_max_357                               : 0        : , "sv", "rep"    :
-sk_max_alyxgun                           : 0        : , "sv", "rep"    :
-sk_max_ar2                               : 0        : , "sv", "rep"    :
-sk_max_ar2_altfire                       : 0        : , "sv", "rep"    :
-sk_max_buckshot                          : 0        : , "sv", "rep"    :
-sk_max_crossbow                          : 0        : , "sv", "rep"    :
-sk_max_gauss_round                       : 0        : , "sv", "rep"    :
-sk_max_grenade                           : 0        : , "sv", "rep"    :
-sk_max_pistol                            : 0        : , "sv", "rep"    :
-sk_max_rpg_round                         : 0        : , "sv", "rep"    :
-sk_max_smg1                              : 0        : , "sv", "rep"    :
-sk_max_smg1_grenade                      : 0        : , "sv", "rep"    :
-sk_max_sniper_round                      : 0        : , "sv", "rep"    :
-sk_metropolice_health                    : 0        : , "sv"           :
-sk_metropolice_simple_health             : 26       : , "sv"           :
-sk_metropolice_stitch_along_hitcount     : 2        : , "sv"           :
-sk_metropolice_stitch_at_hitcount        : 1        : , "sv"           :
-sk_metropolice_stitch_behind_hitcount    : 3        : , "sv"           :
-sk_metropolice_stitch_distance           : 1000     : , "sv"           :
-sk_metropolice_stitch_reaction           : 1        : , "sv"           :
-sk_metropolice_stitch_tight_hitcount     : 2        : , "sv"           :
-sk_npc_arm                               : 1        : , "sv"           :
-sk_npc_chest                             : 1        : , "sv"           :
-sk_npc_dmg_357                           : 0        : , "sv", "rep"    :
-sk_npc_dmg_airboat                       : 0        : , "sv", "rep"    :
-sk_npc_dmg_alyxgun                       : 0        : , "sv", "rep"    :
-sk_npc_dmg_ar2                           : 0        : , "sv", "rep"    :
-sk_npc_dmg_buckshot                      : 0        : , "sv", "rep"    :
-sk_npc_dmg_combineball                   : 15       : , "sv", "rep"    :
-sk_npc_dmg_crossbow                      : 0        : , "sv", "rep"    :
-sk_npc_dmg_dropship                      : 5        : , "sv"           : Dropship container cannon damage.
-sk_npc_dmg_fraggrenade                   : 0        : , "sv"           :
-sk_npc_dmg_grenade                       : 0        : , "sv", "rep"    :
-sk_npc_dmg_gunship                       : 0        : , "sv", "rep"    :
-sk_npc_dmg_gunship_to_plr                : 0        : , "sv", "rep"    :
-sk_npc_dmg_helicopter                    : 6        : , "sv"           : Damage helicopter shots deal to everything but the player
-sk_npc_dmg_helicopter_to_plr             : 3        : , "sv"           : Damage helicopter shots deal to the player
-sk_npc_dmg_pistol                        : 0        : , "sv", "rep"    :
-sk_npc_dmg_rpg_round                     : 0        : , "sv", "rep"    :
-sk_npc_dmg_satchel                       : 0        : , "sv"           :
-sk_npc_dmg_smg1                          : 0        : , "sv", "rep"    :
-sk_npc_dmg_smg1_grenade                  : 0        : , "sv", "rep"    :
-sk_npc_dmg_sniper_round                  : 0        : , "sv", "rep"    :
-sk_npc_dmg_tripmine                      : 0        : , "sv"           :
-sk_npc_head                              : 2        : , "sv"           :
-sk_npc_leg                               : 1        : , "sv"           :
-sk_npc_stomach                           : 1        : , "sv"           :
-sk_pathfollower_grenade_radius           : 0        : , "sv"           :
-sk_player_arm                            : 1        : , "sv"           :
-sk_player_chest                          : 1        : , "sv"           :
-sk_player_head                           : 2        : , "sv"           :
-sk_player_leg                            : 1        : , "sv"           :
-sk_player_stomach                        : 1        : , "sv"           :
-sk_plr_dmg_357                           : 0        : , "sv", "rep"    :
-sk_plr_dmg_airboat                       : 0        : , "sv", "rep"    :
-sk_plr_dmg_alyxgun                       : 0        : , "sv", "rep"    :
-sk_plr_dmg_ar2                           : 0        : , "sv", "rep"    :
-sk_plr_dmg_buckshot                      : 0        : , "sv", "rep"    :
-sk_plr_dmg_crossbow                      : 0        : , "sv", "rep"    :
-sk_plr_dmg_fraggrenade                   : 0        : , "sv"           :
-sk_plr_dmg_grenade                       : 0        : , "sv", "rep"    :
-sk_plr_dmg_pistol                        : 0        : , "sv", "rep"    :
-sk_plr_dmg_rpg_round                     : 0        : , "sv", "rep"    :
-sk_plr_dmg_satchel                       : 0        : , "sv"           :
-sk_plr_dmg_smg1                          : 0        : , "sv", "rep"    :
-sk_plr_dmg_smg1_grenade                  : 0        : , "sv", "rep"    :
-sk_plr_dmg_sniper_round                  : 0        : , "sv", "rep"    :
-sk_plr_dmg_tripmine                      : 0        : , "sv"           :
-sk_plr_grenade_drop_time                 : 30       : , "sv", "rep"    :
-sk_plr_health_drop_time                  : 30       : , "sv", "rep"    :
-sk_plr_num_shotgun_pellets               : 7        : , "sv", "rep"    :
-sk_rollermine_shock                      : 0        : , "sv"           :
-sk_rollermine_stun_delay                 : 1        : , "sv"           :
-sk_rollermine_vehicle_intercept          : 1        : , "sv"           :
-sk_satchel_radius                        : 0        : , "sv"           :
-sk_scanner_dmg_dive                      : 0        : , "sv"           :
-sk_scanner_health                        : 0        : , "sv"           :
-sk_smg1_grenade_radius                   : 0        : , "sv"           :
-sk_stalker_health                        : 0        : , "sv"           :
-sk_stalker_melee_dmg                     : 0        : , "sv"           :
-sk_strider_health                        : 350      : , "sv"           :
-sk_strider_num_missiles1                 : 5        : , "sv"           :
-sk_strider_num_missiles2                 : 7        : , "sv"           :
-sk_strider_num_missiles3                 : 7        : , "sv"           :
-sk_suitcharger                           : 30       : , "sv"           :
-sk_suitcharger_citadel                   : 0        : , "sv"           :
-sk_suitcharger_citadel_maxarmor          : 0        : , "sv"           :
-sk_tripmine_radius                       : 0        : , "sv"           :
-sk_vortigaunt_armor_charge               : 30       : , "sv"           :
-sk_vortigaunt_armor_charge_per_token     : 5        : , "sv"           :
-sk_vortigaunt_dmg_claw                   : 0        : , "sv"           :
-sk_vortigaunt_dmg_rake                   : 0        : , "sv"           :
-sk_vortigaunt_dmg_zap                    : 0        : , "sv"           :
-sk_vortigaunt_health                     : 0        : , "sv"           :
-sk_vortigaunt_vital_antlion_worker_dmg   : 0        : , "sv"           : Vital-ally vortigaunts scale damage taken from antlion workers by this amount.
-sk_vortigaunt_zap_range                  : 100      : , "sv"           : Range of vortigaunt's ranged attack (feet)
-sk_weapon_ar2_alt_fire_duration          : 4        : , "sv"           :
-sk_weapon_ar2_alt_fire_mass              : 150      : , "sv"           :
-sk_weapon_ar2_alt_fire_radius            : 10       : , "sv"           :
-sk_zombie_dmg_both_slash                 : 0        : , "sv"           :
-sk_zombie_dmg_one_slash                  : 0        : , "sv"           :
-sk_zombie_health                         : 0        : , "sv"           :
-sk_zombie_poison_dmg_spit                : 0        : , "sv"           :
-sk_zombie_poison_health                  : 0        : , "sv"           :
+sk_npc_boss_fred_max_jump_height         : 240      : , "sv", "rep"    : Set how high Fred can jump!
+sk_npc_boss_fred_rage_damage             : 110      : , "sv", "rep"    : When Fred is taking damage higher or equal to this value he will insta rage.
+sk_npc_boss_fred_rage_duration           : 60       : , "sv", "rep"    : For how long should Fred rage?
+sk_npc_boss_fred_rage_health             : 30       : , "sv", "rep"    : When Fred has this much % left of his max health he will go into a rage mode.
+sk_weapon_brick_throwdistance            : 250      : , "sv", "rep"    :
+sk_weapon_brick_throwforce               : 6000     : , "sv", "rep"    :
+sk_weapon_propane_lockedtime             : 2        : , "sv", "rep"    :
 skill                                    : 1        : , "a"            : Game skill level (1-3).
+skill_tree                               : cmd      :                  : Player Skill Tree
 skip_next_map                            : cmd      :                  : Skips the next map in the map rotation for the server.
 smoke_trail                              : 1        : , "sv"           :
 smoothstairs                             : 1        : , "sv", "rep"    : Smooth player eye z coordinate when traversing stairs.
@@ -1367,13 +1077,10 @@ snd_vox_captiontrace                     : 0        :                  : Shows s
 snd_vox_globaltimeout                    : 300      :                  :
 snd_vox_sectimetout                      : 300      :                  :
 snd_vox_seqtimetout                      : 300      :                  :
-sniper_xbox_delay                        : 1        : , "sv"           :
-sniperspeak                              : 0        : , "sv"           :
-sniperviewdist                           : 35       : , "sv"           :
 soundpatch_captionlength                 : 2        : , "sv", "rep"    : How long looping soundpatch captions should display for.
-soundscape_debug                         : 0        : , "sv", "cheat"  : When on, draws lines to all env_soundscape entities. Green lines show the active soundscape, red lines show soundscapes that ar
+soundscape_debug                         : 0        : , "sv", "cheat"  : When on, draws lines to all env_soundscape entities. Green lines show the active soundscape, red lines show soundscapes that aren't in range, and white lines show soundscapes that are in range, but not the active soundscape.
 soundscape_flush                         : cmd      :                  : Flushes the server & client side soundscapes
-spec_freeze_time                         : 4        : , "sv", "cheat", "rep" : Time spent frozen in observer freeze cam.
+spec_freeze_time                         : 4        : , "sv", "cheat", "rep" : Time spend frozen in observer freeze cam.
 spec_freeze_traveltime                   : 0        : , "sv", "cheat", "rep" : Time taken to zoom in to frame a target in observer freeze cam.
 spew_consolelog_to_debugstring           : 0        :                  : Send console log to PLAT_DebugString()
 spike                                    : cmd      :                  : generates a fake spike
@@ -1381,61 +1088,37 @@ star_memory                              : cmd      :                  : Dump me
 stats                                    : cmd      :                  : Prints server performance variables
 status                                   : cmd      :                  : Display map and connection status.
 step_spline                              : 0        : , "sv"           :
-strider_always_use_procedural_height     : 0        : , "sv"           :
-strider_ar2_altfire_dmg                  : 25       : , "sv"           :
-strider_distributed_fire                 : 1        : , "sv"           :
-strider_eyepositions                     : 0        : , "sv"           :
-strider_free_knowledge                   : 0        : , "sv"           :
-strider_free_pass_after_escorts_dead     : 2        : , "sv"           :
-strider_free_pass_cover_dist             : 120      : , "sv"           :
-strider_free_pass_duration               : 2        : , "sv"           :
-strider_free_pass_move_tolerance         : 320      : , "sv"           :
-strider_free_pass_refill_rate            : 0        : , "sv"           :
-strider_free_pass_start_time             : 3        : , "sv"           :
-strider_free_pass_tolerance_after_escorts_dead : 600      : , "sv"           :
-strider_idle_test                        : 0        : , "sv"           :
-strider_immolate                         : 0        : , "sv"           :
-strider_missile_suppress_dist            : 240      : , "sv"           :
-strider_missile_suppress_time            : 3        : , "sv"           :
-strider_pct_height_no_crouch_move        : 90       : , "sv"           :
-strider_peek_eye_dist                    : 1        : , "sv"           :
-strider_peek_eye_dist_z                  : 4        : , "sv"           :
-strider_peek_time                        : 0        : , "sv"           :
-strider_peek_time_after_damage           : 4        : , "sv"           :
-strider_show_cannonlos                   : 0        : , "sv"           :
-strider_show_focus                       : 0        : , "sv"           :
-strider_show_weapon_los_condition        : 0        : , "sv"           :
-strider_show_weapon_los_z                : 0        : , "sv"           :
-strider_test_height                      : 0        : , "sv"           :
 studio_queue_mode                        : 1        :                  :
 stuffcmds                                : cmd      :                  : Parses and stuffs command line + commands to command buffer.
-suitvolume                               : 0        : , "a", "sv"      :
 surfaceprop                              : cmd      :                  : Reports the surface properties at the cursor
+sv_accelerate                            : 10       : , "sv", "nf", "rep" :
+sv_airaccelerate                         : 10       : , "sv", "nf", "rep" :
 sv_allow_color_correction                : 1        : , "rep"          : Allow or disallow clients to use color correction on this server.
 sv_allow_voice_from_file                 : 1        : , "rep"          : Allow or disallow clients from using voice_inputfromfile on this server.
 sv_allow_votes                           : 1        : , "sv"           : Allow voting?
 sv_allow_wait_command                    : 1        : , "rep"          : Allow or disallow the wait command on clients connected to this server.
 sv_allowdownload                         : 1        :                  : Allow clients to download files
 sv_allowupload                           : 1        :                  : Allow clients to upload customizations files
-sv_alltalk                               : 0        : , "sv", "nf"     : Players can hear all other players, no team restrictions
+sv_alltalk                               : 0        : , "sv", "nf", "rep" : Players can hear all other players, no team restrictions
 sv_alternateticks                        : 0        : , "sp"           : If set, server only simulates entities on even numbered ticks.
 sv_autojump                              : 0        : , "sv"           :
 sv_autosave                              : 1        : , "sv"           : Set to 1 to autosave game on level transition. Does not affect autosave triggers.
-sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.
+sv_backspeed                             : 0        : , "a", "sv", "rep" : How much to slow down backwards motion
+sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.vprof.
 sv_benchmark_force_start                 : cmd      :                  : Force start the benchmark. This is only for debugging. It's better to set sv_benchmark to 1 and restart the level.
 sv_benchmark_numticks                    : 3300     : , "sv"           : If > 0, then it only runs the benchmark for this # of ticks.
-sv_bonus_challenge                       : 0        : , "sv", "rep"    : Set to values other than 0 to select a bonus map challenge type.
+sv_bounce                                : 0        : , "sv", "nf", "rep" : Bounce multiplier for when physically simulated objects collide with other objects.
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
+sv_caption_distance                      : 900      : , "sv", "rep"    : Set the max caption distance in multiplayer, if the local player is further away from the sound origin than this then the caption will be ignored.
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
 sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
-sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate an
-sv_client_max_interp_ratio               : 5        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_
-sv_client_min_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).               -1
-sv_client_predict                        : -1       : , "rep"          : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients se
+sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate and sv_maxcmdrate.
+sv_client_max_interp_ratio               : 5        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_interp_ratio is -1, then this cvar has no effect.
+sv_client_min_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).               -1 = let clients set cl_interp_ratio to anything  any other value = set minimum value for cl_interp_ratio
+sv_client_predict                        : -1       : , "rep"          : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients set cl_predict to anything     0 = force cl_predict to 0     1 = force cl_predict to 1
 sv_clockcorrection_msecs                 : 60       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
-sv_compressstringtablebaselines          : 1        :                  : Enable Snappy compression for string table baselines.
 sv_compressstringtablebaselines_threshold : 2048     :                  : Minimum size (in bytes) for stringtablebaseline buffer to be compressed.
-sv_consistency                           : 1        : , "rep"          : Legacy variable with no effect!  This was deleted and then added as a temporary kludge to prevent players from being banned by
+sv_consistency                           : 1        : , "rep"          : Legacy variable with no effect!  This was deleted and then added as a temporary kludge to prevent players from being banned by servers running old versions of SMAC
 sv_contact                               : 0        : , "nf"           : Contact email for server sysop
 sv_debug_player_use                      : 0        : , "sv", "rep"    : Visualizes +use logic. Green cross=trace success, Red cross=trace too far, Green box=radius success
 sv_debugmanualmode                       : 0        :                  : Make sure entities correctly report whether or not their network data has changed.
@@ -1448,13 +1131,12 @@ sv_dump_edicts                           : cmd      :                  : Display
 sv_dumpstringtables                      : 0        : , "cheat"        :
 sv_enableoldqueries                      : 0        :                  : Enable support for old style (HL1) server queries
 sv_filterban                             : 1        :                  : Set packet filtering by IP mode
+sv_footsteps                             : 1        : , "sv", "nf", "rep" : Play footstep sound for players
 sv_forcepreload                          : 0        : , "a"            : Force server side preloading.
+sv_friction                              : 4        : , "sv", "nf", "rep" : World friction.
 sv_gravity                               : 600      : , "sv", "nf", "rep" : World gravity.
-sv_hl2mp_weapon_respawn_time             : 90       : , "sv", "nf"     :
 sv_hudhint_sound                         : 1        : , "sv", "rep"    :
-sv_infinite_aux_power                    : 0        : , "sv", "cheat"  :
-sv_ladder_angle                          : -1       : , "sv", "rep"    : Cos of angle of incidence to ladder perpendicular for applying ladder_dampen
-sv_ladder_dampen                         : 0        : , "sv", "rep"    : Amount to dampen perpendicular movement on a ladder
+sv_item_relocation_time                  : 10       : , "sv", "nf"     :
 sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
 sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
 sv_logbans                               : 1        : , "a"            : Log server bans in the server logs.
@@ -1467,10 +1149,10 @@ sv_logfilename_format                    : 0        : , "a"            : Log fil
 sv_logflush                              : 0        : , "a"            : Flush the log file to disk on each write (slow).
 sv_logsdir                               : 0        : , "a"            : Folder in the game directory where server logs will be stored.
 sv_logsecret                             : 0        :                  : If set then include this secret when doing UDP logging (will use 0x53 as packet type, not usual 0x52)
-sv_lowedict_action                       : 0        :                  : 0 - no action, 1 - warn to log file, 2 - attempt to restart the game, if applicable, 3 - restart the map, 4 - go to the next ma
+sv_lowedict_action                       : 0        :                  : 0 - no action, 1 - warn to log file, 2 - attempt to restart the game, if applicable, 3 - restart the map, 4 - go to the next map in the map cycle, 5 - spew all edicts.
 sv_lowedict_threshold                    : 8        :                  : When only this many edicts are free, take the action specified by sv_lowedict_action.
 sv_massreport                            : 0        : , "sv"           :
-sv_master_share_game_socket              : 1        :                  : Use the game's socket to communicate to the master server. If this is 0, then it will create a socket on -steamport + 1 to comm
+sv_master_share_game_socket              : 1        :                  : Use the game's socket to communicate to the master server. If this is 0, then it will create a socket on -steamport + 1 to communicate to the master server on.
 sv_max_connects_sec                      : 2        :                  : Maximum connections per second to respond to from a single IP address.
 sv_max_connects_sec_global               : 0        :                  : Maximum connections per second to respond to from anywhere.
 sv_max_connects_window                   : 4        :                  : Window over which to average connections per second averages.
@@ -1481,21 +1163,23 @@ sv_maxcmdrate                            : 66       : , "rep"          : (If sv_
 sv_maxrate                               : 0        : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
 sv_maxreplay                             : 0        :                  : Maximum replay time in seconds
 sv_maxroutable                           : 1260     :                  : Server upper bound on net_maxroutable that a client can use.
+sv_maxspeed                              : 320      : , "sv", "nf", "rep" :
 sv_maxupdaterate                         : 66       : , "rep"          : Maximum updates per second that the server will allow
 sv_maxuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime exceeds this number of hours, the server will exit.
 sv_maxusrcmdprocessticks                 : 24       : , "sv", "nf"     : Maximum number of client-issued usrcmd ticks that can be replayed in packet loss conditions, 0 to allow no restrictions
-sv_maxusrcmdprocessticks_warning         : -1       : , "sv"           : Print a warning when user commands get dropped due to insufficient usrcmd ticks allocated, number of seconds to throttle, negat
+sv_maxusrcmdprocessticks_holdaim         : 1        : , "sv", "cheat"  : Hold client aim for multiple server sim ticks when client-issued usrcmd contains multiple actions (0: off; 1: hold this server tick; 2+: hold multiple ticks)
+sv_maxusrcmdprocessticks_warning         : -1       : , "sv"           : Print a warning when user commands get dropped due to insufficient usrcmd ticks allocated, number of seconds to throttle, negative disabled
+sv_maxvelocity                           : 3500     : , "sv", "rep"    : Maximum speed any ballistically moving object is allowed to attain per axis.
 sv_memlimit                              : 0        :                  : If set, whenever a game ends, if the total memory used by the server is greater than this # of megabytes, the server will exit.
 sv_mincmdrate                            : 10       : , "rep"          : This sets the minimum value for cl_cmdrate. 0 == unlimited.
 sv_minrate                               : 3500     : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
 sv_minupdaterate                         : 10       : , "rep"          : Minimum updates per second that the server will allow
-sv_minuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime is less than this number of hours, the server will continue running regardle
-sv_motd_unload_on_dismissal              : 0        : , "sv"           : If enabled, the MOTD contents will be unloaded when the player closes the MOTD.
+sv_minuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime is less than this number of hours, the server will continue running regardless of sv_memlimit.
 sv_namechange_cooldown_seconds           : 30       :                  : When a client name change is received, wait N seconds before allowing another name change
-sv_netspike                              : cmd      :                  : Write network trace if amount of data sent to client exceeds N bytes.  Use zero to disable tracing. Note that having this enabl
+sv_netspike                              : cmd      :                  : Write network trace if amount of data sent to client exceeds N bytes.  Use zero to disable tracing. Note that having this enabled, even if never triggered, impacts performance.  Set to zero when not in use. For compatibility reasons, this command can be initialized on the command line with the -netspike option.
 sv_netspike_on_reliable_snapshot_overflow : 0        :                  : If nonzero, the server will dump a netspike trace if a client is dropped due to reliable snapshot overflow
 sv_netspike_output                       : 1        :                  : Where the netspike data be written?  Sum of the following values: 1=netspike.txt, 2=ordinary server log
-sv_netspike_sendtime_ms                  : 0        :                  : If nonzero, the server will dump a netspike trace if it takes more than N ms to prepare a snapshot to a single client.  This fe
+sv_netspike_sendtime_ms                  : 0        :                  : If nonzero, the server will dump a netspike trace if it takes more than N ms to prepare a snapshot to a single client.  This feature does take some CPU cycles, so it should be left off when not in use.
 sv_noclipaccelerate                      : 5        : , "a", "sv", "nf", "rep" :
 sv_noclipduringpause                     : 0        : , "sv", "cheat", "rep" : If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
 sv_noclipspeed                           : 5        : , "a", "sv", "nf", "rep" :
@@ -1512,12 +1196,6 @@ sv_pure_consensus                        : 5        :                  : Minimum
 sv_pure_kick_clients                     : 1        :                  : If set to 1, the server will kick clients with mismatching files. Otherwise, it will issue a warning to the client.
 sv_pure_retiretime                       : 900      :                  : Seconds of server idle time to flush the sv_pure file hash cache.
 sv_pure_trace                            : 0        :                  : If set to 1, the server will print a message whenever a client is verifying a CRC for a file.
-sv_pushaway_clientside                   : 0        : , "sv", "rep"    : Clientside physics push away (0=off, 1=only localplayer, 1=all players)
-sv_pushaway_force                        : 30000    : , "sv", "rep"    : How hard physics objects are pushed away from the players on the server.
-sv_pushaway_max_force                    : 1000     : , "sv", "rep"    : Maximum amount of force applied to physics objects by players.
-sv_pushaway_max_player_force             : 10000    : , "sv", "cheat", "rep" : Maximum of how hard the player is pushed away from physics objects.
-sv_pushaway_min_player_speed             : 75       : , "sv", "rep"    : If a player is moving slower than this, don't push away physics objects (enables ducking behind things).
-sv_pushaway_player_force                 : 200000   : , "sv", "cheat", "rep" : How hard the player is pushed away from physics objects (falls off with inverse square of distance).
 sv_pvsskipanimation                      : 1        : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
 sv_querycache_stats                      : cmd      :                  : Display status of the query cache (client only)
 sv_rcon_banpenalty                       : 0        :                  : Number of minutes to ban users who fail rcon authentication
@@ -1527,13 +1205,13 @@ sv_rcon_maxpacketbans                    : 1        :                  : Ban IPs
 sv_rcon_maxpacketsize                    : 1024     :                  : The maximum number of bytes to allow in a command packet
 sv_rcon_minfailures                      : 5        :                  : Number of times a user can fail rcon authentication in sv_rcon_minfailuretime before being banned
 sv_rcon_minfailuretime                   : 30       :                  : Number of seconds to track failed rcon authentications
+sv_rcon_whitelist_address                : 0        :                  : When set, rcon failed authentications will never ban this address, e.g. '127.0.0.1'
 sv_region                                : 255      :                  : The region of the world to report this server in.
 sv_report_client_settings                : 0        : , "sv", "nf"     :
-sv_restrict_aspect_ratio_fov             : 1        : , "rep"          : This can be used to limit the effective FOV of users using wide-screen resolutions with aspect ratios wider than 1.85:1 (slight
-sv_robust_explosions                     : 1        : , "sv", "rep"    :
+sv_restrict_aspect_ratio_fov             : 1        : , "rep"          : This can be used to limit the effective FOV of users using wide-screen resolutions with aspect ratios wider than 1.85:1 (slightly wider than 16:9).     0 = do not cap effective FOV     1 = limit the effective FOV on windowed mode users using resolutions         greater than 1.85:1     2 = limit the effective FOV on both windowed mode and full-screen users
+sv_rollangle                             : 0        : , "sv", "nf", "rep" : Max view roll angle
+sv_rollspeed                             : 200      : , "sv", "nf", "rep" :
 sv_setsteamaccount                       : cmd      :                  : token Set game server account token to use for logging in to a persistent game server account
-sv_show_crosshair_target                 : 0        : , "sv"           :
-sv_showimpacts                           : 0        : , "sv", "cheat", "rep" : Shows client (red) and server (blue) bullet impact point
 sv_showladders                           : 0        : , "sv"           : Show bbox and dismount points for all ladders (must be set before level load.)
 sv_showlagcompensation                   : 0        : , "sv", "cheat"  : Show lag compensated hitboxes whenever a player is lag compensated.
 sv_shutdown                              : cmd      :                  : Sets the server to shutdown next time it's empty
@@ -1544,28 +1222,36 @@ sv_specaccelerate                        : 5        : , "a", "sv", "nf", "rep" :
 sv_specnoclip                            : 1        : , "a", "sv", "nf", "rep" :
 sv_specspeed                             : 3        : , "a", "sv", "nf", "rep" :
 sv_stats                                 : 1        :                  : Collect CPU usage stats
-sv_steamblockingcheck                    : 0        :                  : Check each new player for Steam blocking compatibility, 1 = message only, 2 >= drop if any member of owning clan blocks,3 >= dr
-sv_steamgroup                            : 0        : , "nf"           : The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page in the steam comm
-sv_stickysprint                          : 0        : , "a", "sv"      :
+sv_steamblockingcheck                    : 0        :                  : Check each new player for Steam blocking compatibility, 1 = message only, 2 >= drop if any member of owning clan blocks,3 >= drop if any player has blocked, 4 >= drop if player has blocked anyone on server
+sv_steamgroup                            : 0        : , "nf"           : The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page in the steam community.
+sv_stepsize                              : 18       : , "sv", "nf", "rep" :
+sv_stopspeed                             : 100      : , "sv", "nf", "rep" : Minimum stopping speed when on ground.
 sv_strict_notarget                       : 0        : , "sv"           : If set, notarget will cause entities to never think they are in the pvs
 sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
-sv_test_scripted_sequences               : 0        : , "sv"           : Tests for scripted sequences that are embedded in the world. Run through your map with this set to check for NPCs falling throu
+sv_test_scripted_sequences               : 0        : , "sv"           : Tests for scripted sequences that are embedded in the world. Run through your map with this set to check for NPCs falling through the world.
 sv_teststepsimulation                    : 1        : , "sv"           :
 sv_thinktimecheck                        : 0        : , "sv"           : Check for thinktimes all on same timestamp.
 sv_timeout                               : 65       :                  : After this many seconds without a message from a client, the client is dropped
 sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
-sv_unlag_debug                           : 0        : , "sv"           :
 sv_unlockedchapters                      : 1        : , "a", "sv"      :
-sv_use_steam_voice                       : 1        : , "rep"          : Enable/disable using Steam Voice instead of the old voice codec (if enabled, voice_inputfromfile will no longer function).
+sv_usercmd_custom_random_seed            : 1        : , "sv", "cheat"  : When enabled server will populate an additional random seed independent of the client
 sv_vehicle_autoaim_scale                 : 8        : , "sv"           :
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
+sv_voicecodec                            : 0        :                  : Specifies which voice codec to use. Valid options are: vaudio_speex - Legacy Speex codec (lowest quality) vaudio_celt - Newer CELT codec steam - Use Steam voice API
 sv_voiceenable                           : 1        : , "a", "nf"      :
 sv_vote_allow_spectators                 : 0        : , "sv"           : Allow spectators to vote?
+sv_vote_creation_timer                   : 150      : , "sv"           : How long before a player can attempt to call another vote (in seconds).
 sv_vote_failure_timer                    : 300      : , "sv"           : A vote that fails cannot be re-submitted for this long
+sv_vote_quorum_ratio                     : 0        : , "sv", "nf"     : The minimum ratio of eligible players needed to pass a vote.  Min 0.5, Max 1.0.
 sv_vote_ui_hide_disabled_issues          : 1        : , "sv"           : Suppress listing of disabled issues in the vote setup screen.
+sv_wateraccelerate                       : 10       : , "sv", "nf", "rep" :
+sv_waterdist                             : 12       : , "sv", "rep"    : Vertical view fixup when eyes are near water plane.
+sv_waterfriction                         : 1        : , "sv", "nf", "rep" :
+sv_weapon_relocation_time                : 10       : , "sv", "nf"     :
 sys_minidumpexpandedspew                 : 1        :                  :
 sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
 systemlinkport                           : 27030    :                  : System Link port
+team_menu                                : cmd      :                  : Team Selection Menu
 telemetry_demoend                        : 0        :                  : When playing demo, stop telemetry on tick #
 telemetry_demostart                      : 0        :                  : When playing demo, start telemetry on tick #
 telemetry_framecount                     : 0        :                  : Set Telemetry count of frames to capture
@@ -1575,9 +1261,8 @@ telemetry_resume                         : 0        :                  : Resume 
 telemetry_server                         : 0        :                  : Set Telemetry server
 template_debug                           : 0        : , "sv"           :
 Test_CreateEntity                        : cmd      :                  :
-test_dispatcheffect                      : cmd      :                  : Test a clientside dispatch effect.  Usage: test_dispatcheffect <effect name> <distance away> <flags> <magnitude> <scale>  Defau
+test_dispatcheffect                      : cmd      :                  : Test a clientside dispatch effect.  Usage: test_dispatcheffect <effect name> <distance away> <flags> <magnitude> <scale>  Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0>
 Test_EHandle                             : cmd      :                  :
-test_endmap                              : cmd      :                  :
 test_entity_blocker                      : cmd      :                  : Test command that drops an entity blocker out in front of the player.
 Test_InitRandomEntitySpawner             : cmd      :                  :
 test_massive_dmg                         : 30       : , "sv"           :
@@ -1589,20 +1274,10 @@ Test_RandomPlayerPosition                : cmd      :                  :
 Test_RemoveAllRandomEntities             : cmd      :                  :
 Test_SpawnRandomEntities                 : cmd      :                  :
 testscript_debug                         : 0        :                  : Debug test scripts.
-tf_arena_max_streak                      : 3        : , "sv", "nf", "rep" : Teams will be scrambled if one team reaches this streak
-tf_arena_preround_time                   : 10       : , "sv", "nf", "rep" : Length of the Pre-Round time
-tf_arena_round_time                      : 0        : , "sv", "nf", "rep" :
-tf_arena_use_queue                       : 1        : , "sv", "nf", "rep" : Enables the spectator queue system for Arena.
-tf_escort_recede_time                    : 30       : , "sv"           :
-tf_escort_recede_time_overtime           : 5        : , "sv"           :
-tf_escort_score_rate                     : 1        : , "sv", "cheat"  : Score for escorting the train, in points per second
-tf_show_train_path                       : 0        : , "sv", "cheat"  :
 think_limit                              : 0        : , "sv", "rep"    : Maximum think time in milliseconds, warning is printed if this is exceeded.
 threadpool_affinity                      : 1        :                  : Enable setting affinity
-thumper_show_radius                      : 0        : , "sv", "cheat"  : If true, advisor will use her custom impact damage table.
 toggle                                   : cmd      :                  : Toggles a convar on or off, or cycles through a set of values.
 toggle_duck                              : cmd      :                  : Toggles duck
-toggle_zoom                              : cmd      :                  : Toggles zoom display
 trace_report                             : 0        : , "sv"           :
 tv_allow_camera_man                      : 1        : , "sv"           : Auto director allows spectators to become camera man
 tv_allow_static_shots                    : 1        : , "sv"           : Auto director uses fixed level cameras for shots
@@ -1614,6 +1289,7 @@ tv_clients                               : cmd      :                  : Shows l
 tv_debug                                 : 0        :                  : SourceTV debug info.
 tv_delay                                 : 30       : , "sv"           : SourceTV broadcast delay in seconds
 tv_delaymapchange                        : 0        : , "sv"           : Delays map change until broadcast is complete
+tv_delaymapchange_protect                : 1        : , "sv"           : Protect against doing a manual map change if HLTV is broadcasting and has not caught up with a major game event such as round_end
 tv_deltacache                            : 2        :                  : Enable delta entity bit stream cache
 tv_dispatchmode                          : 1        :                  : Dispatch clients to relay proxies: 0=never, 1=if appropriate, 2=always
 tv_enable                                : 0        : , "nf"           : Activates SourceTV on server.
@@ -1646,15 +1322,21 @@ users                                    : cmd      :                  : Show us
 vcr_verbose                              : 0        :                  : Write extra information into .vcr file.
 vehicle_flushscript                      : cmd      :                  : Flush and reload all vehicle scripts
 version                                  : cmd      :                  : Print version info string.
+viewpunch_x_max                          : 0        : , "sv", "rep"    :
+viewpunch_x_min                          : -1       : , "sv", "rep"    :
+viewpunch_y_max                          : 0        : , "sv", "rep"    :
+viewpunch_y_min                          : 0        : , "sv", "rep"    :
+viewpunch_z_max                          : 0        : , "sv", "rep"    :
+viewpunch_z_min                          : 0        : , "sv", "rep"    :
 violence_ablood                          : 1        :                  : Draw alien blood
 violence_agibs                           : 1        :                  : Show alien gib entities
 violence_hblood                          : 1        :                  : Draw human blood
 violence_hgibs                           : 1        :                  : Show human gib entities
 voice_debugfeedbackfrom                  : 0        :                  :
 voice_inputfromfile                      : 0        :                  : Get voice input from 'voice_input.wav' rather than from the microphone.
+voice_menu                               : cmd      :                  : Voice Command Menu
 voice_recordtofile                       : 0        :                  : Record mic data and decompressed voice data into 'voice_micdata.wav' and 'voice_decompressed.wav'
 voice_serverdebug                        : 0        : , "sv"           :
-votekick                                 : cmd      :                  :
 vox_reload                               : cmd      :                  : Reload sentences.txt file
 voxeltree_box                            : cmd      :                  : View entities in the voxel-tree inside box <Vector(min), Vector(max)>.
 voxeltree_playerview                     : cmd      :                  : View entities in the voxel-tree at the player position.
@@ -1691,15 +1373,19 @@ vprof_reset_peaks                        : cmd      :                  : Reset j
 vprof_scope_entity_gamephys              : 0        : , "sv"           :
 vprof_scope_entity_thinks                : 0        : , "sv"           :
 vprof_vtune_group                        : cmd      :                  : enable vtune for a particular vprof group ('disable' to disable)
-wc_air_edit_further                      : cmd      :                  : When in WC edit mode and editing air nodes,  moves position of air node crosshair and placement location further away from play
+wc_air_edit_further                      : cmd      :                  : When in WC edit mode and editing air nodes,  moves position of air node crosshair and placement location further away from player
 wc_air_edit_nearer                       : cmd      :                  : When in WC edit mode and editing air nodes,  moves position of air node crosshair and placement location nearer to from player
 wc_air_node_edit                         : cmd      :                  : When in WC edit mode, toggles laying down or air nodes instead of ground nodes
-wc_create                                : cmd      :                  : When in WC edit mode, creates a node where the player is looking if a node is allowed at that location for the currently select
+wc_create                                : cmd      :                  : When in WC edit mode, creates a node where the player is looking if a node is allowed at that location for the currently selected hull size (see ai_next_hull)
 wc_destroy                               : cmd      :                  : When in WC edit mode, destroys the node that the player is nearest to looking at.  (The node will be highlighted by a red box).
 wc_destroy_undo                          : cmd      :                  : When in WC edit mode restores the last deleted node
 wc_link_edit                             : cmd      :                  :
 weapon_showproficiency                   : 0        : , "sv"           :
 wipe_nav_attributes                      : cmd      :                  : Clear all nav attributes of selected area.
+workshop_download_collection             : cmd      :                  : Downloads a collection of workshop items.
+workshop_download_item                   : cmd      :                  : Download some item on the workshop.
+workshop_help                            : cmd      :                  : Display some help & tips related to gameserver workshop stuff.
+workshop_update_items                    : cmd      :                  : Updates downloaded items if possible.
 writeid                                  : cmd      :                  : Writes a list of permanently-banned user IDs to banned_user.cfg.
 writeip                                  : cmd      :                  : Save the ban list to banned_ip.cfg.
 xbox_autothrottle                        : 1        : , "a", "sv"      :
@@ -1710,14 +1396,14 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 xc_crouch_range                          : 0        : , "a", "sv"      : Percentarge [1..0] of joystick range to allow ducking within
 xc_uncrouch_on_jump                      : 1        : , "a", "sv"      : Uncrouch when jump occurs
 xc_use_crouch_limiter                    : 0        : , "a", "sv"      : Use the crouch limiting logic on the controller
-zombie_ambushdist                        : 16000    : , "sv"           :
 zombie_basemax                           : 100      : , "sv"           :
 zombie_basemin                           : 100      : , "sv"           :
 zombie_changemax                         : 0        : , "sv"           :
 zombie_changemin                         : 0        : , "sv"           :
-zombie_decaymax                          : 0        : , "sv"           :
-zombie_decaymin                          : 0        : , "sv"           :
+zombie_decaymax                          : 9        : , "sv"           :
+zombie_decaymin                          : 8        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           :
 zombie_stepfreq                          : 4        : , "sv"           :
+zombie_tree                              : cmd      :                  : Zombie Skill Tree
 --------------
-1714 total convars/concommands
+1400 total convars/concommands
