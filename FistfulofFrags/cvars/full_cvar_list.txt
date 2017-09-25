@@ -1,10 +1,9 @@
-// ****************************************************************************
-//                                                                            *
-//     Fistful of Frags - full_cvar_list.txt                                  *
-//     1714 total convars/concommands                                         *
-//     Version 170815                                                         *
-//                                                                            *
-// ****************************************************************************
+// ************************************************************************** //
+//                                                                            //
+//     Fistful of Frags - full_cvar_list.txt                                  //
+//     Version 240917                                                         //
+//                                                                            //
+// ************************************************************************** //
 
 _resetgamestats                          : cmd      :                  : Erases current game stats and writes out a blank stats file
 _restart                                 : cmd      :                  : Shutdown and restart the engine.
