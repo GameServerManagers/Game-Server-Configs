@@ -7,7 +7,7 @@
     "logo": "",
     "maxPlayers": 32,
     "maxTickRate": 60,
-    "name": "",
+    "name": "SERVERNAME",
     "password": "",
     "port": 4200,
     "queryPort": 4201,
