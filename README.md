@@ -1,22 +1,22 @@
 **Game Server Config Files**
 
-note: this repo is very new an missing most config files currently. More will be added over time.
+Note: This repo is very new and currently missing most config files. More will be added over time.
 
-This is a repo of config files designed to be a starting point for setup of various game servers.
+This is a repo of config files designed to be a starting point for the setup of various game servers.
 
 **The Issue**
 
-Game server configs can be found on many different forums and websites some are better than others. There is also misinformation, confusion or lack of information about what you need in a config file and how you should setup a game server.
+Game server configs can be found on many different forums and websites. Some are better than others. There can also be misinformation, confusion or lack of information about what you need in a config file and how you should setup a game server.
 
-**Aim of this Repo**
+**Aim of This Repo**
 
-The aim of this repository is to put together config files for game servers and keep them as generic/vanilla  and standardised as possible. Providing all the important settings server admins need to get started with there game server and avoiding over complicating the configs.
+The aim of this repository is to put together config files for game servers and keep them as generic/vanilla and as standardized as possible. Providing all the important settings server admins need to get started with their game server and avoiding overcomplicating the configs.
 
-**What this repo provides**
+**What This Repo Provides**
 
  - A basic server config with all the essential settings to get started with vanilla game server.
  - A list of all command variables for the vanilla game servers.
 
-**What do you mean by vanilla/generic?**
+**What Do You Mean by Vanilla/Generic?**
 
-A vanilla server is unchanged from what the game developer intended. Without mods or major tweaks to the servers settings that would make a custom server. 
+A vanilla/generic server is unchanged from what the game developer intended. It excludes mods or major tweaks to the server settings that are found in a custom server.
