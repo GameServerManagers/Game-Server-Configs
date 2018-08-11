@@ -1,0 +1,46 @@
+// Server name
+// desc: Hostname for the server.
+// default: "BrainBread 2 DS"
+hostname "BrainBread 2 Dedicated Server"
+
+// Cheats
+// desc: Allows cheats on the server.
+// hint: This will disable stats & achievements
+// default: 0
+sv_cheats 0
+
+// Password
+// desc: Sets a password for the server.
+// default: ""
+sv_password ""
+
+// Profile System
+// desc: Sets if the player will be able to save and load their skills. (0 - Disabled | 1 - Global | 2 - Local, achievements and steam stats are disabled)
+// default 1
+// Profile Saving only works on dedicated servers.
+bb2_allow_profile_system 1
+
+// Misc
+sv_region 255
+sv_alltalk 1
+
+sv_allowupload 1
+sv_allowdownload 1
+
+// Rates
+sv_maxrate 0
+sv_minrate 35000
+
+sv_maxcmdrate 33
+sv_mincmdrate 30
+
+sv_maxupdaterate 33
+sv_minupdaterate 30
+
+sv_forcepreload 0
+
+exec server_core.cfg
+exec server_game.cfg
+exec server_custom.cfg
+
+heartbeat
