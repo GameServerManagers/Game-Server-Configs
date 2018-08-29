@@ -49,7 +49,7 @@ MatchTime=10
 
 # Password
 # Set an Password to only selected players be able to enter in your match
-Password=test
+Password=
 
 #DedicatedBroadcast
 # 0: P2P Broadcast (Hybrid)
