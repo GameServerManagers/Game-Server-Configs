@@ -5,11 +5,30 @@
 //                                                                            //
 // ************************************************************************** //
 
-// .................................. Basic ................................. //
-// .................................. Game .................................. //
-// ................................ Map Cycle ............................... //
-// .............................. Communication ............................. //
-// .............................. Fast Download ............................. //
-// ................................ Ban List ................................ //
-// ............................. Server Logging ............................. //
+// Section Header ........................................................... //
 
+// Setting Name - Setting description.
+// 0 = option 1.
+// 0 = option 2.
+// Default: variable 0
+variable 0
+
+// Setting Name - Setting description.
+// Default: variable 45
+variable 45
+
+// Setting Name - Setting description.
+// Default: variable 1
+// Recommended: variable 2
+variable 2
+
+// Setting Name - Setting description.
+// Example:
+//    server location: maps/custommap.bsp
+//    web server location: http://example.com/custom/maps/custommap.bsp
+//    sv_downloadurl "http://example.com/custom"
+// Default: variable ""
+variable ""
+
+// Section Header ........................................................... //
+// Section description (optional)

@@ -19,4 +19,8 @@ The aim of this repository is to put together config files for game servers and 
 
 **What Do You Mean by Vanilla/Generic?**
 
-A vanilla/generic server is unchanged from what the game developer intended. It excludes mods or major tweaks to the server settings that are found in a custom server.
+A vanilla/generic server is unchanged from what the game developer intended. It excludes mods or major tweaks to the server settings that are found in a custom server. The exception to this would be any widly accepted settings that improve the permormance or are commonly used.
+
+**How to contribute**
+
+There are many different game servers many of which are different. If you run a game server and wish to improve a config please fork this repo and do a PR or if you are not used to Git raise an issue with your changes so it can be added.
