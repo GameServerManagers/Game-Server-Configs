@@ -1,0 +1,65 @@
+{
+  "LocalS3URL": "",
+  "LocalS3AccessKeyId": "",
+  "LocalS3SecretKey": "",
+  "LocalS3BucketName": "",
+  "LocalS3Region": "",
+  "TribeLogConfig": {
+    "MaxRedisEntries": 1000,
+    "BackupMode": "off",
+    "MaxFileHistory": 10,
+    "HttpBackupURL": "",
+    "HttpAPIKey": "",
+    "S3KeyPrefix": ""
+  },
+  "SharedLogConfig": {
+    "FetchRateSec": 60,
+    "SnapshotCleanupSec": 900,
+    "SnapshotRateSec": 1800,
+    "SnapshotExpirationHours": 48,
+    "BackupMode": "off",
+    "MaxFileHistory": 10,
+    "HttpBackupURL": "",
+    "HttpAPIKey": "",
+    "S3KeyPrefix": ""
+  },
+  "TravelDataConfig": {
+    "BackupMode": "off",
+    "MaxFileHistory": 10,
+    "HttpBackupURL": "",
+    "HttpAPIKey": "",
+    "S3KeyPrefix": ""
+  },
+  "DatabaseConnections": [
+    {
+      "Name": "Default",
+      "URL": "127.0.0.1",
+      "Port": 6379,
+      "Password": "foobared"
+    },
+    {
+      "Name": "TribeDB",
+      "URL": "127.0.0.1",
+      "Port": 6379,
+      "Password": "foobared"
+    },
+    {
+      "Name": "TravelDataDB",
+      "URL": "127.0.0.1",
+      "Port": 6379,
+      "Password": "foobared"
+    },
+    {
+      "Name": "TerritoryDB",
+      "URL": "127.0.0.1",
+      "Port": 6379,
+      "Password": "foobared"
+    },
+    {
+      "Name": "LogDB",
+      "URL": "127.0.0.1",
+      "Port": 6379,
+      "Password": "foobared"
+    }
+  ]
+}
