@@ -19,7 +19,7 @@
       "Spawn_Chance": 0.35,
       "Despawn_Dropped_Time": 600.0,
       "Despawn_Natural_Time": 900.0,
-      "Respawn_Time": 30.0,
+      "Respawn_Time": 50.0,
       "Quality_Full_Chance": 0.1,
       "Quality_Multiplier": 1.0,
       "Gun_Bullets_Full_Chance": 0.1,
@@ -38,7 +38,9 @@
       "Respawn_Time": 300.0,
       "Unlocked_After_Seconds_In_Safezone": 3600.0,
       "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Child_Explosion_Armor_Multiplier": 1.0,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0,
       "Max_Instances_Tiny": 4,
       "Max_Instances_Small": 8,
@@ -63,6 +65,7 @@
       "Respawn_Beacon_Time": 0.0,
       "Damage_Multiplier": 0.75,
       "Armor_Multiplier": 1.25,
+      "Backstab_Multiplier": 1.25,
       "Beacon_Experience_Multiplier": 1.0,
       "Full_Moon_Experience_Multiplier": 2.0,
       "Min_Drops": 1,
@@ -73,6 +76,8 @@
       "Max_Boss_Drops": 10,
       "Slow_Movement": true,
       "Can_Stun": true,
+      "Only_Critical_Stuns": false,
+      "Weapons_Use_Player_Damage": false,
       "Beacon_Max_Rewards": 0,
       "Beacon_Max_Participants": 0,
       "Beacon_Rewards_Multiplier": 1.0
@@ -85,18 +90,23 @@
       "Max_Instances_Small": 8,
       "Max_Instances_Medium": 16,
       "Max_Instances_Large": 32,
-      "Max_Instances_Insane": 64
+      "Max_Instances_Insane": 64,
+      "Weapons_Use_Player_Damage": false
     },
     "Barricades": {
       "Decay_Time": 604800,
-      "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0
     },
     "Structures": {
       "Decay_Time": 604800,
-      "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0
     },
     "Players": {
@@ -129,14 +139,17 @@
       "Can_Start_Bleeding": false,
       "Can_Stop_Bleeding": true,
       "Spawn_With_Max_Skills": false,
-      "Spawn_With_Stamina_Skills": false
+      "Spawn_With_Stamina_Skills": false,
+      "Allow_Instakill_Headshots": false
     },
     "Objects": {
       "Binary_State_Reset_Multiplier": 1.0,
       "Fuel_Reset_Multiplier": 1.0,
       "Water_Reset_Multiplier": 1.0,
       "Resource_Reset_Multiplier": 1.0,
-      "Rubble_Reset_Multiplier": 1.0
+      "Resource_Drops_Multiplier": 1.0,
+      "Rubble_Reset_Multiplier": 1.0,
+      "Allow_Holiday_Drops": true
     },
     "Events": {
       "Rain_Frequency_Min": 2.3,
@@ -184,6 +197,7 @@
       "Timer_Exit": 10,
       "Timer_Respawn": 10,
       "Timer_Home": 30,
+      "Timer_Leave_Group": 30,
       "Max_Group_Members": 0
     }
   },
@@ -192,7 +206,7 @@
       "Spawn_Chance": 0.35,
       "Despawn_Dropped_Time": 600.0,
       "Despawn_Natural_Time": 900.0,
-      "Respawn_Time": 45.0,
+      "Respawn_Time": 100.0,
       "Quality_Full_Chance": 0.1,
       "Quality_Multiplier": 1.0,
       "Gun_Bullets_Full_Chance": 0.05,
@@ -211,7 +225,9 @@
       "Respawn_Time": 300.0,
       "Unlocked_After_Seconds_In_Safezone": 3600.0,
       "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Child_Explosion_Armor_Multiplier": 1.0,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0,
       "Max_Instances_Tiny": 4,
       "Max_Instances_Small": 8,
@@ -236,6 +252,7 @@
       "Respawn_Beacon_Time": 0.0,
       "Damage_Multiplier": 1.0,
       "Armor_Multiplier": 1.0,
+      "Backstab_Multiplier": 1.25,
       "Beacon_Experience_Multiplier": 1.0,
       "Full_Moon_Experience_Multiplier": 2.0,
       "Min_Drops": 1,
@@ -246,6 +263,8 @@
       "Max_Boss_Drops": 10,
       "Slow_Movement": false,
       "Can_Stun": true,
+      "Only_Critical_Stuns": false,
+      "Weapons_Use_Player_Damage": false,
       "Beacon_Max_Rewards": 0,
       "Beacon_Max_Participants": 0,
       "Beacon_Rewards_Multiplier": 1.0
@@ -258,18 +277,23 @@
       "Max_Instances_Small": 8,
       "Max_Instances_Medium": 16,
       "Max_Instances_Large": 32,
-      "Max_Instances_Insane": 64
+      "Max_Instances_Insane": 64,
+      "Weapons_Use_Player_Damage": false
     },
     "Barricades": {
       "Decay_Time": 604800,
-      "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0
     },
     "Structures": {
       "Decay_Time": 604800,
-      "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0
     },
     "Players": {
@@ -302,14 +326,17 @@
       "Can_Start_Bleeding": true,
       "Can_Stop_Bleeding": true,
       "Spawn_With_Max_Skills": false,
-      "Spawn_With_Stamina_Skills": false
+      "Spawn_With_Stamina_Skills": false,
+      "Allow_Instakill_Headshots": false
     },
     "Objects": {
       "Binary_State_Reset_Multiplier": 1.0,
       "Fuel_Reset_Multiplier": 1.0,
       "Water_Reset_Multiplier": 1.0,
       "Resource_Reset_Multiplier": 1.0,
-      "Rubble_Reset_Multiplier": 1.0
+      "Resource_Drops_Multiplier": 1.0,
+      "Rubble_Reset_Multiplier": 1.0,
+      "Allow_Holiday_Drops": true
     },
     "Events": {
       "Rain_Frequency_Min": 2.3,
@@ -357,6 +384,7 @@
       "Timer_Exit": 10,
       "Timer_Respawn": 10,
       "Timer_Home": 30,
+      "Timer_Leave_Group": 30,
       "Max_Group_Members": 0
     }
   },
@@ -365,7 +393,7 @@
       "Spawn_Chance": 0.15,
       "Despawn_Dropped_Time": 600.0,
       "Despawn_Natural_Time": 900.0,
-      "Respawn_Time": 60.0,
+      "Respawn_Time": 150.0,
       "Quality_Full_Chance": 0.01,
       "Quality_Multiplier": 1.0,
       "Gun_Bullets_Full_Chance": 0.025,
@@ -384,7 +412,9 @@
       "Respawn_Time": 300.0,
       "Unlocked_After_Seconds_In_Safezone": 3600.0,
       "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Child_Explosion_Armor_Multiplier": 1.0,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0,
       "Max_Instances_Tiny": 4,
       "Max_Instances_Small": 8,
@@ -409,6 +439,7 @@
       "Respawn_Beacon_Time": 0.0,
       "Damage_Multiplier": 1.5,
       "Armor_Multiplier": 0.75,
+      "Backstab_Multiplier": 1.25,
       "Beacon_Experience_Multiplier": 1.0,
       "Full_Moon_Experience_Multiplier": 2.0,
       "Min_Drops": 1,
@@ -419,6 +450,8 @@
       "Max_Boss_Drops": 10,
       "Slow_Movement": false,
       "Can_Stun": false,
+      "Only_Critical_Stuns": true,
+      "Weapons_Use_Player_Damage": true,
       "Beacon_Max_Rewards": 0,
       "Beacon_Max_Participants": 0,
       "Beacon_Rewards_Multiplier": 1.0
@@ -431,18 +464,23 @@
       "Max_Instances_Small": 8,
       "Max_Instances_Medium": 16,
       "Max_Instances_Large": 32,
-      "Max_Instances_Insane": 64
+      "Max_Instances_Insane": 64,
+      "Weapons_Use_Player_Damage": true
     },
     "Barricades": {
       "Decay_Time": 604800,
-      "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0
     },
     "Structures": {
       "Decay_Time": 604800,
-      "Armor_Multiplier": 1.0,
-      "Gun_Damage_Multiplier": 1.0,
+      "Armor_Lowtier_Multiplier": 1.0,
+      "Armor_Hightier_Multiplier": 0.5,
+      "Gun_Lowcal_Damage_Multiplier": 1.0,
+      "Gun_Highcal_Damage_Multiplier": 1.0,
       "Melee_Damage_Multiplier": 1.0
     },
     "Players": {
@@ -475,14 +513,17 @@
       "Can_Start_Bleeding": true,
       "Can_Stop_Bleeding": false,
       "Spawn_With_Max_Skills": false,
-      "Spawn_With_Stamina_Skills": false
+      "Spawn_With_Stamina_Skills": false,
+      "Allow_Instakill_Headshots": true
     },
     "Objects": {
       "Binary_State_Reset_Multiplier": 1.0,
       "Fuel_Reset_Multiplier": 1.0,
       "Water_Reset_Multiplier": 1.0,
       "Resource_Reset_Multiplier": 1.0,
-      "Rubble_Reset_Multiplier": 1.0
+      "Resource_Drops_Multiplier": 1.0,
+      "Rubble_Reset_Multiplier": 1.0,
+      "Allow_Holiday_Drops": true
     },
     "Events": {
       "Rain_Frequency_Min": 2.3,
@@ -530,6 +571,7 @@
       "Timer_Exit": 10,
       "Timer_Respawn": 10,
       "Timer_Home": 30,
+      "Timer_Leave_Group": 30,
       "Max_Group_Members": 0
     }
   }
