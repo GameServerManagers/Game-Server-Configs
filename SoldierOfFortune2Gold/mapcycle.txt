@@ -1,0 +1,172 @@
+s// In order to only have one map load instead of
+// multiple maps, you can remove the map1 and map2
+// entry from this file. You would also have to set
+// the desired gametype, time- and scorelimit CVARs
+// and change the g_motd CVAR from the map0 entry.
+
+// Choices for gametypes are:
+// dm, tdm, ctf, inf, elim, h&s or h&z
+
+mapcycle
+{
+	map0
+	{
+		command "map mp_shop"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map1
+	{
+		command "map mp_hos1"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map2
+	{
+		command "map mp_hk1"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map3
+	{
+		command "map mp_col1"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map4
+	{
+		command "map mp_finca"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map5
+	{
+		command "map mp_kam1"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map6
+	{
+		command "map mp_kam2"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map7
+	{
+		command "map mp_raven"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map8
+	{
+		command "map mp_pra1"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map9
+	{
+		command "map mp_shop2"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map10
+	{
+		command "map mp_col2"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map11
+	{
+		command "map mp_jor1"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map12
+	{
+		command "map mp_pra2"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map13
+	{
+		command "map mp_kam3"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map14
+	{
+		command "map mp_kam4"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+	map15
+	{
+		command "map mp_hos2"
+		cvars
+		{
+			scorelimit 0
+			timelimit 15
+			g_gametype dm
+		}
+	}
+}
