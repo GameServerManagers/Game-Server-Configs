@@ -36,7 +36,7 @@
   kickafktime="120"
   karmaenabled="False"
   gamemodeidentifier="sandbox"
-  LevelDifficulty="99"
+  LevelDifficulty="50"
   KillDisconnectedTime="30"
   SubSelection="Manual"
   ModeSelection="Manual"
