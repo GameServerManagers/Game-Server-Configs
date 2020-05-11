@@ -17,6 +17,6 @@ jobs:
       with:
         source_repo: "https://github.com/GameServerManagers/Game-Server-Configs"
         source_branch: "refs/heads/*"
-        destination_repo: "git@bitbucket.org:GameServerManagers/Game-Server-Configs.git"
+        destination_repo: "git@bitbucket.org:GameServerManagers/game-server-configs.git"
         destination_branch: "refs/heads/*"
         ssh_private_key: ${{ secrets.BITBUCKET_SECRET }}
