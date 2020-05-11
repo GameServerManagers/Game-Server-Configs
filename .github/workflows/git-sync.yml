@@ -16,7 +16,7 @@ jobs:
       uses: wei/git-sync@v2
       with:
         source_repo: "https://github.com/GameServerManagers/Game-Server-Configs"
-        source_branch: "refs/heads/*"
+        source_branch: "master"
         destination_repo: "git@bitbucket.org:GameServerManagers/game-server-configs.git"
-        destination_branch: "refs/heads/*"
+        destination_branch: "master"
         ssh_private_key: ${{ secrets.BITBUCKET_SECRET }}
