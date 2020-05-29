@@ -3,7 +3,7 @@ game.serverGamePlayMode GPM_CQ
 game.serverGameTime 0
 game.serverMaxPlayers 32
 game.serverScoreLimit 0
-game.serverInternet 1
+game.serverInternet 0
 game.serverNumberOfRounds 3
 game.serverSpawnTime 1
 game.serverSpawnDelay 3
@@ -44,8 +44,8 @@ game.serverSoldierFriendlyFireOnSplash 100
 game.serverVehicleFriendlyFireOnSplash 100
 game.serverIP 0.0.0.0
 game.serverPort 15567
-game.gameSpyLANPort 0
-game.gameSpyPort 0
+game.gameSpyLANPort 23000
+game.gameSpyPort 23000
 game.ASEPort 0
 game.serverHitIndication 0
 game.serverTKPunishMode 1
