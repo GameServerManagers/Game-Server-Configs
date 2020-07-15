@@ -4,67 +4,70 @@
 
 #the following is a list of available command line parameters:
 
-#-config <config file>				            Specifies the configuration file to use.
-#-port <port number>				              Specifies the port to listen on.
-#-players <number> / -maxplayers <number>	Sets the max number of players
-#-pass <password> / -password <password>	Sets the server password
-#-world <world file>				              Load a world and automatically start the server.
-#-autocreate <#>			                  	Creates a world if none is found in the path specified by -world. World size is specified by: 1(small), 2(medium), and 3(large).
-#-banlist <path>			                  	Specifies the location of the banlist. Defaults to "banlist.txt" in the working directory.
-#-worldname <world name>             			Sets the name of the world when using -autocreate.
-#-secure			                        		Adds addition cheat protection to the server.
-#-noupnp				                        	Disables automatic port forwarding
-#-steam                         					Enables Steam Support
-#-lobby <friends> or <private>             Allows friends to join the server or sets it to private if Steam is enabled
-#-ip <ip address>	Sets the IP address for the server to listen on
-#-forcepriority <priority>	Sets the process priority for this task. If this is used the "priority" setting below will be ignored.
-#-disableannouncementbox   Disables the text announcements Announcement Box makes when pulsed from wire.
-#-announcementboxrange <number>   Sets the announcement box text messaging range in pixels, -1 for serverwide announcements.
-#-seed <seed> Specifies the world seed when using -autocreate
+#-config <config file>					Specifies the configuration file to use.
+#-port <port number>					Specifies the port to listen on.
+#-players <number> / -maxplayers <number>		Sets the max number of players
+#-pass <password> / -password <password>		Sets the server password
+#-world <world file>					Load a world and automatically start the server.
+#-autocreate <#>					Creates a world if none is found in the path specified by -world. World size is specified by: 1(small), 2(medium), and 3(large).
+#-banlist <path>					Specifies the location of the banlist. Defaults to "banlist.txt" in the working directory.
+#-worldname <world name>				Sets the name of the world when using -autocreate.
+#-secure						Adds addition cheat protection to the server.
+#-noupnp						Disables automatic port forwarding
+#-steam							Enables Steam Support\
+#-lobby <friends> or <private>				Allows friends to join the server or sets it to private if Steam is enabled
+#-ip <ip address>					Sets the IP address for the server to listen on
+#-forcepriority <priority>				Sets the process priority for this task. If this is used the "priority" setting below will be ignored.
+#-disableannouncementbox				Disables the text announcements Announcement Box makes when pulsed from wire.
+#-announcementboxrange <number>				Sets the announcement box text messaging range in pixels, -1 for serverwide announcements.
+#-seed <seed>						Specifies the world seed when using -autocreate
 
 #remove the # in front of commands to enable them.
 
 #Load a world and automatically start the server.
 #WARNING: Environment variables ($HOME, ~) don't work yet, so the stated file will be relatively loaded from "serverfiles" if the given path is relative.
-world=~/.local/share/Terraria/Worlds/world1.wld
+#world=~/.local/share/Terraria/Worlds/world1.wld
 
 #Creates a new world if none is found. World size is specified by: 1(small), 2(medium), and 3(large).
-autocreate=1
+#autocreate=1
 
 #Sets the world seed when using autocreate
 #seed=AwesomeSeed
 
 #Sets the name of the world when using autocreate
-worldname=world1
+#worldname=Terraria
 
-#Sets the difficulty of the world when using autocreate 0(normal), 1(expert)
-difficulty=0
+#Sets the difficulty of the world when using autocreate 0(classic), 1(expert), 2(master), 3(journey)
+#difficulty=0
 
 #Sets the max number of players allowed on a server.  Value must be between 1 and 255
-maxplayers=8
+#maxplayers=8
 
 #Set the port number
-port=7777
+#port=7777
 
 #Set the server password
-password=
+#password=p@55w0rd
 
 #Set the message of the day
-motd=Please don’t cut the purple trees!
+#motd=Please don’t cut the purple trees!
 
 #Sets the folder where world files will be stored
 #WARNING: Environment variables ($HOME, ~) don't work yet, so the stated folder will be relatively created in "serverfiles" if the given path is relative.
-worldpath=~/.local/share/Terraria/Worlds/
+#worldpath=~/.local/share/Terraria/Worlds/
+
+#Sets the number of rolling world backups to keep
+#worldrollbackstokeep=2
 
 #The location of the banlist. Defaults to "banlist.txt" in the working directory.
-banlist=banlist.txt
+#banlist=banlist.txt
 
 #Adds addition cheat protection.
-secure=1
+#secure=1
 
-#Sets the server language from its language code. 
+#Sets the server language from its language code.
 #English = en-US, German = de-DE, Italian = it-IT, French = fr-FR, Spanish = es-ES, Russian = ru-RU, Chinese = zh-Hans, Portuguese = pt-BR, Polish = pl-PL,
-language=en-US
+#language=en-US
 
 #Automatically forward ports with uPNP
 #upnp=1
@@ -73,5 +76,24 @@ language=en-US
 #npcstream=60
 
 #Default system priority 0:Realtime, 1:High, 2:AboveNormal, 3:Normal, 4:BelowNormal, 5:Idle
-#priority=1
+priority=1
 
+#Reduces maximum liquids moving at the same time. If enabled may reduce lags but liquids may take longer to settle.
+#slowliquids=1
+
+#Journey mode power permissions for every individual power. 0: Locked for everyone, 1: Can only be changed by host, 2: Can be changed by everyone
+#journeypermission_time_setfrozen=2
+#journeypermission_time_setdawn=2
+#journeypermission_time_setnoon=2
+#journeypermission_time_setdusk=2
+#journeypermission_time_setmidnight=2
+#journeypermission_godmode=2
+#journeypermission_wind_setstrength=2
+#journeypermission_rain_setstrength=2
+#journeypermission_time_setspeed=2
+#journeypermission_rain_setfrozen=2
+#journeypermission_wind_setfrozen=2
+#journeypermission_increaseplacementrange=2
+#journeypermission_setdifficulty=2
+#journeypermission_biomespread_setfrozen=2
+#journeypermission_setspawnrate=2
