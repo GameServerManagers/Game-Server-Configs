@@ -1,9 +1,7 @@
 {
-	"LaunchArguments" : {
-		"colserver" : {
-			"WorldName" : "colserver",
-			"Seed" : "RNDSEED"
-		}
+	"NewOptions" : {
+		"WorldName" : "colserver",
+		"Seed" : "RNDSEED"
 	},
 	"ServerSettings" : {
 		"ServerName" : "SERVERNAME",
