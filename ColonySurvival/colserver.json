@@ -1,0 +1,20 @@
+{
+	"LaunchArguments" : {
+		"colserver" : {
+			"WorldName" : "colserver",
+			"Seed" : "RNDSEED"
+		}
+	},
+	"ServerSettings" : {
+		"ServerName" : "SERVERNAME",
+		"ServerPassword" : "",
+		"ServerIP" : "0.0.0.0",
+		"ServerGamePort" : 27004,
+		"ServerSteamPort" : 27005,
+		"UseVAC" : true,
+		"MaxPlayerCount" : 10,
+		"MaxDrawDistance" : 1024,
+		"NetworkType" : "SteamOnline",
+		"RCONPassword" : "ADMINPASSWORD"
+	}
+}
