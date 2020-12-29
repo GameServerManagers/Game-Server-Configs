@@ -1,7 +1,6 @@
 {
 	"NewOptions" : {
-		"WorldName" : "colserver",
-		"Seed" : "RNDSEED"
+		"WorldName" : "colserver"
 	},
 	"ServerSettings" : {
 		"ServerName" : "SERVERNAME",
