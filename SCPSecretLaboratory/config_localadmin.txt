@@ -1,0 +1,12 @@
+﻿restart_on_crash: true
+la_show_stdout_and_stderr: false
+la_no_set_cursor: true
+enable_la_logs: true
+la_log_auto_flush: true
+la_log_stdout_and_stderr: true
+la_delete_old_logs: true
+la_logs_expiration_days: 90
+delete_old_round_logs: false
+round_logs_expiration_days: 180
+compress_old_round_logs: false
+round_logs_compression_threshold_days: 14
