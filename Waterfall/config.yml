@@ -23,7 +23,7 @@ listeners:
 - query_port: 25577
   motd: '&1SERVERNAME'
   tab_list: GLOBAL_PING
-  query_enabled: false
+  query_enabled: true
   proxy_protocol: false
   forced_hosts:
     pvp.md-5.net: pvp
@@ -42,6 +42,6 @@ groups:
   md_5:
   - admin
 connection_throttle: 4000
-stats: e30ed37c-0744-4c2e-b908-f21a92b946c2
+stats: 
 connection_throttle_limit: 3
 log_pings: true
