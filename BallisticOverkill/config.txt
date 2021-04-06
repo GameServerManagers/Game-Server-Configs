@@ -24,15 +24,16 @@ MaxPing=0
 
 # Start game map
 # Valid values are:
-# 1: Corporate Park
-# 2: Hollow
-# 3: Sunnsquare Mall
+# 1: Sunnsquare Mall
+# 2: Corporate Park
+# 3: Hollow
 # 4: Nox Museum
-# 5: Wonderdome
-# 7: Citadel
-# 8: Overhead
-# 9: Blackfield
-# 10: Hakim
+# 5: Overhead
+# 6: Citadel
+# 7: Hakim
+# 8: Blackfield
+# 9: Wonderdome
+# 10: Reinstate
 GameMap=3
 
 # Game mode
@@ -40,21 +41,38 @@ GameMap=3
 # 1: Team Deatchmatch
 # 2: Conquest
 # 3: King of the Hill
+# 4: Rounds
 # 5: Free for all
-GameMode=1
+GameMode=4
 
 # MatchTime
 # value in minutes
 MatchTime=10
 
+#AutoBalance is on?
+# 0 = false
+# 1 = true
+Autobalance=1
+
+# Rounds
+Rounds=7
+
+# RoundTime
+RoundTime=90
+
+# Round warmup time to spawn into the next match
+# value in seconds
+WarmUpTime=26
+
 # Password
 # Set an Password to only selected players be able to enter in your match
 Password=
 
-#DedicatedBroadcast
-# 0: P2P Broadcast (Hybrid)
-# 1: Server Broadcast (ServerOnly)
-DedicatedBroadcast=0
+#DedicatedBroadcast: advanced option.
+# 0: P2P Broadcast (light, player to player position update)
+# 1: Server Broadcast OnDemand (medium, the server broadcasts position of players with ping above 200ms)
+# 2: Server Broadcast (heavy, but ensure the packets sent between players have lowest ping as possible)
+DedicatedBroadcast=1
 
 # Banner shown when the client is logging into the server
 # Valid types are JPG and PNG
@@ -64,3 +82,9 @@ BannerURL=
 # URL to open when the user clicks over the banner
 # Sample Url: http://google.com
 ClickURL=
+
+# OwnerId of the DedicatedServer. you must fill a valid 'SteamID64'.
+# Only the user with this steamID64 can send SpecialCommands from chat to the Server
+# you can find your steamID64 using this site: https://steamid.io/
+# It looks like this: 76561198007483607
+OwnerId=
