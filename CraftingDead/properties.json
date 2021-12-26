@@ -1,0 +1,14 @@
+{
+    "game_title": "SERVERNAME",
+    "game_description": "LinuxGSM Server",
+    "game_port": 28091,
+    "steam_port_messages": 28092,
+    "world_name": "World",
+    "world_map": "Fellvern Island",
+    "player_count": 20,
+    "player_admins": [
+    ],
+    "rcon": false,
+    "rcon_port": 28093,
+    "rcon_password": "ADMINPASSWORD"
+}
