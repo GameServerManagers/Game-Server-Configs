@@ -3,7 +3,7 @@
     "region": "EU",
     "gameHostBindAddress": "0.0.0.0",
     "gameHostBindPort": 2001,
-    "gameHostRegisterBindAddress": "0.0.0.0",
+    "gameHostRegisterBindAddress": "",
     "gameHostRegisterPort": 2001,
     "game": {
         "name": "SERVERNAME",
