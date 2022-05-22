@@ -5,11 +5,15 @@
     "gameHostBindPort": 2001,
     "gameHostRegisterBindAddress": "",
     "gameHostRegisterPort": 2001,
+    "a2sQueryEnabled": true,
+    "steamQueryPort": 17777,
+    "adminPassword": "ADMINPASSWORD",
     "game": {
         "name": "SERVERNAME",
         "password": "",
         "scenarioId": "{ECC61978EDCC2B5A}Missions/23_Campaign.conf",
         "playerCountLimit": 16,
+        "autoJoinable": false,
         "visible": true,
         "gameProperties": {
             "serverMaxViewDistance": 1600,
