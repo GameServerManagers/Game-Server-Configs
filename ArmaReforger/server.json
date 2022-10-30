@@ -5,8 +5,6 @@
     "gameHostBindPort": 2001,
     "gameHostRegisterBindAddress": "",
     "gameHostRegisterPort": 2001,
-    "a2sQueryEnabled": true,
-    "steamQueryPort": 17777,
     "adminPassword": "ADMINPASSWORD",
     "game": {
         "name": "SERVERNAME",
@@ -24,5 +22,7 @@
             "battlEye": true
         },
         "mods": []
-    }
+    },
+    "a2sQueryEnabled": true,
+    "steamQueryPort": 17777
 }
