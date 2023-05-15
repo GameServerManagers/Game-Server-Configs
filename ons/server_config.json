@@ -1,0 +1,67 @@
+{
+	"servername": "Onset Server",
+	"servername_short": "Onset Server",
+	"gamemode": "do what you want",
+	"website_url": "https://playonset.com",
+	"ipaddress": "127.0.0.1",
+	"port": 7777,
+	"maxplayers": 100,
+	"password": "",
+	"timeout": 15000,
+	"iplimit": 5,
+	"vac": false,
+	"masterlist": false,
+	"sandbox": false,
+	"plugins": [
+		"mariadb",
+		"ini-plugin"
+	],
+	"packages": [
+		"packagemanager",
+		"zeus",
+		"default",
+		"elevator",
+		"freeroam",
+		"sandbox"
+	],
+	"discord_client_id": "",
+	"connect_screen_url": "",
+	"connect_screen_show_cursor": false,
+	"voice": true,
+	"voice_sample_rate": 24000,
+	"voice_spatialization": true,
+	"pools": {
+		"player": {
+			"distance": 12000.0,
+			"update_rate": 0.05
+		},
+		"voice": {
+			"distance": 5000.0,
+			"update_rate": 0.8
+		},
+		"vehicle": {
+			"distance": 12000.0,
+			"update_rate": 0.1
+		},
+		"object": {
+			"distance": 12000.0,
+			"update_rate": 0.1
+		},
+		"npc": {
+			"distance": 12000.0,
+			"update_rate": 0.1
+		},
+		"pickup": {
+			"distance": 12000.0,
+			"update_rate": 0.1
+		},
+		"door": {
+			"distance": 12000.0,
+			"update_rate": 0.1
+		},
+		"text3d": {
+			"distance": 12000.0,
+			"update_rate": 0.1
+		}
+	}
+}
