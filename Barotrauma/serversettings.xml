@@ -43,7 +43,6 @@
   maxplayers="10"
   password=""
   enableupnp="false"
-  autorestart="false"
   SubSelection="Manual"
   LevelDifficulty="20"
   TraitorsEnabled="No"
