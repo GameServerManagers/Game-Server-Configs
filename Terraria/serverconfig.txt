@@ -26,28 +26,28 @@
 
 #Load a world and automatically start the server.
 #WARNING: Environment variables ($HOME, ~) don't work yet, so the stated file will be relatively loaded from "serverfiles" if the given path is relative.
-#world=~/.local/share/Terraria/Worlds/world1.wld
+world=~/.local/share/Terraria/Worlds/world1.wld
 
 #Creates a new world if none is found. World size is specified by: 1(small), 2(medium), and 3(large).
-#autocreate=1
+autocreate=1
 
 #Sets the world seed when using autocreate
-#seed=AwesomeSeed
+seed=
 
 #Sets the name of the world when using autocreate
-#worldname=Terraria
+worldname=Terraria
 
 #Sets the difficulty of the world when using autocreate 0(classic), 1(expert), 2(master), 3(journey)
-#difficulty=0
+difficulty=0
 
 #Sets the max number of players allowed on a server.  Value must be between 1 and 255
-#maxplayers=8
+#maxplayers=16
 
 #Set the port number
-#port=7777
+port=7777
 
 #Set the server password
-#password=p@55w0rd
+password=
 
 #Set the message of the day
 #motd=Please don’t cut the purple trees!
@@ -63,11 +63,11 @@
 #banlist=banlist.txt
 
 #Adds addition cheat protection.
-#secure=1
+secure=1
 
 #Sets the server language from its language code.
 #English = en-US, German = de-DE, Italian = it-IT, French = fr-FR, Spanish = es-ES, Russian = ru-RU, Chinese = zh-Hans, Portuguese = pt-BR, Polish = pl-PL,
-#language=en-US
+language=en-US
 
 #Automatically forward ports with uPNP
 #upnp=1
