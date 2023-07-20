@@ -3,8 +3,10 @@
     "bindPort": 2001,
     "publicAddress": "",
     "publicPort": 2001,
-    "a2sQueryEnabled": true,
-    "steamQueryPort": 17777,
+    "a2s": {
+        "address": "0.0.0.0",
+        "port": 17777
+    },
     "game": {
         "name": "SERVERNAME",
         "password": "",
