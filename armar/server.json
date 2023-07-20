@@ -1,28 +1,36 @@
 {
-    "dedicatedServerId": "",
-    "region": "EU",
-    "gameHostBindAddress": "0.0.0.0",
-    "gameHostBindPort": 2001,
-    "gameHostRegisterBindAddress": "",
-    "gameHostRegisterPort": 2001,
-    "adminPassword": "ADMINPASSWORD",
+    "bindAddress": "0.0.0.0",
+    "bindPort": 2001,
+    "publicAddress": "",
+    "publicPort": 2001,
+    "a2s": {
+        "address": "0.0.0.0",
+        "port": 17777
+    },
     "game": {
         "name": "SERVERNAME",
         "password": "",
+        "passwordAdmin": "ADMINPASSWORD",
         "scenarioId": "{ECC61978EDCC2B5A}Missions/23_Campaign.conf",
-        "playerCountLimit": 16,
-        "autoJoinable": false,
+        "maxPlayers": 64,
         "visible": true,
+        "supportedPlatforms": [
+            "PLATFORM_PC",
+            "PLATFORM_XBL"
+        ],
         "gameProperties": {
-            "serverMaxViewDistance": 1600,
-            "serverMinGrassDistance": 0,
-            "networkViewDistance": 500,
+            "serverMaxViewDistance": 2500,
+            "serverMinGrassDistance": 100,
+            "networkViewDistance": 1500,
             "disableThirdPerson": false,
             "fastValidation": true,
-            "battlEye": true
+            "battlEye": true,
+            "VONDisableUI": false,
+            "VONDisableDirectSpeechUI": false
         },
         "mods": []
     },
-    "a2sQueryEnabled": true,
-    "steamQueryPort": 17777
+    "operating": {
+        "lobbyPlayerSynchronise": true
+    }
 }
