@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SettingData xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SettingsVersion>0.2.4120.19431</SettingsVersion>
+<ShowFps>false</ShowFps>
+<ShowLatency>false</ShowLatency>
+<AutoSave>true</AutoSave>
+<SaveInterval>300</SaveInterval>
+<SavePath>/data/serverfiles</SavePath>
+<HUDScale>50</HUDScale>
+<TooltipOpacity>0.95</TooltipOpacity>
+<IngamePortrait>true</IngamePortrait>
+<ExtendedTooltips>true</ExtendedTooltips>
+<ChatFadeTimer>10</ChatFadeTimer>
+<SunOrbitPeriod>1</SunOrbitPeriod>
+<LegacyInventory>false</LegacyInventory>
+<ShowSlotToolTips>true</ShowSlotToolTips>
+<ResearchPoolKey>ResearchOff</ResearchPoolKey>
+<DeleteSkeletonOnDecay>false</DeleteSkeletonOnDecay>
+<Monitor>1</Monitor>
+<ScreenWidth>1920</ScreenWidth>
+<ScreenHeight>1080</ScreenHeight>
+<RefreshRate>60</RefreshRate>
+<GraphicQuality>Fantastic</GraphicQuality>
+<TextureQuality>Very High</TextureQuality>
+<FullScreen>true</FullScreen>
+<Vsync>false</Vsync>
+<Shadows>High</Shadows>
+<ShadowResolution>VeryHigh</ShadowResolution>
+<ShadowDistance>100</ShadowDistance>
+<LightShadowDistance>50</LightShadowDistance>
+<RoomControlTickSpeed>1</RoomControlTickSpeed>
+<ShadowNearPlaneOffset>0.2</ShadowNearPlaneOffset>
+<ShadowCascades>4</ShadowCascades>
+<ThingShadowMode>High</ThingShadowMode>
+<WorldOrigin>false</WorldOrigin>
+<Brightness>100</Brightness>
+<FieldOfView>70</FieldOfView>
+<ColorBlind>None</ColorBlind>
+<ParticleQuality>High</ParticleQuality>
+<SoftParticles>true</SoftParticles>
+<EnvironmentElements>true</EnvironmentElements>
+<ExtendedTerrain>true</ExtendedTerrain>
+<VolumeLight>Full</VolumeLight>
+<PixelLightCount>8</PixelLightCount>
+<MaxThingLights>256</MaxThingLights>
+<Antialiasing>SSAA</Antialiasing>
+<FrameLock>Off</FrameLock>
+<AtmosphericScattering>true</AtmosphericScattering>
+<AmbientOcclusion>Ultra</AmbientOcclusion>
+<LensFlares>true</LensFlares>
+<ChunkRenderDistance>150</ChunkRenderDistance>
+<MineableRenderDistance>45</MineableRenderDistance>
+<ThingRenderDistance>12</ThingRenderDistance>
+<DisableWaterVisualizer>true</DisableWaterVisualizer>
+<Clouds>false</Clouds>
+<TerrainClutter>false</TerrainClutter>
+<TerrainClutterMultiplier>1</TerrainClutterMultiplier>
+<DoubleClickDelay>0.18</DoubleClickDelay>
+<HelmetOverlay>true</HelmetOverlay>
+<WeatherEventQuality>High</WeatherEventQuality>
+<MasterVolume>100</MasterVolume>
+<SoundVolume>100</SoundVolume>
+<VoiceNotificationVolume>90</VoiceNotificationVolume>
+<MusicVolume>100</MusicVolume>
+<InterfaceVolume>100</InterfaceVolume>
+<VirtualVoices>1024</VirtualVoices>
+<RealVoices>64</RealVoices>
+<UserSpeakerMode>Stereo</UserSpeakerMode>
+<ServerName>Stationeers</ServerName>
+<StartLocalHost>true</StartLocalHost>
+<ServerVisible>false</ServerVisible>
+<ServerPassword />
+<AdminPassword />
+<ServerAuthSecret />
+<ServerMaxPlayers>10</ServerMaxPlayers>
+<UpdatePort>27015</UpdatePort>
+<GamePort>27016</GamePort>
+<UPNPEnabled>true</UPNPEnabled>
+<UseSteamP2P>true</UseSteamP2P>
+<DisconnectTimeout>10000</DisconnectTimeout>
+<NetworkDebugFrequency>500</NetworkDebugFrequency>
+<LocalIpAddress />
+<AutoPauseServer>true</AutoPauseServer>
+<LanguageCode>EN</LanguageCode>
+<VoiceLanguageCode>EN</VoiceLanguageCode>
+<Voice>false</Voice>
+<PopupChat>true</PopupChat>
+<CameraSensitivity>50</CameraSensitivity>
+<Keyboard>
+    <KeyItem>
+        <Name>Ascend</Name>
+        <Key>Space</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Descend</Name>
+        <Key>LeftControl</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Left</Name>
+        <Key>A</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Right</Name>
+        <Key>D</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Forward</Name>
+        <Key>W</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Backward</Name>
+        <Key>S</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>PrimaryAction</Name>
+        <Key>Mouse0</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>SecondaryAction</Name>
+        <Key>Mouse1</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>InventorySelect</Name>
+        <Key>F</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>HelmetSlot</Name>
+        <Key>Alpha1</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>GlassesSlot</Name>
+        <Key>Alpha2</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>SuitSlot</Name>
+        <Key>Alpha3</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>BackSlot</Name>
+        <Key>Alpha4</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>UniformSlot</Name>
+        <Key>Alpha5</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ToolBeltSlot</Name>
+        <Key>Alpha6</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ActiveHandSlot</Name>
+        <Key>R</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Grab</Name>
+        <Key>G</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Drop</Name>
+        <Key>Q</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>SwapHands</Name>
+        <Key>E</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ShowControls</Name>
+        <Key>None</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ShowScoreBoard</Name>
+        <Key>Tab</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ShowDynamicPanel</Name>
+        <Key>Slash</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>PreviousItem</Name>
+        <Key>LeftBracket</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>NextItem</Name>
+        <Key>RightBracket</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>SpawnItem</Name>
+        <Key>F9</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Jetpack</Name>
+        <Key>J</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Help</Name>
+        <Key>F1</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ToggleUI</Name>
+        <Key>F2</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ToggleConsole</Name>
+        <Key>F3</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ToggleInfo</Name>
+        <Key>F4</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ScreenShot</Name>
+        <Key>P</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Internals</Name>
+        <Key>I</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ToggleHandPower</Name>
+        <Key>O</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Chatting</Name>
+        <Key>Return</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>PrecisionPlace</Name>
+        <Key>T</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>Cancel</Name>
+        <Key>Escape</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>RotateLeft</Name>
+        <Key>Delete</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>RotateRight</Name>
+        <Key>PageDown</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>RotateUp</Name>
+        <Key>Home</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>RotateDown</Name>
+        <Key>End</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>RotateRollLeft</Name>
+        <Key>Insert</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>RotateRollRight</Name>
+        <Key>PageUp</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>InstantStop</Name>
+        <Key>B</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>NightVision</Name>
+        <Key>N</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>QuantityModifier</Name>
+        <Key>C</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>MouseControl</Name>
+        <Key>LeftAlt</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>MouseInspect</Name>
+        <Key>LeftShift</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>FoVUp</Name>
+        <Key>KeypadPlus</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>FoVDown</Name>
+        <Key>KeypadMinus</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>FovReset</Name>
+        <Key>KeypadEnter</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>EmoteWave</Name>
+        <Key>Keypad1</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ToggleLight</Name>
+        <Key>L</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>ThirdPersonControl</Name>
+        <Key>LeftShift</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>HideAllWindows</Name>
+        <Key>BackQuote</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>SuitPressureIncrease</Name>
+        <Key>None</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>SuitPressureDecrease</Name>
+        <Key>None</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>SuitTemperatureIncrease</Name>
+        <Key>None</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>SuitTemperatureDecrease</Name>
+        <Key>None</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>JetpackThrustIncrease</Name>
+        <Key>None</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>JetpackThrustDecrease</Name>
+        <Key>None</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>JetpackToggleStabilizer</Name>
+        <Key>None</Key>
+    </KeyItem>
+    <KeyItem>
+        <Name>PingHighlight</Name>
+        <Key>Mouse2</Key>
+    </KeyItem>
+</Keyboard>
+<InvertMouse>false</InvertMouse>
+<InvertMouseWheelInventory>false</InvertMouseWheelInventory>
+<MenuLite>false</MenuLite>
+<MouseWheelZoom>true</MouseWheelZoom>
+<FirstRun>true</FirstRun>
+<VoiceNotifications />
+<CompletedTutorials />
+<CompletedScenarios />
+<VerticalMovementAxis>
+    <Controller>None</Controller>
+    <Axis>None</Axis>
+</VerticalMovementAxis>
+<HorizontalMovementAxis>
+    <Controller>None</Controller>
+    <Axis>None</Axis>
+</HorizontalMovementAxis>
+<ForwardMovementAxis>
+    <Controller>None</Controller>
+    <Axis>None</Axis>
+</ForwardMovementAxis>
+<VerticalLookAxis>
+    <Controller>None</Controller>
+    <Axis>None</Axis>
+</VerticalLookAxis>
+<HorizontalLookAxis>
+    <Controller>None</Controller>
+    <Axis>None</Axis>
+</HorizontalLookAxis>
+<UseCustomWorkThreadsCount>false</UseCustomWorkThreadsCount>
+<MinWorkerThreads>6</MinWorkerThreads>
+<MinCompletionPortThreads>6</MinCompletionPortThreads>
+<MaxWorkerThreads>80</MaxWorkerThreads>
+<MaxCompletionPortThreads>40</MaxCompletionPortThreads>
+<CoroutineTimeBudget>1</CoroutineTimeBudget>
+<SmoothTerrain>false</SmoothTerrain>
+<SmoothTerrainAngle>60</SmoothTerrainAngle>
+<ConsoleBufferSize>1024</ConsoleBufferSize>
+<LegacyCpu>false</LegacyCpu>
