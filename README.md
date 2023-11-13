@@ -1,12 +1,10 @@
 **Game Server Config Files**
 
-Note: This repo is very new and currently missing most config files. More will be added over time.
-
 This is a repo of config files designed to be a starting point for the setup of various game servers.
 
 **The Issue**
 
-Game server configs can be found on many different forums and websites. Some are better than others. There can also be misinformation, confusion or lack of information about what you need in a config file and how you should setup a game server.
+Game server configs can be found on many different forums and websites. Some are better than others. There can also be misinformation, confusion, or lack of information about what you need in a config file and how you should set up a game server.
 
 **Aim of This Repo**
 
@@ -14,7 +12,7 @@ The aim of this repository is to put together config files for game servers and 
 
 **What This Repo Provides**
 
- - A basic server config with all the essential settings to get started with vanilla game server.
+ - A basic server config with all the essential settings to get started with the vanilla game server.
  - A list of all command variables for the vanilla game servers.
 
 **What Do You Mean by Vanilla/Generic?**
