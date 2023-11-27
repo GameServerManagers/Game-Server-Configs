@@ -1,0 +1,1237 @@
+Cmds
+aasStats              shows AAS stats
+addarrow              adds a debug arrow
+addChatLine           internal use - core to game chat lines
+addFriend
+addIcon               adds a test icon
+addline               adds a debug line
+ai_debugFilter        ai_debugMove and ai_debugTactical only work on the specified entity (if none, does one you're looking at)
+apState               prints AP state
+benchmark             benchmark
+bind                  binds a command to a key
+bindRagdoll           binds ragdoll at the current drag position
+bindunbindtwo         binds a key but unbinds it first if there are more than two binds
+blinkline             blinks a debug line
+buildNotes            build notes about the current map
+bundler               Setup the bundler settings
+buy                   Buy an item (if in a buy zone and the game type supports it)
+buyMenu               Toggle buy menu (if in a buy zone and the game type supports it)
+call                  calls script function and prints out return val
+centerview            centers the view
+checkNewVersion       check if a new version of the game is available
+checkSave             tests save system
+CheckTeamBalance      helper for team switching in the guis - <team to switch to> <named event for yes> <named event for no> <named event for same team>
+clear                 clears the console
+clearAssetLog         clears log of all the assets loaded
+clearLights           clears all lights
+clientCallVote        call a vote: clientCallVote si_.. proposed_value
+clientMessageMode     ingame gui message mode
+clientVoiceChat       voice chats: clientVoiceChat <sound shader>
+clientVoiceChatTeam   team voice chats: clientVoiceChat <sound shader>
+clientvoicemute       mute the specified player's incoming voicechat
+clientvoiceunmute     unmute the specified player's incoming voicechat
+clientVote            cast your vote: clientVote yes | no
+collisionModelInfo    shows collision model info
+combineCubeImages     combines six images for roq compression
+conDump               dumps the console text to a file
+connect               connects to a server
+crash                 causes a crash
+cvar_restart          restart the cvar system
+damage                apply damage to an entity
+dec                   decrements the cvar integer value
+DecrementCVar         DecrementCVar <name> <amount> <min>
+deleteSelected        deletes selected entity
+demoShot              writes a screenshot for a demo
+dir                   lists a folder
+dirtree               lists a folder with subfolders
+disasmScript          disassembles script
+disconnect            disconnects from a game
+DoButton              perform an button via a cmd
+DoImpulse             perform an impulse via a cmd
+echo                  prints text
+editCVars             edit cvars
+emote                 plays an emote
+envshot               takes an environment shot
+error                 causes an error
+evaluateMPPerformance spawns serveral player models
+exec                  executes a config file
+execMachineSpec       execs the appropriate config files and sets cvars based on com_machineSpec
+execMPMachineSpec     sets cvars for multiplayer
+exit                  exits the game
+exportmodels          exports models
+extract_tactical      pulls tactical information for the current position.
+fadeSound             fades all sound by X decibles over Y seconds
+fadeSoundClass        fade the specified sound class
+finishBuild           finishes the build process
+flashlight            toggle actor's flashlight
+forceTeamChange       force team change: forceTeamChange <id>
+freeze                freezes the game for a number of seconds
+game_memory           displays game class info
+gameError             causes a game error
+gameKick              same as kick, but recognizes player names
+getFriends            gets your list of friends
+getMOTD
+getServers            get all of the servers from the master server
+getviewpos            prints the current view position
+gfxInfo               show graphics info
+give                  gives one or more items
+god                   enables god mode
+GuiEvent              call a named event in the active gui
+heartbeat             send a heartbeat to the the master servers
+help                  shows help
+hitch                 hitches the game
+inc                   increments the cvar integer value
+IncrementCVar         IncrementCVar <name> <amount> <max>
+jump                  jumps to a specific debug jump point
+keepTestModel         keeps the last test model in the game
+kick                  kick a client by connection number
+kickViewer            kick a viewer by connection number
+kill                  kills the player
+killMessage           prints a fake death message
+killMonsters          removes all monsters
+killMoveables         removes all moveables
+killRagdolls          removes all ragdolls
+killRepeater          kills a repeater
+killVehicles          kills all vehicles
+lanScan               scans LAN for servers
+listActiveEntities    lists active game entities
+listActiveSounds      list the active sounds
+listAF                lists articulated figures
+listAllDecls          lists every single decl, not just the summary
+listAnims             lists all animations
+listAudios            lists Audios
+listBinds             lists key bindings
+listClasses           lists game classes
+listClientEntities    lists client entities
+listClients           list all clients connected to the server
+listCmds              lists commands
+listCollisionModels   lists collision models
+listCvars             lists cvars
+listDecls             lists all decls
+listDictKeys          lists all keys used by dictionaries
+listDictValues        lists all values used by dictionaries
+listEffects           lists effect decls
+listEmails            lists Emails
+listEntities          lists game entities
+listEntityDefs        lists entity defs
+listEntityStats       lists global entity stats
+listGameCmds          lists game commands
+listGuis              lists guis
+listHuffmanFrequencies lists decl text character frequencies
+listImageReferences   lists materials and models referencing an image pattern
+listImages            lists images
+listImagesRaven       lists images (Raven)
+listInstances         lists instances
+listLines             lists all debug lines
+listLipsyncs          lists lip sync decls
+listMapEntities       lists map entity numbers
+listMaps              list the available maps
+listMaterials         lists materials
+listMaterialTypes     lists material types
+listModelDefs         lists model defs
+listModels            lists all models
+listModes             lists all video modes
+listMonsters          lists monsters
+listPDAs              lists PDAs
+listPlaybacks         lists playback decls
+listRelayInfo         produce a status summary of the repeater
+listRenderEffectDefs  lists the effect defs
+listRenderEntityDefs  lists the entity defs
+listRendererCmds      lists renderer commands
+listRenderLightDefs   lists the light defs
+listServers           lists scanned servers
+listSkins             lists skins
+listSoundCmds         lists sound commands
+listSoundDecoders     list active sound decoders
+listSounds            lists all sounds
+listSoundShaders      lists sound shaders
+listSpawnArgs         list the spawn args of an entity
+listSpawnIds          lists map entity numbers
+listSystemCmds        lists system commands
+listTables            lists tables
+listThreads           lists script threads
+listToolCmds          lists tool commands
+listVideos            lists Videos
+listViewers           list all viewers connected to the repeater
+makeAmbientMap        makes an ambient map
+makeLoadScreens       Stub to keep the game from erroring out on startup when building load screens
+MakeMegaTexture       processes giant images
+memoryDump            creates a memory dump
+memoryDumpCompressed  creates a compressed memory dump
+modulateLights        modifies shader parms on all lights
+netScan               scans internet for servers
+nextAnim              shows next animation on test model
+nextFrame             shows next animation frame on test model
+nextGUI               teleport the player to the next func_static with a gui
+nextjumppoint         jumps to the next debug jump point
+noclip                disables collision detection for the player
+notarget              disables the player as a target
+parse                 prints tokenized string
+path                  lists search paths
+playerModel           sets the given model on the player
+playNetDemo           playback a network demo
+playNetTimeDemo       run a timedemo on a network demo
+popLight              removes the last created light
+prevAnim              shows previous animation on test model
+prevFrame             shows previous animation frame on test model
+prevjumppoint         jumps to the previous debug jump point
+printAF               prints an articulated figure
+printAudio            prints an Video
+printEffects          prints effects
+printEmail            prints an Email
+printEntityDef        prints an entity def
+printLipsyncs         prints lip syncs
+printMaterial         prints a material
+printMaterialTypes    prints material types
+printMemInfo          prints memory debugging data
+printModel            prints model info
+printModelDefs        prints a model def
+printPDA              prints an PDA
+printPlaybacks        prints playbacks
+printSkin             prints a skin
+printSoundShader      prints a sound shader
+printTable            prints a table
+printVideo            prints a Audio
+promptKey             prompt and sets the CD Key
+QANotes               qa notes about the current map
+quit                  quits the game
+rcon                  sends remote console command to server
+reconnect             reconnect to the last server we tried to connect to
+recordNetDemo         recordDemo <name> start recording a network demo
+reexportmodels        reexports models
+regenerateWorld       regenerates all interactions
+reloadanims           reloads animations
+reloadDecls           reloads decls
+reloadEngine          reloads the engine down to including the file system
+reloadFAS             reloads the viseme data
+reloadGuis            reloads guis
+reloadImages          reloads images
+reloadLanguage        reload language dict
+reloadModels          reloads models
+reloadScript          reloads scripts
+reloadShaders         reloads the hardware shader programs
+reloadSounds          reloads all sounds
+reloadSurface         reloads the decl and images for selected surface
+remove                removes an entity
+removeClientFromBanList removes a client id from the ban list: removeClientFromBanList <client id>
+removeFriend
+removeline            removes a debug line
+reportImageDuplication checks all referenced images for duplications
+reportSurfaceAreas    lists all used materials sorted by surface area
+resaveDecl            resaves a decl or every decl of a certain type
+rescanSI              internal - rescan serverinfo cvars and tell game
+reset                 resets a cvar
+s_restart             restarts the sound system
+SaveGameRefreshList   refresh the gui's save list
+saveLights            saves all lights to the .map file
+saveMoveables         save all moveables to the .map file
+saveParticles         saves all lights to the .map file
+saveRagdolls          save all ragdoll poses to the .map file
+saveSelected          saves the selected entity to the .map file
+say                   text chat
+sayTeam               team text chat
+screenshot            takes a tga screenshot
+screenshotJpeg        takes a jpg screenshot
+script                executes a line of script
+serverForceReady      force all players ready
+serverInfo            shows server info
+serverMapRestart      restart the current game
+serverNextMap         change to the next map
+set                   sets a cvar
+seta                  sets a cvar and flags it as archive
+setInstance           sets a player's world instance
+setMachineSpec        detects system capabilities and sets com_machineSpec to appropriate value
+setPlayerGravity      sets players local gravity
+setPMCVars            Resets player movement cvars
+setr                  sets a cvar and flags it as repeater info
+sets                  sets a cvar and flags it as server info
+sett                  sets a cvar and flags it as tool
+setu                  sets a cvar and flags it as user info
+setviewpos            sets the current view position
+showDictMemory        shows memory used by dictionaries
+ShowInGameStats       show in game stats.
+showInteractionMemory shows memory used by interactions
+showMemAlloc          Prints outstanding mem_alloc tags -- Debug only
+showMemory            gives a reasonably detailed account of memory usage
+showStringMemory      shows memory used by strings
+showTriSurfMemory     shows memory used by triangle surfaces
+shuffleTeams          shuffle teams
+sizeDown              makes the rendered view smaller
+sizeUp                makes the rendered view larger
+soundLog              list the number of times sounds have been played
+spawn                 spawns a game entity
+spawnGUI              spawn gui
+spawnRepeater         spawns a repeater
+spawnServer           spawns a server
+startBuild            prepares to make a build
+StartMainMenu         start the main menu
+stopNetDemo           stop playing/recording a network demo
+tabComplete           tab completes it's argument
+teleport              teleports the player to an entity location
+testAnim              tests an animation
+testBlend             tests animation blending
+testClientModel
+testDamage            tests a damage def
+testDeath             tests death
+testGUI               tests a gui
+testid                output the string for the specified id.
+testImage             displays the given image centered on screen
+testLight             tests a light
+testModel             tests a model
+testParticleStopTime  tests particle stop time on a test model
+testPointLight        tests a point light
+testSave              writes out a test savegame
+testShaderParm        sets a shaderParm on an existing testModel
+testSIMD              test SIMD code
+testSkin              tests a skin on an existing testModel
+testSound             tests a sound
+testStandaloneVideo   displays the a standalone cinematic
+testVideo             displays the given cinematic
+toggle                toggles a cvar
+touch                 touches a decl
+touchFile             touches a file
+touchFileList         touches a list of files
+touchGui              touches a gui
+touchModel            touches a model
+trigger               triggers an entity
+unbind                unbinds any command from a key
+unbindall             unbinds any commands from all keys
+unbindRagdoll         unbinds the selected ragdoll
+undying               enables undying mode (take damage down to 1 health, but do not die)
+updateUI              internal - cause a sync down of game-modified userinfo
+verifyServerSettings  verifies the game type can be played on the map
+vid_restart           restarts renderSystem
+viewNotes             notes about the current map
+vstr                  inserts the current value of a cvar as command text
+wait                  delays remaining buffered commands one or more frames
+weaponSplat           projects a blood splat on the player weapon
+where                 prints the current view position
+writeAssetLog         generates log file of all the assets loaded
+writeConfig           writes a config file
+WriteConfiguration    WriteConfiguration
+writePrecache         writes precache commands
+writeProgramImages    write program formulated targas to compression dir
+writeRDF              write RDF file
+WriteServerConfig     Writes all server related cvars out to the filename provided
+314 commands
+
+CVars
+aas_goalArea                     "0"
+aas_pullPlayer                   "0"
+aas_randomPullPlayer             "0"
+aas_showAreaBounds               "0"
+aas_showAreas                    "0"
+aas_showFlyPath                  "0"
+aas_showHideArea                 "0"
+aas_showPath                     "0"
+aas_showProblemAreas             "0"
+aas_showPushIntoArea             "0"
+aas_showRevReach                 "0"
+aas_showWallEdges                "0"
+aas_test                         "0"
+af_contactFrictionScale          "0"
+af_forceFriction                 "-1"
+af_highlightBody                 ""
+af_highlightConstraint           ""
+af_jointFrictionScale            "0"
+af_maxAngularVelocity            "1.57"
+af_maxLinearVelocity             "128"
+af_showActive                    "0"
+af_showBodies                    "0"
+af_showBodyNames                 "0"
+af_showConstrainedBodies         "0"
+af_showConstraintNames           "0"
+af_showConstraints               "0"
+af_showInertia                   "0"
+af_showLimits                    "0"
+af_showMass                      "0"
+af_showPrimaryOnly               "0"
+af_showTimings                   "0"
+af_showTotalMass                 "0"
+af_showTrees                     "0"
+af_showVelocity                  "0"
+af_skipFriction                  "0"
+af_skipLimits                    "0"
+af_skipSelfCollision             "0"
+af_testSolid                     "1"
+af_timeScale                     "1"
+af_useImpulseFriction            "0"
+af_useJointImpulseFriction       "0"
+af_useLinearTime                 "1"
+af_useSymmetry                   "1"
+ai_allowOldAAS                   "0"
+ai_allowTacticalRush             "1"
+ai_animShow                      "0"
+ai_blockedFailSafe               "1"
+ai_debugEyeFocus                 "0"
+ai_debugFilterString             ""
+ai_debugHelpers                  "0"
+ai_debugMove                     "0"
+ai_debugScript                   "-1"
+ai_debugSquad                    "0"
+ai_debugStealth                  "0"
+ai_debugTactical                 "0"
+ai_debugTrajectory               "0"
+ai_disableAttacks                "0"
+ai_disableCover                  "0"
+ai_disableEntTactical            "0"
+ai_disableSimpleThink            "0"
+ai_freeze                        "0"
+ai_playerPushAlways              "1"
+ai_showCombatNodes               "0"
+ai_showCover                     "0"
+ai_showObstacleAvoidance         "0"
+ai_showPaths                     "0"
+ai_showTacticalFeatures          "0"
+ai_speeds                        "0"
+ai_testPredictPath               "0"
+ai_useRVMasterMove               "0"
+bse_debris                       "1"
+bse_debug                        "0"
+bse_enabled                      "1"
+bse_maxParticles                 "2048"
+bse_physics                      "1"
+bse_rateCost                     "1.0"
+bse_rateLimit                    "1.0"
+bse_render                       "1"
+bse_scale                        "0.33"
+bse_showBounds                   "0"
+bse_singleEffect                 ""
+bsp_menuitem0                    "bsp"
+bsp_menuitem1                    "bsp noflood"
+bsp_menuitem10                   "bsp -aasonly 48"
+bsp_menuitem11                   "bsp -aasonly 96"
+bsp_menuitem12                   "bsp -aasonly 250"
+bsp_menuitem13                   "bsp -aasonly ALL"
+bsp_menuitem2                    "bsp shadowOpt 2"
+bsp_menuitem3                    "bsp -noaas"
+bsp_menuitem4                    "separator"
+bsp_menuitem5                    "bsp copy game"
+bsp_menuitem6                    "bsp copy game -noaas"
+bsp_menuitem7                    "bsp shadowOpt 2 copy game"
+bsp_menuitem8                    "separator"
+bsp_menuitem9                    "bsp -aasonly 32"
+cl_punkbuster                    "0"
+cl_showEntityInfo                "0"
+cm_backFaceCull                  "0"
+cm_debugCollision                "0"
+cm_debugRotation                 "1"
+cm_debugSetParms                 "1"
+cm_debugTranslation              "1"
+cm_drawColor                     "1 0 0 .5"
+cm_drawFilled                    "0"
+cm_drawIndexScale                "0.02"
+cm_drawIndices                   "0"
+cm_drawInternal                  "1"
+cm_drawMask                      "none"
+cm_drawNormals                   "0"
+cm_testAngle                     "60"
+cm_testBox                       "-16 -16 0 16 16 64"
+cm_testBoxRotation               "0 0 0"
+cm_testCollision                 "0"
+cm_testLength                    "1024"
+cm_testModel                     "0"
+cm_testOrigin                    "0 0 0"
+cm_testRadius                    "64"
+cm_testRandomMany                "0"
+cm_testReset                     "0"
+cm_testRotation                  "1"
+cm_testTimes                     "1000"
+cm_testTranslation               "1"
+cm_testWalk                      "1"
+com_allowBadSavegameVersion      "0"
+com_allowConsole                 "0"
+com_asyncSound                   "3"
+com_aviDemoHeight                "256"
+com_aviDemoSamples               "16"
+com_aviDemoTics                  "2"
+com_aviDemoWidth                 "256"
+com_BinaryRead                   "0"
+com_BinaryWrite                  "0"
+com_Bundler                      "0"
+com_compressDemos                "1"
+com_cpuCaches                    "0/0/0"
+com_cpuCount                     "1"
+com_cpuSpeed                     "1.999995"
+com_fixedTic                     "0"
+com_forceGenericSIMD             "0"
+com_guid                         "ePxFAYf0Xfs"
+com_journal                      "0"
+com_lastQuicksave                "Quick0"
+com_Limits                       "0"
+com_logDemos                     "0"
+com_logMPStats                   "0"
+com_machineSpec                  "0"
+com_MakeLoadScreens              "0"
+com_makingBuild                  "0"
+com_memoryMarker                 "-1"
+com_minTics                      "1"
+com_pid                          "131155"
+com_preciseTic                   "1"
+com_preloadDemos                 "0"
+com_profileDemo                  "0"
+com_purgeAll                     "0"
+com_QuickLoad                    "0"
+com_showAngles                   "0"
+com_showAsyncStats               "0"
+com_showDemo                     "0"
+com_showFPS                      "0"
+com_showMemAllocTags             "0"
+com_showMemoryUsage              "0"
+com_showSoundDecoders            "0"
+com_showTics                     "0"
+com_skipGameDraw                 "0"
+com_skipLevelLoadPause           "0"
+com_skipRenderer                 "0"
+com_skipUltraQuality             "0"
+com_speeds                       "0"
+com_syncGameFrame                "0"
+com_systemRam                    "7936"
+com_timestampPrints              "0"
+com_uniqueWarnings               "0"
+com_updateLoadSize               "0"
+com_videoRam                     "64"
+com_wipeSeconds                  "1"
+con_noPrint                      "1"
+con_notifyTime                   "3"
+con_speed                        "3"
+decl_show                        "0"
+demo_debug                       "0"
+demo_enforceFS                   "0"
+demo_execSessCmd                 "1"
+demo_prediction                  "26"
+demo_scale                       "1.0"
+demo_snapshotDelay               "50"
+developer                        "0"
+fas_blendBias                    "1.5"
+fas_debug                        "0"
+fas_intensityBias                "0"
+fas_threshhold0                  "60"
+fas_threshhold1                  "30"
+fas_timeOffset                   "50"
+fs_basepath                      "/home/dgibbs/linuxgsm/q4server/serverfiles"
+fs_caseSensitiveOS               "1"
+fs_cdpath                        ""
+fs_copyfiles                     "0"
+fs_debug                         "0"
+fs_devpath                       "/home/dgibbs/.quake4"
+fs_game                          "q4mp"
+fs_game_base                     ""
+fs_importpath                    ""
+fs_restrict                      "0"
+fs_savepath                      "/home/dgibbs/.quake4"
+fs_searchAddons                  "0"
+g_allowVehicleGunOverheat        "1"
+g_announcerDelay                 "1000"
+g_armorProtection                "0.66667"
+g_armorProtectionMP              "0.66667"
+g_blobSize                       "1"
+g_blobTime                       "1"
+g_brassTime                      "0"
+g_cinematic                      "1"
+g_cinematicMaxSkipTime           "600"
+g_crosshairCharInfoFar           "1"
+g_crosshairColor                 "1 1 1 1"
+g_crosshairCustom                "0"
+g_crosshairCustomFile            "gfx/guis/crosshairs/crosshair_blaster.tga"
+g_crosshairSize                  "32"
+g_currentPlayback                ""
+g_debugAnim                      "-1"
+g_debugBounds                    "0"
+g_debugCinematic                 "0"
+g_debugDamage                    "0"
+g_debugMove                      "0"
+g_debugMover                     "0"
+g_debugScript                    "0"
+g_debugState                     "0"
+g_debugTriggers                  "0"
+g_debugVehicle                   "0"
+g_debugVehicleAI                 "0"
+g_debugVehicleDriver             "0"
+g_debugWeapon                    "0"
+g_decals                         "0"
+g_disasm                         "0"
+g_doubleVision                   "1"
+g_dragDamping                    "0.5"
+g_dragEntity                     "0"
+g_dragShowSelection              "0"
+g_dropItemRotation               ""
+g_dvAmplitude                    "0.001"
+g_dvFrequency                    "0.5"
+g_dvTime                         "1"
+g_earthquake                     "1"
+g_editEntityDistance             "512"
+g_editEntityMode                 "0"
+g_editEntityTextDistance         "256"
+g_exportMask                     ""
+g_favoritesList                  ""
+g_flushSave                      "0"
+g_forceMarineModel               ""
+g_forceModel                     ""
+g_forceStroggModel               ""
+g_forceUndying                   "0"
+g_fov                            "90"
+g_frametime                      "0"
+g_friendsList                    ""
+g_gamelog                        "0"
+g_gameReviewPause                "15"
+g_gravity                        "1066"
+g_grenadeTrail                   "1"
+g_gunPitch                       "0"
+g_gunRoll                        "0"
+g_gunViewStyle                   "0"
+g_gunX                           "0"
+g_gunY                           "0"
+g_gunYaw                         "0"
+g_gunZ                           "0"
+g_healthTakeAmt                  "5"
+g_healthTakeLimit                "25"
+g_healthTakeTime                 "5"
+g_keepEntityStats                "0"
+g_kickAmplitude                  "0.0001"
+g_kickTime                       "1"
+g_knockback                      "1000"
+g_mapCycle                       "mapcycle"
+g_maxShowDistance                "128"
+g_monsters                       "1"
+g_mp_gravity                     "800"
+g_mpWeaponAngleScale             "0"
+g_muzzleFlash                    "1"
+g_nailTrail                      "1"
+g_napalmTrail                    "1"
+g_nightmare                      "0"
+g_noTVChat                       "0"
+g_password                       ""
+g_perfTest_aiNoDodge             "0"
+g_perfTest_aiNoObstacleAvoid     "0"
+g_perfTest_aiNoRagdoll           "0"
+g_perfTest_aiNoVisTrace          "0"
+g_perfTest_aiStationary          "0"
+g_perfTest_aiUndying             "0"
+g_perfTest_hitscanBBox           "0"
+g_perfTest_hitscanShort          "0"
+g_perfTest_noJointTransform      "0"
+g_perfTest_noPlayerFocus         "0"
+g_perfTest_noProjectiles         "0"
+g_perfTest_weaponNoFX            "0"
+g_playerLean                     "1"
+g_playPlayback                   "0"
+g_predictedProjectiles           "0"
+g_privatePassword                ""
+g_privateViewerPassword          ""
+g_projectileLights               "0"
+g_railTrail                      "1"
+g_recordPlayback                 "0"
+g_repeaterPassword               ""
+g_repeaterReliableOnly           "1"
+g_rocketTrail                    "1"
+g_showActiveEntities             "0"
+g_showAreaClipSectors            "0"
+g_showcamerainfo                 "0"
+g_showClipSectorFilter           "0"
+g_showClipSectors                "0"
+g_showCollisionModels            "0"
+g_showCollisionTraces            "0"
+g_showCollisionWorld             "0"
+g_showDebugHud                   "0"
+g_showEnemies                    "0"
+g_showEntityInfo                 "0"
+g_showFrameCmds                  "0"
+g_showGodDamage                  "0"
+g_showHud                        "1"
+g_showHudPopups                  "0"
+g_showPlayback                   "0"
+g_showPlayerShadow               "0"
+g_showProjectilePct              "0"
+g_showPVS                        "0"
+g_showRange                      "0"
+g_showTargets                    "0"
+g_showTestModelFrame             "0"
+g_showTriggers                   "0"
+g_showviewpos                    "0"
+g_simpleItems                    "0"
+g_skill                          "1"
+g_skipFX                         "0"
+g_skipItemShadowsMP              "0"
+g_skipParticles                  "0"
+g_skipPlayerShadowsMP            "0"
+g_skipViewEffects                "0"
+g_spectatorChat                  "0"
+g_stopTime                       "0"
+g_testCTF                        "0"
+g_testDeath                      "0"
+g_testHealthVision               "0"
+g_testModelAnimate               "0"
+g_testModelBlend                 "0"
+g_testModelRotate                "0"
+g_testPlayer                     ""
+g_testPostProcess                ""
+g_testScoreboard                 "0"
+g_timeEntities                   "0"
+g_useDynamicProtection           "1"
+g_vehicleForce                   "50000"
+g_vehicleMode                    "1"
+g_vehicleVelocity                "1000"
+g_version                        "Quake4  V1.4.3 linux-x86 Oct 20 2010"
+g_viewerPassword                 ""
+g_viewNodalX                     "0"
+g_viewNodalZ                     "0"
+g_voiceChatDebug                 "0"
+g_voteFlags                      "0"
+g_weaponFovEffect                "0"
+gamedate                         "Oct 20 2010"
+gamename                         "Q4MP 1.4.3"
+gui_configServerRate             "0"
+gui_debug                        "0"
+gui_debugScript                  "0"
+gui_edit                         "0"
+gui_mediumFontLimit              "0.60"
+gui_smallFontLimit               "0.30"
+gui_ui_name                      ""
+hud_inputColor                   "1 0 0"
+hud_inputPosition                "580 90"
+hud_showInput                    "0"
+hud_showSpeed                    "0"
+ik_debug                         "0"
+ik_enable                        "1"
+image_anisotropy                 "1"
+image_cacheMegs                  "100"
+image_cacheMinK                  "30"
+image_colorMipLevels             "0"
+image_downSize                   "1"
+image_downSizeBump               "1"
+image_downSizeBumpLimit          "128"
+image_downSizeLimit              "128"
+image_downSizeSpecular           "1"
+image_downSizeSpecularLimit      "64"
+image_filter                     "GL_LINEAR_MIPMAP_LINEAR"
+image_ignoreHighQuality          "1"
+image_lodbias                    "0"
+image_preload                    "1"
+image_showBackgroundLoads        "0"
+image_useAllFormats              "1"
+image_useCache                   "0"
+image_useCompression             "1"
+image_useNormalCompression       "2"
+image_useNormalCompressionLoadDDSForPal "1"
+image_useOfflineCompression      "0"
+image_usePrecompressedTextures   "1"
+image_writeNormalTGA             "0"
+image_writePrecompressedTextures "0"
+image_writeProgramImages         "0"
+image_writeTGA                   "0"
+in_alwaysRun                     "1"
+in_anglespeedkey                 "1.5"
+in_freeLook                      "1"
+in_joystickLeftStickMove         "1"
+in_pitchspeed                    "140"
+in_toggleCrouch                  "0"
+in_toggleRun                     "0"
+in_toggleZoom                    "0"
+in_tty                           "1"
+in_yawspeed                      "140"
+lcp_showFailures                 "0"
+logFile                          "0"
+logFileName                      "qconsole.log"
+m_accel                          "0"
+m_maxInput                       "0"
+m_pitch                          "0.022"
+m_showMouseRate                  "0"
+m_smooth                         "1"
+m_strafeScale                    "6.25"
+m_strafeSmooth                   "4"
+m_yaw                            "0.022"
+mat_useHitMaterials              "1"
+mat_writeHitMaterials            "0"
+net_allowCheats                  "0"
+net_challengeLimit               "30"
+net_channelShowDrop              "0"
+net_channelShowPackets           "0"
+net_clientDownload               "1"
+net_clientLagOMeter              "0"
+net_clientLagOMeterResolution    "16"
+net_clientMaxPrediction          "1000"
+net_clientMaxRate                "16000"
+net_clientPredictGUI             "1"
+net_clientPrediction             "10"
+net_clientPredictWeaponSwitch    "1"
+net_clientRemoteConsoleAddress   "localhost"
+net_clientRemoteConsolePassword  ""
+net_clientRepeaterDelay          "0"
+net_clientServerTimeout          "60"
+net_clientShowSnapshot           "0"
+net_clientShowSnapshotRadius     "128"
+net_clientUsercmdBackup          "1"
+net_clientUsercmdPacking         "2"
+net_clientUseroriginTime         "100"
+net_debugClient                  "0"
+net_debugPlayerCount             "0"
+net_debugStartLevel              "0"
+net_forceInternet                "0"
+net_httpPassword                 ""
+net_httpProxy                    ""
+net_httpProxyMode                "1"
+net_httpProxyPassword            ""
+net_httpProxyUser                ""
+net_httpServerBaseURL            ""
+net_httpServerGlobalBW           "0"
+net_httpServerPlayerBW           "0"
+net_httpServerPort               "0"
+net_httpUser                     ""
+net_ip                           "localhost"
+net_LANRepeater                  "0"
+net_LANServer                    "0"
+net_master0                      "q4master.idsoftware.com:27650"
+net_master1                      ""
+net_master2                      ""
+net_master3                      ""
+net_master4                      ""
+net_menuLANServer                "0"
+net_motd                         "q4master.idsoftware.com:27650"
+net_motdMessage                  ""
+net_port                         "28004"
+net_predictionErrorDecay         "112"
+net_repeaterPort                 "0"
+net_repeaterSnapshotDelay        "80"
+net_reportUsageStatistics        "0"
+net_serverAllowServerMod         "0"
+net_serverClientTimeout          "60"
+net_serverDedicated              "1"
+net_serverDlBaseURL              ""
+net_serverDlTable                ""
+net_serverDownload               "0"
+net_serverDrawClient             "-1"
+net_serverMaxClientRate          "10000"
+net_serverMaxUsercmdRelay        "5"
+net_serverMenuDedicated          "0"
+net_serverReloadEngine           "0"
+net_serverRemoteConsolePassword  "06og4password"
+net_serverRunning                "1"
+net_serverSnapshotDelay          "80"
+net_serverZombieTimeout          "5"
+net_showPredictionError          "-1"
+net_socksEnabled                 "0"
+net_socksPassword                ""
+net_socksPort                    "1080"
+net_socksServer                  ""
+net_socksUsername                ""
+net_spawnRepeater                "0"
+net_verbose                      "0"
+net_warnStale                    "1"
+password                         ""
+pb_sv_lan                        "0"
+pm_acceloverride                 "0"
+pm_air                           "1800"
+pm_bboxwidth                     "32"
+pm_bobpitch                      "0.002"
+pm_bobroll                       "0.002"
+pm_bobup                         "0.005"
+pm_crouchbob                     "0.5"
+pm_crouchheight                  "49"
+pm_crouchrate                    "0.87"
+pm_crouchspeed                   "160"
+pm_crouchviewheight              "32"
+pm_deadheight                    "20"
+pm_deadviewheight                "10"
+pm_forcespectatormove            "0"
+pm_frictionoverride              "-1"
+pm_isZoomed                      "0"
+pm_jumpheight                    "48"
+pm_maxviewpitch                  "89"
+pm_minviewpitch                  "-89"
+pm_modelView                     "0"
+pm_noclipspeed                   "270"
+pm_normalheight                  "77"
+pm_normalviewheight              "68"
+pm_powerslide                    "0.09"
+pm_runbob                        "0.4"
+pm_runpitch                      "0.002"
+pm_runroll                       "0.005"
+pm_slidevelocity                 "1"
+pm_spectatebbox                  "32"
+pm_spectatespeed                 "450"
+pm_speed                         "320"
+pm_stamina                       "12"
+pm_staminarate                   "0.75"
+pm_staminathreshold              "4"
+pm_stepsize                      "16"
+pm_thirdPerson                   "0"
+pm_thirdPersonAngle              "0"
+pm_thirdPersonClip               "1"
+pm_thirdPersonDeath              "0"
+pm_thirdPersonHeight             "0"
+pm_thirdPersonRange              "80"
+pm_usecylinder                   "1"
+pm_vehicleCameraMinDist          "300"
+pm_vehicleCameraScaleMax         "300"
+pm_vehicleCameraSnap             "1"
+pm_vehicleCameraSpeedScale       "0.5"
+pm_vehicleSoundLerpScale         "10"
+pm_walkbob                       "0.3"
+pm_walkspeed                     "160"
+pm_zoomedSlow                    "100"
+privatePassword                  ""
+r_actualRenderer                 "best"
+r_allowSMP                       "0"
+r_alphaToCoverage                "1"
+r_aspectRatio                    "0"
+r_brightness                     "1.2"
+r_checkBounds                    "0"
+r_clear                          "2"
+r_customHeight                   "486"
+r_customWidth                    "720"
+r_debugArrowStep                 "120"
+r_debugLineDepthTest             "0"
+r_debugLineWidth                 "1"
+r_debugPolygonFilled             "1"
+r_debugRenderToTexture           "0"
+r_debugSphereSubdivision         "2"
+r_demonstrateBug                 "0"
+r_deriveBiTangents               "0"
+r_displayRefresh                 "0"
+r_drawBoundInfo                  "0"
+r_finish                         "0"
+r_fixedHorizFOV                  "0"
+r_flareSize                      "1"
+r_forceAmbient                   "0"
+r_forceDiffuseOnly               "0"
+r_forceLoadImages                "0"
+r_frontBuffer                    "0"
+r_fullscreen                     "1"
+r_gamma                          "1"
+r_glDriver                       ""
+r_ignore                         "0"
+r_ignore2                        "0"
+r_ignoreGLErrors                 "1"
+r_ignoreHWGamma                  "0"
+r_inhibitFragmentProgram         "0"
+r_inhibitNativePowerOfTwo        "1"
+r_jitter                         "0"
+r_jointNameOffset                "0.5"
+r_jointNameScale                 "0.02"
+r_lightAllBackFaces              "0"
+r_lightDetailLevel               "9"
+r_lightScale                     "2"
+r_lightSourceRadius              "0"
+r_limitBatchSize                 "0"
+r_lockSurfaces                   "0"
+r_lod_animations_coverage        "0.05"
+r_lod_animations_distance        "0.0"
+r_lod_animations_wait            "0.1"
+r_lod_entities                   "0"
+r_lod_entities_percent           "0.008"
+r_lod_shadows                    "0"
+r_lod_shadows_percent            "0.06"
+r_materialOverride               ""
+r_megaTextureLevel               "0"
+r_mergeModelSurfaces             "1"
+r_mode                           "3"
+r_multiSamples                   "0"
+r_offsetfactor                   "0"
+r_offsetunits                    "-600"
+r_orderIndexes                   "1"
+r_penumbraMapDepthBias           "3."
+r_portalsDistanceCull            "1"
+r_renderer                       "best"
+r_screenFraction                 "100"
+r_shadowMapDepthBias             ".6"
+r_shadowMapSlopeScaleBias        "3.2"
+r_shadowPolygonFactor            "0"
+r_shadowPolygonOffset            "-1"
+r_shadows                        "1"
+r_showAlloc                      "0"
+r_showBatchSize                  "0"
+r_showCull                       "0"
+r_showDebugGraph                 "0"
+r_showDefs                       "0"
+r_showDemo                       "0"
+r_showDepth                      "0"
+r_showDominantTri                "0"
+r_showDynamic                    "0"
+r_showEdges                      "0"
+r_showEditorImages               "0"
+r_showEntityScissors             "0"
+r_showHitImages                  "0"
+r_showImages                     "0"
+r_showIntensity                  "0"
+r_showInteractionFrustums        "0"
+r_showInteractions               "0"
+r_showInteractionScissors        "0"
+r_showLightCount                 "0"
+r_showLightPortals               "0"
+r_showLights                     "0"
+r_showLightScale                 "0"
+r_showLightScissors              "0"
+r_showMegaTexture                "0"
+r_showMegaTextureLabels          "0"
+r_showMemory                     "0"
+r_showNormals                    "0"
+r_showOverDraw                   "0"
+r_showOverdrawDivisor            "10"
+r_showOverdrawMax                "50"
+r_showPortals                    "0"
+r_showPrimitives                 "0"
+r_showRenderTrace                "0"
+r_showSafeArea                   "0"
+r_showShadowCount                "0"
+r_showShadows                    "0"
+r_showSilhouette                 "0"
+r_showSkel                       "0"
+r_showSmp                        "0"
+r_showSurfaceInfo                "0"
+r_showSurfaces                   "0"
+r_showTangentSpace               "0"
+r_showTexturePolarity            "0"
+r_showTextureVectors             "0"
+r_showTrace                      "0"
+r_showTriangleTangents           "0"
+r_showTris                       "0"
+r_showUnsmoothedTangents         "0"
+r_showUnweld                     "0"
+r_showUpdates                    "0"
+r_showVertexCache                "0"
+r_showVertexColor                "0"
+r_showViewEntitys                "0"
+r_singleArea                     "0"
+r_singleEntity                   "-1"
+r_singleLight                    "-1"
+r_singleSurface                  "-1"
+r_singleTriangle                 "0"
+r_skipAmbient                    "0"
+r_skipBackEnd                    "0"
+r_skipBlendLights                "0"
+r_skipBump                       "0"
+r_skipCopyTexture                "0"
+r_skipDecals                     "0"
+r_skipDeforms                    "0"
+r_skipDiffuse                    "0"
+r_skipDownsize                   "0"
+r_skipDynamicTextures            "0"
+r_skipFogLights                  "0"
+r_skipFrontEnd                   "0"
+r_skipGuiShaders                 "0"
+r_skipInteractions               "0"
+r_skipLightScale                 "0"
+r_skipMegaTexture                "0"
+r_skipNewAmbient                 "1"
+r_skipOverlays                   "0"
+r_skipPostProcess                "0"
+r_skipRender                     "0"
+r_skipRenderContext              "0"
+r_skipROQ                        "0"
+r_skipSky                        "0"
+r_skipSpecular                   "0"
+r_skipSubviews                   "0"
+r_skipSuppress                   "0"
+r_skipTextures                   "0"
+r_skipTranslucent                "0"
+r_skipUpdates                    "0"
+r_slopNormal                     "0.02"
+r_slopTexCoord                   "0.001"
+r_slopVertex                     "0.01"
+r_strictResolutionMatch          "1"
+r_subviewOnly                    "0"
+r_suppressMultipleUpdates        "1"
+r_swapInterval                   "0"
+r_terrainScale                   "3"
+r_test                           "0"
+r_testARBProgram                 "0"
+r_testGamma                      "0"
+r_testGammaBias                  "0"
+r_testSpecialEffect              "0"
+r_testSpecialEffectParm          "0"
+r_testSpecialEffectParmValue     "0"
+r_testStepGamma                  "0"
+r_trackTextureUsage              "0"
+r_useCachedDynamicModels         "1"
+r_useClippedLightScissors        "1"
+r_useCombinerDisplayLists        "1"
+r_useConstantMaterials           "1"
+r_useCulling                     "2"
+r_useDeferredTangents            "1"
+r_useDepthBoundsTest             "1"
+r_useEntityCallbacks             "1"
+r_useEntityCulling               "1"
+r_useEntityScissors              "1"
+r_useExternalShadows             "1"
+r_useFastSkinning                "0"
+r_useFrustumFarDistance          "0"
+r_useIndexBuffers                "0"
+r_useInfiniteFarZ                "1"
+r_useInteractionCulling          "1"
+r_useInteractionScissors         "2"
+r_useLightCulling                "3"
+r_useLightPortalFlow             "1"
+r_useLightScissors               "1"
+r_useNewSkinning                 "1"
+r_useNodeCommonChildren          "1"
+r_useNV20MonoLights              "1"
+r_useOptimizedShadows            "1"
+r_usePenumbraMapShadows          "0"
+r_usePortals                     "1"
+r_usePreciseTriangleInteractions "0"
+r_useScissor                     "1"
+r_useShadowCulling               "1"
+r_useShadowProjectedCull         "1"
+r_useShadowSurfaceScissor        "1"
+r_useShadowVertexProgram         "1"
+r_useSilRemap                    "1"
+r_useSimpleInteraction           "0"
+r_useSMP                         "0"
+r_useStateCaching                "1"
+r_useTripleTextureARB            "1"
+r_useTurboShadow                 "1"
+r_useTwoSidedStencil             "1"
+r_useVertexBuffers               "1"
+r_videoCard                      ""
+r_videoSettingsFailed            "0"
+r_znear                          "3"
+radiant_camerawindow             "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000020000000F601000042010000"
+radiant_InspectorsWindow         "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0100000073010000F8010000A8030000"
+radiant_MainWindowPlace          "2C00000002000000030000000083FFFF0083FFFFFFFFFFFFFFFFFFFF500000008300000000050000C0030000"
+radiant_xywindow                 "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5502000020000000FC04000078030000"
+radiant_zwindow                  "2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7010000200000005502000078030000"
+rb_showActive                    "0"
+rb_showBodies                    "0"
+rb_showContacts                  "0"
+rb_showInertia                   "0"
+rb_showMass                      "0"
+rb_showTimings                   "0"
+rb_showVelocity                  "0"
+ri_maxViewers                    "0"
+ri_name                          ""
+ri_numPrivateViewers             "0"
+ri_numViewers                    "0"
+ri_privateViewers                "0"
+ri_useViewerPass                 "0"
+s_clipVolumes                    "1"
+s_constantAmplitude              "-1"
+s_decompressionLimit             "2"
+s_deviceName                     ""
+s_doorDistanceAdd                "150"
+s_dotbias2                       "1.1"
+s_dotbias6                       "0.8"
+s_drawSounds                     "0"
+s_driver                         "oss"
+s_dsp                            "/dev/dsp"
+s_earSeperationAlgo              "0"
+s_force22kHz                     "0"
+s_frequencyShift                 "1"
+s_globalFraction                 "0.8"
+s_maxChannelsMixed               "24"
+s_maxSoundsPerShader             "0"
+s_meterTopTime                   "2000"
+s_micInputLevel                  "6"
+s_minStereo                      "8"
+s_minVolume2                     "0.25"
+s_minVolume6                     "0"
+s_mp_maxWindow                   "0.4"
+s_mp_minVolume                   "0.15"
+s_musicVolume                    "0.5"
+s_noSound                        "1"
+s_numberOfSpeakers               "2"
+s_playDefaultSound               "1"
+s_quadraticFalloff               "0"
+s_radioChatterFraction           "0.9"
+s_realTimeDecoding               "1"
+s_reverbFeedback                 "0.333"
+s_reverbTime                     "1000"
+s_reverse                        "0"
+s_showLevelMeter                 "0"
+s_showStartHardware              "0"
+s_showStartSound                 "0"
+s_singleEmitter                  "-1"
+s_skipStartSound                 "0"
+s_spatializationDecay            "2"
+s_speakerFraction                "0.65"
+s_subFraction                    "0.5"
+s_useDeferredSettings            "1"
+s_useEAXOcclusion                "0"
+s_useEAXReverb                   "0"
+s_useOcclusion                   "1"
+s_useOpenAL                      "0"
+s_voiceChatEcho                  "0"
+s_voiceChatReceive               "1"
+s_voiceChatSend                  "1"
+s_voiceChatTest                  "0"
+s_voiceLatency                   "100"
+s_voiceVolume                    "1.0"
+s_volume                         "1"
+sensitivity                      "5"
+serverInfo                       ""
+si_allowHitscanTint              "0"
+si_allowVoting                   "0"
+si_autobalance                   "1"
+si_buyModeMaxCredits             "25000"
+si_buyModeMinCredits             "0"
+si_buyModeStartingCredits        "1000"
+si_captureLimit                  "10"
+si_controlTime                   "120"
+si_countDown                     "10"
+si_deadZonePowerupTime           "45"
+si_dropWeaponsInBuyingModes      "0"
+si_entityFilter                  "DM"
+si_fps                           "60"
+si_fragLimit                     "100"
+si_gameType                      "DM"
+si_isBuyingEnabled               "0"
+si_map                           "mp/q4dm1.map"
+si_mapCycle                      "mp/q4dm1;mp/q4dm2;mp/q4dm3;mp/q4dm4;mp/q4dm5;mp/q4dm6;mp/q4dm7;mp/q4dm8"
+si_maxPlayers                    "16"
+si_minPlayers                    "2"
+si_name                          "LinuxGSM"
+si_numPlayers                    "4"
+si_numPrivatePlayers             "0"
+si_privatePlayers                "0"
+si_pure                          "1"
+si_serverURL                     ""
+si_shuffle                       "0"
+si_spectators                    "1"
+si_suddenDeathRestart            "1"
+si_teamDamage                    "0"
+si_timeLimit                     "0"
+si_tourneyLimit                  "3"
+si_usePass                       "0"
+si_useReady                      "0"
+si_version                       "Quake4  V1.4.2 linux-x86 Jun 15 2007"
+si_voiceChat                     "1"
+si_voteFlags                     "0"
+si_warmup                        "1"
+si_weaponStay                    "0"
+subliminal                       "0"
+sv_punkbuster                    "0"
+sys_country                      "unknown"
+sys_lang                         "english"
+sys_language                     "unknown"
+timescale                        "1"
+ui_autoReload                    "1"
+ui_autoSwitch                    "1"
+ui_chat                          "0"
+ui_clan                          ""
+ui_handicap                      "100"
+ui_hitscanTint                   "120.0 0.6 1.0"
+ui_model                         "model_player_marine"
+ui_model_backup                  ""
+ui_model_marine                  ""
+ui_model_strogg                  ""
+ui_name                          "Player"
+ui_ready                         "Not Ready"
+ui_showGun                       "1"
+ui_skin                          "base"
+ui_spectate                      "Play"
+ui_team                          "Marine"
+viewnotes_categories             "Animation;Art;Bug;Build Notes;Design;Feedback Group 1;Feedback Group 2;Feedback Group 3;Generic;Info;Jump Point;Monster;Scripting;Sound;Suggestion"
+viewnotes_names                  "Chuck Nicholson;Gretchen Carlson;Ken Banks;Jeff Dischler;Eric Biessman;Chad Bordwell;Bryan Dube;Ford Dye;Mike Egnew;Mike Ekberg;Chris Foster;Mike Gummelt;Jim Hughes;Kevin Long;Nick Maggiore;Mike Majernik;Nathan McKenzie;Scott McNutt;Corey Peters;Zack Quarles;Mike Renner;Jim Shepard;Matt Vainio;Andrew Weldon;Pat Williams;--Graham Fuchs;--Tim Willits"
+win_viewlog                      "1"
+win_viewlog_update_count         "10"
+win_viewlog_xpos                 "0"
+win_viewlog_ypos                 "0"
+win_xpos                         "3"
+win_ypos                         "22"
+
+912 cvars listed
+
+listCvar [search string]          = list cvar values
+listCvar -help [search string]    = list cvar descriptions
+listCvar -type [search string]    = list cvar types
+listCvar -flags [search string]   = list cvar flags
