@@ -42,5 +42,3 @@ sv_forcepreload 0
 exec server_core.cfg
 exec server_game.cfg
 exec server_custom.cfg
-
-heartbeat
