@@ -1,0 +1,7 @@
+hostname "Double Action: Boogaloo"
+sv_lan 0
+bot_quota 2
+sv_allow_votes 1
+exec banned_ip.cfg
+exec banned_user.cfg
+exec server_custom.cfg
