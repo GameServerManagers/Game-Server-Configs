@@ -1,0 +1,37 @@
+hostname "Cure Dedicated Server"
+
+//internet
+sv_lan 0
+
+//number of bots (maximum 3)
+bot_quota 3
+
+//freindly fire enabled
+mp_friendlyfire 1
+
+//unless freindly fire is disabled there is no way to turn off the new autokick system (introduced to reduce trolling)
+//however you can alter the strikes and cooldown values (within a limited range)
+//you can also set select steamid's to be exempt from being kicked on this server via "kickexemption.txt"
+sv_autokick_strikes 10 //min 5, max 30
+sv_autokick_cooldown 15 //min 10, max 60
+
+//the amount of mins a player should be banned for after being kicked
+//(-1 to turn off 0 for indefinate time)
+sv_kickbantime 5
+
+//the amount of time players have to vote, once it has been called
+sv_votetime 20
+
+//the amount of time players have to wait before calling another vote
+sv_votenext 10
+
+//allow voting on specific issues
+sv_allowvotekick 1
+sv_allowvotediff 1
+sv_allowvotemap 1
+
+//it is no longer recommended to set difficulty here
+//as on map change it will override any difficulty players have voted for
+
+//send info to master servers
+heartbeat

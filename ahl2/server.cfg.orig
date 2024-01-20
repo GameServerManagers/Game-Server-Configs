@@ -1,0 +1,48 @@
+// dedicated server default configuration settings
+
+// server name
+hostname                        "Action: Source Server"
+
+// server password
+sv_password                     ""
+
+// maximum players allowed in server
+maxplayers                      12
+
+// only allow players on local network to join
+sv_forcelan                     0
+sv_lan                          0
+
+// ping master server list
+heartbeat
+
+// teamplay
+mp_teamplay                     0       // enable teams
+mp_threeteams           0       // use three teams for teamplay
+mp_friendlyfire         1       // allow friendly fire
+mp_tkpunish                     1       // punish team killers after 2 unforgiven team kills
+
+// game modes
+mp_instagib                     0       // enable one hit kill ultimate gib mode
+mp_allowctb                     0       // allow "capture the briefcase" mode on supported maps
+mp_allowdante           0       // allow "dante must die" mode on supported maps
+mp_allowvip                     0       // allow VIP mode on supported maps
+mp_allowcustom          0       // allow map defined goal modes
+
+// game rules
+mp_timelimit            20      // amount of time, in minutes, played on each map
+mp_fraglimit            0       // number of kills a player must get to win the match
+mp_maxrounds            0       // in rounds mode, number of rounds to be played on each map
+mp_playerlives          0       // number of lives each player gets per round (0 = deathmatch)
+mp_roundtimelimit       5       // amount of time, in minutes, a round is allowed to last
+mp_forcerespawn         0       // automatically respawn players without waiting for them to click
+
+// loadouts and pickups
+mp_forcerandom          0       // force players to spawn with random equipment
+// 0: Players can choose loadout. 1: Each player gets different random loadout. 2: All players get the same random loadout
+
+mp_allowequip           3       // restrict which equipment players can spawn with
+// 0: Players spawn with nothing. 1: Side arms only. 2: Side arms and items only. 3: All equipment allowed
+
+mp_allowpickup          3       // restrict which equipment can spawn on the map as pickups
+// 0: No pickups spawn on map. 1: Side arms only. 2: Side arms and items only. 3: All equipment pickup types spawn on map.
