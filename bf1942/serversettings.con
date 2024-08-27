@@ -34,8 +34,8 @@ game.serverSoldierFriendlyFireOnSplash 100
 game.serverVehicleFriendlyFireOnSplash 100
 game.serverIP 0.0.0.0
 game.serverPort 14567
-game.gameSpyLANPort 22000
-game.gameSpyPort 22000
+game.gameSpyLANPort 23000
+game.gameSpyPort 23000
 game.ASEPort 14690
 game.serverHitIndication 1
 game.serverTKPunishMode 1
