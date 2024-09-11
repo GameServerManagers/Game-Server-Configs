@@ -46,7 +46,7 @@ game.serverIP 0.0.0.0
 game.serverPort 15567
 game.gameSpyLANPort 23000
 game.gameSpyPort 23000
-game.ASEPort 0
+game.ASEPort 14690
 game.serverHitIndication 0
 game.serverTKPunishMode 1
 game.serverCrossHairCenterPoint 1
