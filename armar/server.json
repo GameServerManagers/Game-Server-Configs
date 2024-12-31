@@ -7,17 +7,22 @@
         "address": "0.0.0.0",
         "port": 17777
     },
+    "rcon": {
+        "address": "0.0.0.0",
+        "port": 19999,
+        "password": "ADMINPASSWORD",
+        "permission": "monitor",
+        "blacklist": [],
+        "whitelist": []
+    },
     "game": {
         "name": "SERVERNAME",
         "password": "",
         "passwordAdmin": "ADMINPASSWORD",
+        "admins" : [],
         "scenarioId": "{ECC61978EDCC2B5A}Missions/23_Campaign.conf",
         "maxPlayers": 64,
         "visible": true,
-        "supportedPlatforms": [
-            "PLATFORM_PC",
-            "PLATFORM_XBL"
-        ],
         "gameProperties": {
             "serverMaxViewDistance": 2500,
             "serverMinGrassDistance": 100,
@@ -26,7 +31,8 @@
             "fastValidation": true,
             "battlEye": true,
             "VONDisableUI": false,
-            "VONDisableDirectSpeechUI": false
+            "VONDisableDirectSpeechUI": false,
+            "VONCanTransmitCrossFaction": false
         },
         "mods": []
     },
