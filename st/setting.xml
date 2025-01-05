@@ -69,7 +69,7 @@
     <UserSpeakerMode>Stereo</UserSpeakerMode>
     <ServerName>Stationeers</ServerName>
     <StartLocalHost>true</StartLocalHost>
-    <ServerVisible>false</ServerVisible>
+    <ServerVisible>true</ServerVisible>
     <ServerPassword />
     <AdminPassword />
     <ServerAuthSecret />
