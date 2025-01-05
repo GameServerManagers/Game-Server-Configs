@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SettingData xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SettingData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <SettingsVersion>0.2.4120.19431</SettingsVersion>
 <ShowFps>false</ShowFps>
 <ShowLatency>false</ShowLatency>
@@ -375,3 +374,4 @@
 <SmoothTerrainAngle>60</SmoothTerrainAngle>
 <ConsoleBufferSize>1024</ConsoleBufferSize>
 <LegacyCpu>false</LegacyCpu>
+</SettingData>
