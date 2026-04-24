@@ -125,6 +125,10 @@
   <property name="DayNightLength" value="60" />                           <!-- real time minutes per in game day: 60 minutes -->
   <property name="DayLightLength" value="18" />                           <!-- in game hours the sun shines per day: 18 hours
   day light per in game day -->
+  <property name="DeathPenalty" value="1" />                             <!-- Penalty after dying. 0 = Nothing. 1 = Default: 
+  Classic XP Penalty. 2 = Injured: You keep most of your debuffs. Food and Water is set to 50% 
+  on respawn. 3 = Permanent Death: Your character is completely reset. You will respawn with a 
+  fresh start within the saved game. -->
   <property name="DropOnDeath" value="1" />                            <!-- 0 = nothing, 1 = everything, 2 = toolbelt only, 3 =
   backpack only, 4 = delete all -->
   <property name="DropOnQuit" value="0" />                            <!-- 0 = nothing, 1 = everything, 2 = toolbelt only, 3 =
