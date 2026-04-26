@@ -1,24 +1,16 @@
-// ****************************************************************************
-// Empires Mod
-// Config - server.cfg
-// Date - 26/04/2026
-// ****************************************************************************
+/// Empires config
+/// Please only uncomment and edit the values you need to change.
+/// Default values are sensible for most servers.
+/// If you feel any of the defaults should be changed, please send the devs a message.
 
-// .................................. Basic ................................. //
-
-// hostname - Name of the server.
+// server name
 hostname "Empires Server"
 
-// rcon_password - Remote console password.
-// Be sure to change your RCON password.
+// rcon passsword
+//be sure to change your rcon password
 rcon_password ""
 
-// sv_password - Server password for private servers.
 sv_password ""
-
-// ................................. Security ................................ //
-
-// sv_cheats - Enable/disable cheats.
 sv_cheats 0
 
 // server cvars
@@ -44,9 +36,7 @@ sv_cheats 0
 //emp_sv_debug_build_vehicles 0
 //emp_sv_debug_instant_build 0
 
-// ................................ Gameplay ................................ //
-
-// Empires specific cvars
+//Empires specific cvars
 
 //emp_sv_vote_commander_time 90			//How long people have to vote for a commander
 //emp_sv_wait_phase_time 60			// Time before round starts on map without commander
@@ -107,12 +97,8 @@ sv_cheats 0
 //sv_parallel_sendsnapshot 1			//controls whether the sending of network data is done on the main thread (when set to zero) or on worker threads (when set to one).
 //decalfrequency 10
 
-// ............................. Communication .............................. //
-
-// voice
+//voice
 //sv_voicecodec vaudio_celt
-
-// ............................. Server Logging ............................. //
 
 // server logging
 //log on
