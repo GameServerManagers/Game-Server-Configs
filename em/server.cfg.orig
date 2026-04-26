@@ -1,0 +1,134 @@
+/// Empires config
+/// Please only uncomment and edit the values you need to change.
+/// Default values are sensible for most servers.
+/// If you feel any of the defaults should be changed, please send the devs a message.
+
+// server name
+hostname "Empires Server"
+
+// rcon passsword
+//be sure to change your rcon password
+rcon_password ""
+
+sv_password ""
+sv_cheats 0
+
+// server cvars
+//mp_footsteps 1
+//mp_autoteambalance 1
+//mp_flashlight 0
+//mp_forcecamera 0
+//sv_alltalk 0
+//sv_pausable 0
+//sv_cheats 0
+//sv_consistency 1
+//sv_allowupload 1
+//sv_allowdownload 1
+//sv_voiceenable 1
+//emp_allowspectators 1
+//emp_forceautoassign 0
+//mp_timelimit 0
+//mp_chattime 45
+//sv_timeout 65
+//mp_falldamage 0
+//sv_specspeed 8
+//sv_downloadurl "http://fastdl.empiresmod.com:17739/default/" // used for fastdownload server
+//emp_sv_debug_build_vehicles 0
+//emp_sv_debug_instant_build 0
+
+//Empires specific cvars
+
+//emp_sv_vote_commander_time 90			//How long people have to vote for a commander
+//emp_sv_wait_phase_time 60			// Time before round starts on map without commander
+//emp_sv_kick_commander_penalty 300		//time before a kicked commander can re-enter the command vehicle
+//emp_sv_kick_commander_percentage 0.6	//percentage of players on a team that must vote yes to kick the commander
+//emp_sv_kick_commander_time 180		//time commander kick vote lasts
+//emp_sv_max_buildings 48				//number of buildings (not counting walls) each team can have at any one time
+//emp_sv_max_vehicles 32				//number of vehicles each team can have at any one time
+//emp_sv_max_turrets 24				//number of turrets each team can have at any one time
+//emp_sv_max_walls 64				//number of walls each team can have at any one time
+//emp_sv_player_refinery_multiplier 20	//number of players that cause an increase in resources produced via refineries (default: 12 means at 12 to 23 players, 1 is added to refinery output, 24 to 35, 2 is added to refinery output
+//emp_sv_resource_multiplier_be 1		//number of resources at map start is multiplied by this (Brenodi Empire)
+//emp_sv_resource_multiplier_nf 1		//number of resources at map start is multiplied by this (Northern Faction)
+//emp_sv_refinery_multiplier 1			//refinery output is multiplied by this
+//emp_sv_reinforcement_multiplier_be 1	//number of reinforcements at map start is multiplied by this (Brenodi Empire)
+//emp_sv_reinforcement_multiplier_nf 1	//number of reinforcements at map start is multiplied by this (Northern Faction)
+//emp_sv_research_complete 0			//set to 1 to have all research tree items unlocked
+//emp_sv_research_multiplier 1			//affects research speed, less than 1 is slower, greater than 1 is faster
+//emp_sv_respawn_penalty 10			//number of seconds to make players wait to respawn
+//emp_sv_refinery_interval 1			//number of seconds between refinery resource generation
+//emp_sv_spawn_protection 1		//number of seconds that a player is invincible after spawn
+//emp_sv_vehicle_fadeout_time 30 //how long vehicle carcesses last for
+
+//skill cvars percentage modifiers
+//emp_sv_skill_rifleman_damage_increase 0.1
+//emp_sv_vehicle_skill_speed 0.25
+//emp_sv_vehicle_skill_damage 0.25
+//emp_sv_vehicle_skill_cooling 0.15
+//emp_sv_vehicle_skill_armor 0.25
+//
+//emp_sv_player_minimap_interval 1	//how often the network info required to update the minimap is sent (actually split up into 1/4s and sent at 1/4 intervals of this time)
+//emp_sv_vehicle_minimap_interval 6
+//
+//emp_sv_netvisdist_player 8000		//distance to stop sending player network info to others
+//emp_sv_netvisdist_building 12000	//distance to stop sending buildings
+//emp_sv_netvisdist_vehicle 10000
+//emp_sv_netvisdist_commander 10000
+//emp_sv_netvisdist_ratedistmin 2000  //Minimum distance to regulate network traffic (highest frequency of transmission)
+//emp_sv_netvisdist_ratedistmax 8000  //Maximum distantce to regulate network traffic (lowest frequency of transmission)
+//emp_sv_client_missiles 1		// Predicted and cheaper missiles will be used for dumb missiles
+//emp_sv_client_shells 1			// Predicted and cheaper shells.
+
+// bandwidth rates/settings
+// The following settings are omptimized for a 64 slot 30 tick server as 30 tick is recommended for empires.
+// Empires needs higher than normal settings for sv_maxrate and sv_minrate compared to other source games as the increased player count, vehicles and buildings use a lot more bandwidth.
+
+//sv_maxrate 0					//The maximum bytes/sec the server will send to the client.
+//sv_minrate 1000000				//value is in bytes/sec. Overrides the client's rate setting if it is less than sv_minrate.
+//sv_minupdaterate 33				//The minimum amount of updates the server will send to the client. Change this to what your tickrate is.
+//sv_maxupdaterate 66				//The maximum amount of updates the server will send to the client. Change this to what your tickrate is.
+//sv_mincmdrate 33				//The minimum amount of updates the client can send to the server. Change this to what your tickrate is. 
+//sv_maxcmdrate 66				//The maximum amount of updates the client can send to the server. Change this to what your tickrate is.
+//net_splitpacket_maxrate 1048576			//
+//net_splitrate 2					//Maximum number of fragments per frame.
+//fps_max 0
+//net_maxcleartime 0.01 				//Max # of seconds we can wait for next packets to be sent based on rate setting (0 == no limit).
+//net_compresspackets 0				//Use compression on game packets.
+//sv_parallel_sendsnapshot 1			//controls whether the sending of network data is done on the main thread (when set to zero) or on worker threads (when set to one).
+//decalfrequency 10
+
+//voice
+//sv_voicecodec vaudio_celt
+
+// server logging
+//log on
+//sv_logbans 1
+//sv_logecho 1
+//sv_logfile 1
+//sv_log_onefile 0
+
+// operation
+//sv_lan 0
+//sv_region 0
+sv_contact info@empiresmod.com		//Enter your contact information here
+
+//sourcetv
+tv_enable 1
+tv_port 27020
+//tv_debug 0
+//tv_delay 20
+//tv_dispatchmode 1
+//tv_maxclients 1
+//tv_maxrate 20000
+tv_name "SourceTV"
+tv_password ""
+tv_relaypassword ""
+//tv_snapshotrate 20
+tv_autorecord 0
+
+//vprof - this is for creating performance logs to find bottlenecks; it shouldn't be turned on
+//vprof_scope_entity_gamephys 1
+//vprof_scope_entity_thinks 1
+//emp_vprof_record_interval 30
+//emp_vprof_start
+//echo server.cfg loaded
