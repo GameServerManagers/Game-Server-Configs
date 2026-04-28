@@ -149,10 +149,17 @@ Server security and integrity settings.
 
 ### 5. Gameplay *(required)*
 
-Game rules, physics, and mechanics. Includes:
+Standard engine cvars controlling game rules, physics, and mechanics. Use this
+section for cvars that exist across multiple Source/GoldSrc games — not for
+cvars unique to one specific game (those go in **[Game Name] Settings**).
+
+Includes:
 
 - `mp_*` cvars (timelimit, friendlyfire, teamplay, roundtime, etc.)
 - `sv_maxspeed`, `sv_gravity`, `sv_friction`, `sv_airaccelerate`
+- `sv_minrate`, `sv_maxrate`, `sv_mincmdrate`, `sv_maxcmdrate`,
+  `sv_minupdaterate`, `sv_maxupdaterate` (network bandwidth)
+- `sv_idlekick`, `sv_pure`, `sv_cheats` if not already in Security
 - GoldSrc: `deathmatch`, `decalfrequency`, `sys_ticrate`, `hpk_maxsize`
 - `sv_aim` (GoldSrc autoaim)
 
@@ -208,14 +215,24 @@ custom plugin commands.
 
 ### 10. [Game Name] Settings *(optional)*
 
-Game-specific cvars that do not fit into any standard section above. The
-section name must match the full display name of the game or mod followed by
-` Settings`:
+Game-specific cvars that are **unique to that game or mod** and do not exist in
+any other Source/GoldSrc game. If a cvar begins with a game-specific prefix
+(e.g. `sbox_`, `jb_`, `zm_`, `sf_`, `ins_`) or is otherwise not shared with
+other games, it belongs here.
 
-- `Garry's Mod Settings`
-- `Insurgency Settings`
-- `Fistful of Frags Settings`
-- `Dystopia Settings`
+**Standard engine cvars (`mp_*`, `sv_*`, etc.) must never go in this section**
+— they always belong in the appropriate standard section above (Security,
+Communication, Gameplay, etc.).
+
+The section name must match the full display name of the game or mod followed
+by ` Settings`:
+
+- `Garry's Mod Settings` — `sbox_*` sandbox cvars
+- `Insurgency Settings` — `sv_vote_*`, `mp_coop_*` vote and coop system
+- `Fistful of Frags Settings` — `fof_*` game-specific cvars
+- `Zombie Master: Reborn Settings` — `zm_*` game-specific cvars
+
+If a game has no game-specific cvars, omit this section entirely.
 
 ---
 
@@ -266,103 +283,3 @@ The shortname matches the directory name in this repository (e.g. `css` for
 
 For cvars not present in the cvarlist (mod-specific cvars), write a concise
 description in sentence case ending with a period.
-
----
-
-## Complete Example
-
-```
-// ****************************************************************************
-// Counter-Strike: Source
-// Config - server.cfg
-// Date - 01/01/2025
-// ****************************************************************************
-
-// .................................. Basic ................................. //
-
-// hostname - Name of the server.
-hostname "SERVERNAME"
-
-// rcon_password - Remote console password.
-rcon_password "ADMINPASSWORD"
-
-// sv_password - Server password for private servers.
-sv_password ""
-
-// sv_contact - Contact email for server admin.
-sv_contact ""
-
-// ................................. Security ................................ //
-
-// sv_lan - LAN server mode, disables Steam authentication.
-sv_lan 0
-
-// sv_cheats - Allow cheat commands on the server.
-sv_cheats 0
-
-// sv_pure - Enforce pure server file verification.
-sv_pure 1
-
-// ............................. Server Logging ............................. //
-
-// log - Enable server log output.
-log on
-
-// sv_logbans - Log bans in the server logs.
-sv_logbans 1
-
-// sv_logecho - Echo log information to the console.
-sv_logecho 1
-
-// sv_logfile - Log server information to file.
-sv_logfile 1
-
-// sv_log_onefile - Log server information to only one file.
-sv_log_onefile 0
-
-// .............................. Communication ............................. //
-
-// sv_voiceenable - Enable voice communications.
-sv_voiceenable 1
-
-// sv_alltalk - Allow all players to hear each other regardless of team.
-sv_alltalk 0
-
-// ................................ Gameplay ................................ //
-
-// mp_friendlyfire - Allow players to injure teammates.
-mp_friendlyfire 0
-
-// mp_timelimit - Game time per map in minutes.
-mp_timelimit 30
-
-// .............................. Map Rotation .............................. //
-
-// mapcyclefile - Name of the map cycle file.
-mapcyclefile mapcycle.txt
-
-// ............................. Fast Download .............................. //
-
-// sv_allowdownload - Allow clients to download files from the server.
-sv_allowdownload 1
-
-// sv_allowupload - Allow clients to upload customisation files.
-sv_allowupload 1
-
-// sv_downloadurl - URL of the fast download server.
-sv_downloadurl ""
-
-// ................................ Ban List ................................ //
-
-// exec banned_user.cfg - Load the banned user ID list.
-exec banned_user.cfg
-
-// exec banned_ip.cfg - Load the banned IP address list.
-exec banned_ip.cfg
-
-// writeid - Write banned user IDs to banned_user.cfg.
-writeid
-
-// writeip - Write banned IPs to banned_ip.cfg.
-writeip
-```
