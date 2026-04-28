@@ -113,7 +113,7 @@ Server identity and access credentials. Always the first section.
 | `hostname` | Name of the server |
 | `rcon_password` | Remote console password |
 | `sv_password` | Server password for private servers |
-| `sv_contact` | Contact email for server admin |
+| `sv_setsteamaccount` | Game server login token (include only for games that support it) |
 | `maxplayers` | Maximum number of players |
 
 ### 2. Security *(required)*
@@ -264,7 +264,6 @@ server operators with real values:
 | `SERVERNAME` | Server hostname |
 | `ADMINPASSWORD` | RCON password |
 | `ADMINPASSWORD` | sv_password (if included) |
-| `""` (empty string) | sv_contact (leave blank — operators fill in) |
 
 ---
 
