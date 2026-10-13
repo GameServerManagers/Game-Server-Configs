@@ -1,11 +1,11 @@
 #Server main settings
-server_name: SERVERNAME
+server_name: controls rp/gaming server
 #default - uses server_name
 player_list_title: default
 player_list_title_rate: default
 serverinfo_pastebin_id: 7wV681fT
 server_ip: auto
-max_players: 20
+max_players: 40
 server_tickrate: 60
 use_reserved_slots: true
 lobby_waiting_time: default
