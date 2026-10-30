@@ -1,0 +1,19 @@
+{
+    "name": "SERVERNAME",
+    "description": "",
+    "location": "",
+    "gamePort": 18451,
+    "discoveryPort": 18452,
+    "maxPlayers": 64,
+    "rotation": [
+        "swbf1/nab2:rep:conquest",
+        "swbf1/hot1:imp:conquest",
+        "swbf1/kas2:rep:conquest",
+        "swbf1/tat2:imp:conquest",
+        "swbf1/bes2:rep:conquest",
+        "swbf1/end1:imp:conquest"
+    ],
+    "onlineNoticeAccepted": false,
+    "relayPolicy": "auto",
+    "honorGlobalBans": true
+}
