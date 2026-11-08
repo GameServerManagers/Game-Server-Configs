@@ -1,7 +1,10 @@
 name: Github to Bitbucket sync
 # This action will sync the github repo with a backup bitbucket repo.
 # This will allow LinuxGSM to use Bitbucket as and alternative download if github fails.
-on: push
+on:
+  push:
+    branches:
+      - main
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
@@ -16,6 +19,6 @@ jobs:
       with:
         ssh_private_key: ${{ secrets.BITBUCKET_SECRET }}
         source_repo: "https://github.com/GameServerManagers/Game-Server-Configs"
-        source_branch: "master"
+        source_branch: "main"
         destination_repo: "git@bitbucket.org:GameServerManagers/game-server-configs.git"
         destination_branch: "master"
